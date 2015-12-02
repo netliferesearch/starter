@@ -1,0 +1,33 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Statamic files #
+######################
+_cache/*
+!_cache/index.html
+_logs/*
+!_logs/index.html
+
+# Scss Cache #
+######################
+.scssc
+.sass-cache
+assets/img/resized/*
+_themes/webdagene/bower_components
+
+# NPM & BOWER #
+######################
+node_modules/
+bower_components/
+
+# Sublime Text #
+######################
+*.sublime-project
+*.sublime-workspace
