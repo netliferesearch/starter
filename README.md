@@ -7,23 +7,6 @@
                                                                  
     Netlife Research front-end starter for prototyping and production
 
-### Gulp + Browsersync
-Browsersync with libsass and autoprefixer
-
-### Static site generator
-With JSON and Nunjucks
-https://mozilla.github.io/nunjucks/
-
-### Styleguide
-Styleguide generated with styledown
-https://github.com/styledown/styledown
-
-### Install only once
-
-* Install homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-* Install nodejs: `brew install nodejs`
-* Install bower: `npm install -g bower`
-* Install gulp: `npm install --global gulp`
 
 ### Install the starter 
 ```npm i```
@@ -32,5 +15,27 @@ https://github.com/styledown/styledown
 Work ```gulp```
 Production ```gulp prod```
 
-Push to gh-pages ```git push origin master:gh-pages```
-url: netliferesearch.github.io/{{ yourepo }}
+
+### Gulp + Browsersync
+Browsersync with libsass and autoprefixer
+
+
+### Static site generator
+With JSON and Nunjucks
+
+https://mozilla.github.io/nunjucks/
+
+
+### Styleguide
+Styleguide generated with styledown
+
+https://github.com/styledown/styledown
+
+
+### Install only once
+
+* Install homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+* Install nodejs: `brew install nodejs`
+* Install bower: `npm install -g bower`
+* Install gulp: `npm install --global gulp`
+

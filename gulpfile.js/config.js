@@ -1,3 +1,9 @@
+/*
+  Gulp config
+  ===========
+  Set paths here
+*/
+
 module.exports = {
   project: './',
   bower: 'bower_components/',
@@ -14,7 +20,7 @@ module.exports = {
     js: './dist/js/',
     css: './dist/css/',
     images: './dist/images/',
-    pages: './dist/',
+    pages: './dist',
     styleguide: './dist/styleguide/'
   }
 }
