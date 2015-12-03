@@ -15,6 +15,7 @@
     "gulp-autoprefixer": "^2.1.0",
     "gulp-concat": "^2.5.2",
     "gulp-connect-php": "^0.0.5",
+    "gulp-cssmin": "^0.1.7",
     "gulp-data": "^1.2.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-include": "^2.0.2",
@@ -24,16 +25,15 @@
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.3",
+    "gulp-sass-lint": "^1.1.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-styledown": "0.0.2",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.5",
-    "gulp-cssmin": "^0.1.7",
     "require-dir": "^0.3.0"
   },
   "scripts": {
-    "postinstall": "bower install",
     "postinstall": "node postinstall.js"
   }
 }

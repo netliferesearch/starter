@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     rename = require('gulp-rename'), 
     browserSync = require('browser-sync'),
+    sassLint = require('gulp-sass-lint'),
     gutil = require('gulp-util');
 
 gulp.task('sass', function() {
@@ -33,5 +34,8 @@ gulp.task('sass', function() {
         .pipe(rename('main.min.css'))
         .pipe(gulp.dest(config.dist.css))
         .pipe(sass({errLogToConsole: true}))
+        .pipe(sassLint())
+        .pipe(sassLint.format())
+        .pipe(sassLint.failOnError())
         .pipe(browserSync.reload({stream: true}))
 });
