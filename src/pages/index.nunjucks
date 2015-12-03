@@ -1,0 +1,8 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block content %} 
+
+{{nav.active('home')}}
+	<h1>Find what you love and let it kill you</h1>
+{% endblock %}

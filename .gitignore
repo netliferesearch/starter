@@ -1,3 +1,9 @@
+
+# Dependencies #
+bower_components/
+node_modules/
+dist/
+
 # OS generated files #
 ######################
 .DS_Store
@@ -26,8 +32,11 @@ _themes/webdagene/bower_components
 ######################
 node_modules/
 bower_components/
+npm-debug.log
 
 # Sublime Text #
 ######################
 *.sublime-project
 *.sublime-workspace
+
+
