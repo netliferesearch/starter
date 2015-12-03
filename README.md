@@ -6,8 +6,7 @@
      \__ \ || (_| | |  | ||  __/ |   
     |___/\__\__,_|_|   \__\___|_|   
                                                                  
-## Netlife Research front-end starter for prototyping and production
-====================================================================
+    Netlife Research front-end starter for prototyping and production
 
 ### Gulp + Browsersync
 Browsersync with libsass and autoprefixer
