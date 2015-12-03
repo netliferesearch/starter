@@ -1,7 +1,5 @@
 # Styleguide
 
-Netlife Research
-
 Style and components library.
 * Content: <a href="#styles">Styles</a>, <a href="#buttons">Buttons</a>, <a href="#styles">Styles</a>, <a href="#table">Table</a>
 
@@ -9,9 +7,10 @@ Style and components library.
 
 ### Colors 
 Colors are used for functions.
-<code>$color-success: #67898</code><br />
-<code>$color-success: #67898</code><br />
-<code>$color-success: #67898</code>
+
+<code>$color-primary: #67898</code>
+
+<code>$color-secondary: #67898</code>
 
 	@example
 	<div class="sg-color">
@@ -23,10 +22,13 @@ Colors are used for functions.
 
 ### Typography
 Font is Gotham. 
-<br />
-<code>$font-sans--light</code><br />
-<code>$font-sans--book</code><br />
-<code>$font-sans--medium</code><br />
+
+<code>$font-sans--light</code>
+
+<code>$font-sans--book</code>
+
+<code>$font-sans--medium</code>
+
 <code>$font-sans--bold</code>
 
 

@@ -6,12 +6,11 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync');
 
 gulp.task('nunjucks', function() {
-    nunjucksRender.nunjucks.configure([config.src.layout]);
+    nunjucksRender.nunjucks.configure(config.src.layout);
     return gulp.src(config.src.pages)
     .pipe(data(function() {
       return require(config.src.data)
     }))
     .pipe(nunjucksRender())
-    .pipe(gulp.dest(config.src.pages))
-    .pipe(browserSync.reload({stream: true}))
-}); 
+    .pipe(gulp.dest(config.dist.pages))
+});

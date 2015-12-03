@@ -10,9 +10,9 @@ module.exports = {
   src: {
     js: 'js/**/*.js',
     scss: './scss/**/*.scss',
-    layout: '../src/layout/',
-    pages: '../src/pages/**/*.+(html|nunjucks)',
-    data: '../src/data/data.json',
+    layout: './src/layout/',
+    pages: './src/pages/**/*.+(html|nunjucks)',
+    data: '../../src/data/data.json',
     images: './src/images/**',
     styleguide: './styledown/*.md'
   },
@@ -20,7 +20,7 @@ module.exports = {
     js: './dist/js/',
     css: './dist/css/',
     images: './dist/images/',
-    pages: './dist',
+    pages: './dist/',
     styleguide: './dist/styleguide/'
   }
 }
