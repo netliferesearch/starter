@@ -37,5 +37,5 @@ https://github.com/styledown/styledown
 * Install homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 * Install nodejs: `brew install nodejs`
 * Install bower: `npm install -g bower`
-* Install gulp: `npm install --global gulp`
+* Install gulp: `npm install -g gulp`
 
