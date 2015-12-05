@@ -1,5 +1,13 @@
 {
 
+  "persons": [{
+      "name" : "Charles Bukowski"
+    }, {
+      "name" : "Jack Kerouac"
+    }, {
+      "name" : "Alan Kaufman"
+  }],
+
   "cards": [{
     "image": "../images/photo-1.jpg",
     "alt": "Image one alt text"
@@ -12,14 +20,6 @@
   }, {
     "image": "../images/photo-4.jpg",
     "alt": "Image three alt text"
-  }],
-
-  "persons": [{
-      "name" : "Charles Bukowski"
-    }, {
-      "name" : "Jack Kerouac"
-    }, {
-      "name" : "Alan Kaufman"
   }]
 
 }
