@@ -3,8 +3,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sassLint = require('gulp-sass-lint');
 
-  gulp.task('sass-lint', function () {
-  gulp.src(config.src.scss)
+gulp.task('sass-lint', function () {
+  gulp.src('./scss/**/*.scss')
     .pipe(sassLint())
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError())
