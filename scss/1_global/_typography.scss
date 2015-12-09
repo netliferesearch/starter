@@ -1,0 +1,164 @@
+article { max-width: 40em; margin: auto; padding: 1em; } // Temporary styling for <article>
+
+
+
+
+
+
+
+
+body {
+  font-family: 'Georgia', serif;
+  font-size: 100%;
+  line-height: 1.6;
+  color: DarkSlateGray;
+}
+
+
+// Headings
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+h1, h2,
+.h1, .h2 {
+  line-height: 1.1;
+}
+h3, h4,
+.h3, .h4 {
+  line-height: 1.3;
+}
+h1, .h1 {
+  font-size: 3rem;
+  letter-spacing: -0.025em;
+}
+h2, .h2 {
+  font-size: 2rem;
+  letter-spacing: -0.025em;
+}
+h3, .h3 {
+  font-size: 1.25rem;
+}
+h4, .h4 {
+  font-size: 1.125rem;
+}
+h5, .h5 {
+  font-size: 1rem;
+}
+h6, .h6 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+
+
+// Text Block Elements
+p, ul, ol, dl, pre, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+
+// Paragraphs
+p {
+  font-size: inherit;
+  line-height: 1.6;
+}
+p:only-of-type,
+p:last-child {
+  margin-bottom: 0;
+}
+
+// Lists
+ul, ol {
+  padding-left: 1.4rem;
+}
+dd {
+  margin-left: 0;
+}
+dd + dt, li {
+  margin-top: 0.6em;
+}
+
+// Code
+pre, code {
+  font-family: monospace;
+  background-color: WhiteSmoke;
+  border-radius: 3px;
+  padding: 0 0.25rem;
+}
+pre {}
+code {
+  font-size: 1.125rem;
+}
+pre > code {
+  border: 0;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+
+blockquote {
+  margin-left: 1.4rem;
+}
+blockquote > footer {
+  text-align: right;
+  margin-top: 0.6rem;
+}
+q {
+  font-style: italic;
+  quotes: '«' '»' "‘" "’"; // Norske anførselstegn
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fixed {
+  font-family: monotype;
+  font-size: 100%;
+  line-height: 1.4;
+}
+
+.quiet {
+  font-color: DimGray;
+}
+.loud {
+  font-color: Black;
+}
+
+.italic {
+  font-style: italic;
+}
+.bold   {
+  @extend .loud;
+  font-weight: 700;
+}
+
+.block-margins {
+  margin: 1em 0;
+}
+
+.unordered-list {
+  list-style-type: disc;
+}
+.ordered-list {
+  list-style: decimal;
+}
