@@ -1,0 +1,19 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+caption {
+  margin-bottom: 0.4rem;
+}
+th, td {
+  border-top: 1px solid LightGray;
+  vertical-align: top;
+  padding-right: 0.25em;
+}
+th + *,
+td + * {
+  border-left: 1px solid LightGray;
+  padding-left: 0.25em;
+}
