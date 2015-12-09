@@ -1,42 +1,120 @@
 <!-- index.nunjucks -->
 {% extends "layout.nunjucks" %}
-{% block content %} 
+{% block content %}
 {{nav.active('typo')}}
 <main>
-	<article>
-		<h1>Responsive Web Design</h1>
-		<p class="small">by <a href="#">Ethan Marcotte</a> May 25, 2010</p>
-		<p class="lead">The control which designers know in the print medium, and often desire in the web medium, is simply a function of the limitation of the printed page. We should embrace the fact that the web doesn’t have the same constraints, and design for this flexibility. But first, we must 'accept the ebb and flow of things.</p>
-		<p>
-		The English architect Christopher Wren once quipped that his chosen field “aims for Eternity,” and there’s something appealing about that formula: Unlike the web, which often feels like aiming for next week, architecture is a discipline very much defined by its permanence.
-		</p>
-		<blockquote>
-			<p>– A Dao of Web Design</p>
-			<cite>John Allsopp</cite>
-		</blockquote>
-		<p>
-		A building’s foundation defines its footprint, which defines its frame, which shapes the facade. Each phase of the architectural process is more immutable, more unchanging than the last. Creative decisions quite literally shape a physical space, defining the way in which people move through its confines for decades or even centuries.
-		</p>
-		<p>
-		Working on the web, however, is a wholly different matter. Our work is defined by its transience, often refined or replaced within a year or two. Inconsistent window widths, screen resolutions, user preferences, and our users’ installed fonts are but a few of the intangibles we negotiate when we publish our work, and over the years, we’ve become incredibly adept at doing so.
-		</p>
-		<p>
-		But the landscape is shifting, perhaps more quickly than we might like. Mobile browsing is expected to outpace desktop-based access within <a href="#">three to five years</a>. Two of the three dominant video game consoles have web browsers (and one of them is quite excellent). We’re designing for mice and keyboards, for T9 keypads, for handheld game controllers, for touch interfaces. In short, we’re faced with a greater number of devices, input modes, and browsers than ever before.
-		</p>
-		<h2>A flexible foundation</h2>
-		<p>
-		Let’s consider an example design. I’ve built a simple page for a hypothetical magazine; it’s a straightforward two-column layout built on a fluid grid, with not a few flexible images peppered throughout. As a long-time proponent of non-fixed layouts, I’ve long felt they were more “future proof” simply because they were layout agnostic. And to a certain extent, that’s true: flexible designs make no assumptions about a browser window’s width, and adapt beautifully to devices that have portrait and landscape modes.
-		</p>
-		<p>
-		But no design, fixed or fluid, scales seamlessly beyond the context for which it was originally intended. The example design scales perfectly well as the browser window resizes, but stress points quickly appear at lower resolutions. When viewed at viewport smaller than 800×600, the illustration behind the logo quickly becomes cropped, navigation text can wrap in an unseemly manner, and the images along the bottom become too compact to appear legible. And it’s not just the lower end of the resolution spectrum that’s affected: when viewing the design on a widescreen display, the images quickly grow to unwieldy sizes, crowding out the surrounding context.
-		</p>
-		<p>
-		In short, our flexible design works well enough in the desktop-centric context for which it was designed, but isn’t optimized to extend far beyond that.
-		</p>
-		<h2>Becoming responsive</h2>
-		<p>
-		Recently, an emergent discipline called “responsive architecture” has begun asking how physical spaces can respond to the presence of people passing through them. Through a combination of embedded robotics and tensile materials, architects are experimenting with art installations and wall structures that bend, flex, and expand as crowds approach them. Motion sensors can be paired with climate control systems to adjust a room’s temperature and ambient lighting as it fills with people. Companies have already produced “smart glass technology” that can automatically become opaque when a room’s occupants reach a certain density threshold, giving them an additional layer of privacy.
-		</p>
-	</article>
+  <article>
+  <h1>Header One</h1>
+
+  <p>Lorem ipsum <em>emphasised text</em> dolor sit amet, <strong>strong text</strong> consectetur adipisicing elit, <abbr title="">abbreviated text</abbr> sed do eiusmod tempor <acronym title="">acronym text</acronym> incididunt ut labore et dolore magna aliqua. Ut <q>quoted <q>text</q></q> enim ad minim veniam, quis nostrud exercitation <a href="/">link text</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <del>deleted text</del> <ins>inserted text</ins> irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat <code>code text</code> cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <blockquote>
+    <p>Blockquote. Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat   cupidatat non proident, sunt in culpa qui officia</p>
+    <footer><cite><a href="/">Cite author with link text</a></cite>, 2008</footer>
+  </blockquote>
+
+
+  <h2>Header 2</h2>
+
+  <p>Extended paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <ol>
+    <li>Ordered list</li>
+    <li>Item 2 Consectetur adipisicing elit</li>
+    <li>Item 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+    incididunt ut labore et dolore magna aliqua</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ol>
+
+  <h3>Header 3</h3>
+
+  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+  <ul>
+    <li>Unordered list</li>
+    <li>Consectetur adipisicing elit</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+    <li>Item</li>
+    <li>Item</li>
+    <li>Item</li>
+  </ul>
+
+  <h4>Header 4</h4>
+
+  <p>Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+  <pre><code>pre, code {
+  line-height: 1.4em;
+}</code></pre>
+
+  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+  <h5>Header 5</h5>
+
+  <dl>
+    <dt>Definition list</dt>
+    <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+    <dt>Lorem ipsum dolor sit amet</dt>
+    <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+    <dt>Lorem ipsum dolor sit amet</dt>
+    <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+    <dt>Lorem ipsum dolor sit amet</dt>
+    <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+  </dl>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+  <h6>Header 6</h6>
+
+  <table summary="Table summary">
+    <caption>Table Caption</caption>
+    <thead>
+      <tr>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Content</td>
+        <td>1</td>
+        <td>a</td>
+      </tr>
+      <tr>
+        <td>Content</td>
+        <td>2</td>
+        <td>b</td>
+      </tr>
+      <tr>
+        <td>Content</td>
+        <td>3</td>
+        <td>c</td>
+      </tr>
+      <tr>
+        <td>Content</td>
+        <td>4</td>
+        <td>d</td>
+      </tr>
+      <tr>
+        <td>Content</td>
+        <td>5</td>
+        <td>e</td>
+      </tr>
+      <tr>
+        <td>Content</td>
+        <td>6</td>
+        <td>f</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <address>Author text</address>
+  </article>
 </main>
 {% endblock %}
