@@ -58,22 +58,25 @@ h6, .h6 {
 p, ul, ol, dl, pre, blockquote, table {
   margin-top: 0;
   margin-bottom: 2em;
-}
 
+  &:only-child,
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
 
 // Paragraphs
 p {
   font-size: inherit;
   line-height: 1.6;
 }
-p:only-of-type,
-p:last-child {
-  margin-bottom: 0;
-}
 
 // Lists
 ul, ol {
   padding-left: 1.4rem;
+}
+dt {
+  font-weight: bold;
 }
 dd {
   margin-left: 0;
@@ -104,6 +107,9 @@ pre > code {
 blockquote {
   margin-left: 1.4rem;
 }
+blockquote > p:only-of-type {
+  margin-bottom: 0;
+}
 blockquote > footer {
   text-align: right;
   margin-top: 0.6rem;
@@ -112,53 +118,6 @@ q {
   font-style: italic;
   quotes: '«' '»' "‘" "’"; // Norske anførselstegn
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.fixed {
-  font-family: monotype;
-  font-size: 100%;
-  line-height: 1.4;
-}
-
-.quiet {
-  font-color: DimGray;
-}
-.loud {
-  font-color: Black;
-}
-
-.italic {
-  font-style: italic;
-}
-.bold   {
-  @extend .loud;
-  font-weight: 700;
-}
-
-.block-margins {
-  margin: 1em 0;
-}
-
-.unordered-list {
-  list-style-type: disc;
-}
-.ordered-list {
-  list-style: decimal;
+address {
+  font-style: normal;
 }
