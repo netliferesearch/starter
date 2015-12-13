@@ -1,7 +1,7 @@
 <!-- layout.nunjucks -->
 
 <!doctype html>
-  
+
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8">
@@ -17,12 +17,12 @@
   </head>
 
   <body>
-    <h2> Hei </h2>
+    <h3>Netlife Research starter</h3>
     <nav>
-      {% import 'partials/navigation.nunjucks' as nav %}  
+      {% import 'partials/navigation.nunjucks' as nav %}
     </nav>
-    {% block content %} 
-    <!-- Pages goes here -->
+    {% block content %}
+    <!-- Pages conent goes here -->
     {% endblock %}
     <footer>
     </footer>

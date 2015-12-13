@@ -4,4 +4,4 @@
 		<a href="styleguide" class="">Styleguide</a>
 		<a href="typo.html" class="{%if activePage == 'typo' %} active {% endif %}">Typographic test</a>
 	</nav>
-{% endmacro %} 
+{% endmacro %}

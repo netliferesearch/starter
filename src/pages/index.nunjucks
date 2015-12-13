@@ -1,16 +1,16 @@
 <!-- index.nunjucks -->
 {% extends "layout.nunjucks" %}
 
-{% block content %} 
+{% block content %}
 
-{{nav.active('home')}}
-	<h1>Find what you love and let it kill you</h1>
-  
+	{{nav.active('home')}}
+
+	<h1>Find what you love and let it kill</h1>
+
   <ul>
   {% for person in persons %}
       <li>{{ person.name }}</li>
   {% endfor %}
   </ul>
-
 
 {% endblock %}
