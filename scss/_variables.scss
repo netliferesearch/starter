@@ -1,0 +1,44 @@
+/*------------------------------------------------------*\
+   Colors
+\*------------------------------------------------------*/
+
+$color-primary    : #a8cd25;
+$color-secondary  : #0059b3;
+$color-third      : #cc00cc;
+
+$color-black      : #000;
+$color-white      : #fff;
+$color-darkGray   : DarkSlateGray;
+$color-gray       : WhiteSmoke;
+$color-lightGray  : gray;
+$text-color       : $color-darkGray;
+
+/*------------------------------------------------------*\
+   Spacing
+\*------------------------------------------------------*/
+
+$spacing        : 20px;
+$spacing-small  : 10px;
+$spacing-medium : 30px;
+$spacing-large  : 50px;
+
+/*------------------------------------------------------*\
+   Breakpoints
+\*------------------------------------------------------*/
+
+$breakpoints: (
+  small: 480px,
+  medium: 720px,
+  large: 960px,
+  wide: 1200px
+);
+
+/*------------------------------------------------------*\
+   Typography
+\*------------------------------------------------------*/
+
+$font-sans--light     : 'Gotham Light', 'Helvetica', sans-serif;
+$font-sans--regular   : 'Gotham Book', 'Helvetica', sans-serif;
+$font-sans--medium    : 'Gotham Medium', 'Helvetica', sans-serif;
+$font-sans--bold      : 'Gotham Bold', 'Helvetica', sans-serif;
+$font-serif           : 'Merriweather', 'Georgia', serif;

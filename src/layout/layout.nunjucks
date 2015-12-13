@@ -17,6 +17,7 @@
   </head>
 
   <body>
+    <h2> Hei </h2>
     <nav>
       {% import 'partials/navigation.nunjucks' as nav %}  
     </nav>

@@ -1,19 +1,11 @@
 article { max-width: 40em; margin: auto; padding: 1em; } // Temporary styling for <article>
 
-
-
-
-
-
-
-
 body {
   font-family: 'Georgia', serif;
   font-size: 100%;
   line-height: 1.6;
-  color: DarkSlateGray;
+  color: $text-color;
 }
-
 
 // Headings
 h1, h2, h3, h4, h5, h6,
@@ -52,8 +44,6 @@ h6, .h6 {
   text-transform: uppercase;
 }
 
-
-
 // Text Block Elements
 p, ul, ol, dl, pre, blockquote, table {
   margin-top: 0;
@@ -88,7 +78,7 @@ dd + dt, li {
 // Code
 pre, code {
   font-family: monospace;
-  background-color: WhiteSmoke;
+  background-color: $color-lightGray;
   border-radius: 3px;
   padding: 0 0.25rem;
 }
@@ -102,7 +92,6 @@ pre > code {
   padding: 0;
   border-radius: 0;
 }
-
 
 blockquote {
   margin-left: 1.4rem;
