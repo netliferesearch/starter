@@ -14,6 +14,10 @@ Wrap input fields in labels. The label provides margin.
 		<input type="text" disabled/>
 	</label>
 
+### Textarea fields
+Wrap textarea fields in labels. The label provides margin.
+
+	@example
 	<label>
 		Label
 		<textarea></textarea>
@@ -32,11 +36,11 @@ Form button without classes.
 	<button type="button" disabled>Disabled</button>
 
 ### Select fields
-Select fields without classes.
+Select fields with and without custom styling with a `div.select` container.
 
 	@example
 	<label>
-		Without classes
+		Without custom styling
 		<select>
 			<option>One</option>
 			<option>Two</option>
@@ -44,7 +48,7 @@ Select fields without classes.
 	</label>
 
 	<label>
-		With classes
+		With custom styling
 		<div class="select">
 			<select>
 				<option>One</option>
