@@ -36,11 +36,22 @@ Select fields without classes.
 
 	@example
 	<label>
-	Label
-	<select>
-		<option>One</option>
-		<option>Two</option>
-	</select>
+		Without classes
+		<select>
+			<option>One</option>
+			<option>Two</option>
+		</select>
+	</label>
+
+	<label>
+		With classes
+		<div class="select">
+			<select>
+				<option>One</option>
+				<option>Two</option>
+			</select>
+		</div>
+	</label>
 
 ### Fieldset and legends
 Used to group form elements. Always use legends together with fieldsets.

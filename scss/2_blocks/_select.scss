@@ -1,0 +1,49 @@
+.select {
+  display: block;
+  position: relative;
+  max-width: 15em;
+  select {
+    display: block;
+    width: 100%;
+    padding: 0.5em 1em;
+    padding-right: 2.5em;
+    background-color: $color-lightGray;
+    color: $color-black;
+    border: 1px solid $color-gray;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    // Hide the arrow in IE10 and up
+    &::-ms-expand {
+      display: none;
+    }
+    // Undo the Firefox inner focus ring
+    &:focus:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+    &:focus, &:hover {
+
+    }
+    &:active {
+      // Styling here will affect the dropdown list in IE
+
+    }
+  }
+  // Dropdown arrow
+  &:after {
+    content: '';
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: calc(50% - 0.75em);
+    right: 1em;
+    width: 1em;
+    height: 1em;
+    background-color: $color-lightGray;
+    border-left: 2px solid $color-black;
+    border-bottom: 2px solid $color-black;
+    transform: rotate(-45deg);
+  }
+}

@@ -24,7 +24,8 @@
         '1_global/forms';
 
 // 2. Blocks
-@import '2_blocks/button';
+@import '2_blocks/button',
+        '2_blocks/select';
 
 // Styleguide
 @import 'styleguide';
