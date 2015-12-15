@@ -7,7 +7,7 @@
 @mixin breakpoint($breakpoint) {
   $value: map-get($breakpoints, $breakpoint);
   @if $value != null {
-    @media (min-width: $value) {
+    @media (min-width: rem-calc($value)) {
       @content;
     }
   }
@@ -26,8 +26,6 @@
       font-size: $fs-font-size;
     }
     @else {
-      // If $fs-font-size is a key that exists in
-      // $fs-breakpoints, use the value
       @if map-has-key($fs-breakpoints, $fs-breakpoint) {
         $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
       }
