@@ -15,6 +15,7 @@
     "fastclick": "~1.0.6",
     "jquery": "~2.1.4",
     "modernizr": "~3.0.0",
-    "normalize-css": "normalize.css#~3.0.3"
+    "normalize-css": "normalize.css#~3.0.3",
+    "html5shiv": "~3.7.3"
   }
 }

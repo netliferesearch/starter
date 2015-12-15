@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.min.css?v=1.0">
     <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="../bower_components/html5shiv/dist/html5shiv.min.js"></script>
     <![endif]-->
     <script src="js/main.min.js"></script>
   </head>
