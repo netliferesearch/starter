@@ -1,11 +1,16 @@
 # Styleguide
 
 Style and components library.
-* Content: <a href="#styles">Styles</a>, <a href="#buttons">Buttons</a>, <a href="#styles">Styles</a>, <a href="#table">Table</a>
+
+Content:
+- [Styles](#styles)
+- [Buttons](#buttons)
+- [Styles](#styles)
+- [Table](#table)
 
 ## Styles
 
-### Colors 
+### Colors
 Colors are used for functions.
 
 <code>$color-primary: #67898</code>
@@ -21,7 +26,7 @@ Colors are used for functions.
 	</div>
 
 ### Typography
-Font is Gotham. 
+Font is Gotham.
 
 <code>$font-sans--light</code>
 
@@ -38,7 +43,7 @@ Font is Gotham.
     123456789!"#$%&/()</div>
     <div class="sg-typo gotham-bold">ABCDEFGHIJKLMOPQRSTUVWXYZÆØÅ<br />
     abcdefghijklmnopqrsyuvwxyzæøå<br />
-    123456789!"#$%&/()</div>	
+    123456789!"#$%&/()</div>
 
 ## Buttons
 
