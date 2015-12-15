@@ -2,7 +2,7 @@
 // Labels
 label {
   display: block;
-  margin-bottom: 2em;
+  margin-bottom: $spacing;
 }
 
 // Inputs and textareas
@@ -20,8 +20,9 @@ textarea {
 }
 
 // Checkboxes and radiobuttons
-// TODO Should a higher specifity like [type=checkboxes] be used?
-label input:first-child {
+// TODO Could a lower specificity than [type] be used? Classes will not overwrite this.
+label input[type="checkbox"]:first-child,
+label input[type="radio"]:first-child {
   display: inline-block;
   margin-right: 0.5em;
 }
@@ -45,6 +46,7 @@ button {
 }
 
 // Select fields
+// See blocks/_select.scss
 select {
   display: block;
 }
@@ -53,7 +55,8 @@ select {
 fieldset {
   border: none;
   padding: 0;
+  margin-bottom: $spacing;
   legend {
-
+    @extend .h4;
   }
 }
