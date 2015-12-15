@@ -1,0 +1,59 @@
+
+// Labels
+label {
+  display: block;
+  margin-bottom: 2em;
+}
+
+// Inputs and textareas
+input,
+textarea {
+  display: block;
+  padding: 0.5em 1em;
+  border: 1px solid $color-gray;
+  &:focus {
+
+  }
+  &:disabled {
+    border: 1px solid $color-lightGray;
+  }
+}
+
+// Checkboxes and radiobuttons
+// TODO Should a higher specifity like [type=checkboxes] be used?
+label input:first-child {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+// Buttons
+button {
+  border: none;
+  background: $color-secondary;
+  color: $color-white;
+  padding: 0.5em 1em;
+  &:focus, &:hover {
+
+  }
+  &:active {
+
+  }
+  &:disabled {
+    color: $color-gray;
+    background: $color-lightGray;
+  }
+}
+
+// Select fields
+select {
+  display: block;
+}
+
+// Fieldsets and legends
+fieldset {
+  border: none;
+  padding: 0;
+  legend {
+
+  }
+}
