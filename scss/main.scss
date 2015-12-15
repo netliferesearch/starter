@@ -4,7 +4,8 @@
   https://github.com/netliferesearch/starter
 \*------------------------------------------------------*/
 
-@import "../bower_components/normalize-css/normalize";
+@import "../bower_components/normalize-css/normalize",
+        "../bower_components/susy/sass/susy";
 
 // Utilities
 @import 'variables',
