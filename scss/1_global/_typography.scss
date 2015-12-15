@@ -1,0 +1,122 @@
+article { max-width: 40em; margin: auto; padding: 1em; } // Temporary styling for <article>
+
+body {
+  font-family: 'Georgia', serif;
+  font-size: 100%;
+  line-height: 1.6;
+  color: $text-color;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+h1, h2,
+.h1, .h2 {
+  line-height: 1.1;
+}
+h3, h4,
+.h3, .h4 {
+  line-height: 1.3;
+}
+
+$h1-font-sizes: (
+  null :  2rem,
+  small:  2.5rem,
+  medium: 3rem,
+  large:  4rem,
+  wide:   6rem
+);
+
+h1, .h1 {
+  @include font-size($h1-font-sizes);
+  letter-spacing: -0.025em;
+}
+h2, .h2 {
+  font-size: 2rem;
+  letter-spacing: -0.025em;
+}
+h3, .h3 {
+  font-size: 1.25rem;
+}
+h4, .h4 {
+  font-size: 1.125rem;
+}
+h5, .h5 {
+  font-size: 1rem;
+}
+h6, .h6 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+// Text Block Elements
+p, ul, ol, dl, pre, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 2em;
+
+  &:only-child,
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Paragraphs
+p {
+  font-size: inherit;
+  line-height: 1.6;
+}
+
+// Lists
+ul, ol {
+  padding-left: 1.4rem;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0;
+}
+dd + dt, li {
+  margin-top: 0.6em;
+}
+
+// Code
+pre, code {
+  font-family: monospace;
+  background-color: $color-lightGray;
+  border-radius: 3px;
+  padding: 0 0.25rem;
+}
+pre {}
+code {
+  font-size: 1.125rem;
+}
+pre > code {
+  border: 0;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+blockquote {
+  margin-left: 1.4rem;
+}
+blockquote > p:only-of-type {
+  margin-bottom: 0;
+}
+blockquote > footer {
+  text-align: right;
+  margin-top: 0.6rem;
+}
+q {
+  font-style: italic;
+  quotes: '«' '»' "‘" "’"; // Norske anførselstegn
+}
+address {
+  font-style: normal;
+}

@@ -1,19 +1,19 @@
 
 var gulp = require('gulp'),
-    config = require('../config'), 
+    config = require('../config'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     concat = require('gulp-concat'),
     autoprefixer = require('gulp-autoprefixer'),
     minifyCSS = require('gulp-minify-css'),
-    rename = require('gulp-rename'), 
+    rename = require('gulp-rename'),
     browserSync = require('browser-sync'),
     gutil = require('gulp-util');
 
 gulp.task('sass', function() {
     return gulp.src(config.src.scss)
         .pipe(sourcemaps.init())
-        .pipe(sass({ 
+        .pipe(sass({
             style: 'expanded'
             })
             .on('error', function(err){

@@ -10,8 +10,8 @@ module.exports = {
   src: {
     js: 'js/**/*.js',
     scss: './scss/**/*.scss',
-    layout: './src/layout/',
-    pages: './src/pages/**/*.+(html|nunjucks)',
+    layout: 'src/layout/',
+    pages: 'src/pages/*.+(html|nunjucks)',
     data: '../../src/data/data.json',
     images: './src/images/**',
     styleguide: './styledown/*.md'

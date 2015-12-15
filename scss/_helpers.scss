@@ -1,9 +1,9 @@
 /*------------------------------------------------------*\
-   Px to rem
+  Vertical align
 \*------------------------------------------------------*/
 
-// rem-calc(00px)
-@function rem-calc($size) {
-  $remSize: $size / 16px;
-  @return #{$remSize}rem;
+%verticalAlign {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }

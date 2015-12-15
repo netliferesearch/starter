@@ -1,5 +1,30 @@
-div {
-    h1 {
-        font-size: 12rem;
-    }
-}
+/*------------------------------------------------------*\
+  Starter by Netlife Research
+  ---------------------------
+  https://github.com/netliferesearch/starter
+\*------------------------------------------------------*/
+
+@import "../bower_components/normalize-css/normalize",
+        "../bower_components/susy/sass/susy";
+
+// Utilities
+@import 'variables',
+        'functions',
+        'mixins',
+        'icons',
+        'grid',
+        'animations';
+
+
+// 1. Global
+@import '1_global/body',
+        '1_global/typography',
+        '1_global/lists',
+        '1_global/tables',
+        '1_global/forms';
+
+// 2. Blocks
+@import '2_blocks/button';
+
+// Styleguide
+@import 'styleguide';
