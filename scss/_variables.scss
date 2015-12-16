@@ -11,7 +11,7 @@ $color-white      : #fff;
 $color-darkGray   : DarkSlateGray;
 $color-gray       : gray;
 $color-lightGray  : WhiteSmoke;
-$text-color       : $color-darkGray;
+$color-text       : $color-darkGray;
 
 /*------------------------------------------------------*\
    Spacing
@@ -42,3 +42,14 @@ $font-sans--regular   : 'Gotham Book', 'Helvetica', sans-serif;
 $font-sans--medium    : 'Gotham Medium', 'Helvetica', sans-serif;
 $font-sans--bold      : 'Gotham Bold', 'Helvetica', sans-serif;
 $font-serif           : 'Merriweather', 'Georgia', serif;
+
+$h1-font-sizes: (
+  null :  2rem,
+  small:  2.5rem,
+  medium: 3rem,
+  large:  4rem
+) !default;
+
+h1 {
+  // @include font-size($h1-font-sizes);
+}
