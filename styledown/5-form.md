@@ -75,8 +75,8 @@ Checkboxes without classes.
 	<label><input type="checkbox" disabled/> Disabled</label>
 	<label><input type="checkbox" disabled checked/> Disabled and checked</label>
 
-### Radioboxes
-Radioboxes without classes.
+### Radiobuttons
+Radiobuttons without classes.
 
 	@example
 	<label><input type="radio"/> Label</label>
