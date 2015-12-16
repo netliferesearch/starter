@@ -11,39 +11,25 @@
   width: 100%;
   display: block;
   float: left;
+
   &__swatch {
     border: 1px solid #e2e2e2;
     width: 100px;
     height: 100px;
-    background: #eee;
+    background-color: #eee;
     margin-bottom: 10px;
     border-radius: 100px;
     float: left;
     margin-right: 30px;
-    &.color-primary {
-      background: $color-primary;
-    }
-    &.color-secondary {
-      background: $color-secondary;
-    }
-    &.color-third {
-      background: $color-third;
-    }
-    &.color-black {
-      background: $color-black;
-    }
-    &.color-white {
-      background: $color-white;
-    }
-    &.color-lightGray {
-      background: $color-lightGray;
-    }
-    &.color-gray {
-      background: $color-gray;
-    }
-    &.color-darkGray {
-      background: $color-darkGray;
-    }
+
+    &.color-primary   { background-color: $color-primary;   }
+    &.color-secondary { background-color: $color-secondary; }
+    &.color-third     { background-color: $color-third;     }
+    &.color-black     { background-color: $color-black;     }
+    &.color-white     { background-color: $color-white;     }
+    &.color-lightGray { background-color: $color-lightGray; }
+    &.color-gray      { background-color: $color-gray;      }
+    &.color-darkGray  { background-color: $color-darkGray;  }
   }
 }
 
