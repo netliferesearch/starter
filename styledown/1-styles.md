@@ -16,7 +16,7 @@ Colors is defined with variables:
 		<div class="sg-color__swatch color-lightgGray"></div>
 	</div>
 
-### Typography
+### Fonts
 
 `$font-sans--light` `$font-sans--book` `$font-sans--medium` `$font-sans--bold`
 
