@@ -33,6 +33,47 @@
   }
 }
 
+// Animations
+
+.animation {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 2rem;
+  background: $color-gray;
+  display: inline-block;
+  &__preview {
+    display: inline-block;
+    background: $color-primary;
+    width: 5rem;
+    height: 5rem;
+    margin-right: 3rem;
+  }
+  &--scaleUp:hover {
+    > .animation__preview {
+      @extend %scaleUp;
+    }
+  }
+  &--slideFromLeft:hover {
+    > .animation__preview {
+      @extend %slideFromLeft;
+    }
+  }
+  &--slideFromRight:hover {
+    > .animation__preview {
+      @extend %slideFromRight;
+    }
+  }
+  &--rotate:hover {
+    > .animation__preview {
+      @extend %rotate;
+    }
+  }
+  &--shake:hover {
+    > .animation__preview {
+      @extend %shake;
+    }
+  }
+}
 
 // Rest code first-child style
 
