@@ -16,9 +16,7 @@
   }
 }
 
-/*------------------------------------------------------*\
-  Font sizes iteration
-\*------------------------------------------------------*/
+// Font size iteration
 
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
   @each $fs-breakpoint, $fs-font-size in $fs-map {
