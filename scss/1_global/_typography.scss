@@ -3,7 +3,7 @@ article { max-width: 40em; margin: auto; padding: 1em; } // Temporary styling fo
 body {
   font-family: 'Georgia', serif;
   line-height: 1.6;
-  color: $color-text;
+  color: color(gray, dark);
 }
 
 // Headings
@@ -24,7 +24,6 @@ h3, h4,
 }
 
 h1, .h1 {
-  font-size: 3rem;
   letter-spacing: -0.025em;
 }
 h2, .h2 {
@@ -79,7 +78,7 @@ dd + dt, li {
 // Code
 pre, code {
   font-family: monospace;
-  background-color: $color-lightGray;
+  background-color: color(gray, light);
   border-radius: 3px;
   padding: 0 0.25rem;
 }

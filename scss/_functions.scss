@@ -4,6 +4,30 @@
 
 // rem-calc(00px)
 @function rem-calc($size) {
-  $remSize: $size / 16px;
+  $remSize: $size / 16;
   @return #{$remSize}rem;
+}
+
+// colors
+
+@function color($color, $tone:null) {
+  @if map-has-key($colors, $color) {
+    @if ($tone != null) {
+      @return map-get(map-get($colors, $color), $tone);
+    } @else {
+      @return map-get($colors, $color);
+    }
+  }
+  @warn "`#{$color}` is not in color map";
+  @return null;
+}
+
+// spacing
+
+@function spacing($spacing) {
+  @if map-has-key($spacings, $spacing) {
+    @return map-get($spacings,$spacing);
+  }
+  @warn "`#{$spacing}` is not in spacing map";
+  @return null;
 }

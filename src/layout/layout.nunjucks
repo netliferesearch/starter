@@ -9,7 +9,8 @@
       <title>Netlife Research - Starter</title>
     <meta name="description" content="Starter">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/main.min.css?v=1.0">
+    <link rel="stylesheet" href="css/main.css?v=1.0">
+    <!--<link rel="stylesheet" href="css/main.min.css?v=1.0">-->
     <!--[if lt IE 9]>
       <script src="../bower_components/html5shiv/dist/html5shiv.min.js"></script>
     <![endif]-->
@@ -17,7 +18,7 @@
   </head>
 
   <body>
-    <h3>Netlife Research starter</h3>
+    <h3>Netlife Starter</h3>
     <nav>
       {% import 'partials/navigation.nunjucks' as nav %}
     </nav>

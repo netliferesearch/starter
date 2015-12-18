@@ -1,7 +1,7 @@
-
 /*------------------------------------------------------*\
   Styleguide
 \*------------------------------------------------------*/
+
 @import 'variables';
 
 .sg-color {
@@ -22,14 +22,14 @@
     float: left;
     margin-right: 30px;
 
-    &.color-primary   { background-color: $color-primary;   }
-    &.color-secondary { background-color: $color-secondary; }
-    &.color-third     { background-color: $color-third;     }
-    &.color-black     { background-color: $color-black;     }
-    &.color-white     { background-color: $color-white;     }
-    &.color-lightGray { background-color: $color-lightGray; }
-    &.color-gray      { background-color: $color-gray;      }
-    &.color-darkGray  { background-color: $color-darkGray;  }
+    &.color-primary   { background-color: color(primary); }
+    &.color-secondary { background-color: color(secondary); }
+    &.color-third     { background-color: color(third); }
+    &.color-black     { background-color: color(black); }
+    &.color-white     { background-color: color(white); }
+    &.color-lightGray { background-color: color(gray, light); }
+    &.color-gray      { background-color: color(gray, base); }
+    &.color-darkGray  { background-color: color(gray, dark); }
   }
 }
 
@@ -39,11 +39,11 @@
   width: 5rem;
   height: 5rem;
   margin-right: 2rem;
-  background: $color-gray;
+  background: color(gray, base);
   display: inline-block;
   &__preview {
     display: inline-block;
-    background: $color-primary;
+    background: color(primary);
     width: 5rem;
     height: 5rem;
     margin-right: 3rem;

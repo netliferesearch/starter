@@ -2,25 +2,28 @@
    Colors
 \*------------------------------------------------------*/
 
-$color-primary    : #a8cd25;
-$color-secondary  : #0059b3;
-$color-third      : #cc00cc;
-
-$color-black      : #000;
-$color-white      : #fff;
-$color-darkGray   : DarkSlateGray;
-$color-gray       : gray;
-$color-lightGray  : WhiteSmoke;
-$color-text       : $color-darkGray;
+$colors: (
+  primary: #a8cd25,
+  secondary: #0059b3,
+  third: #cc00cc,
+  black: #000,
+  white: #fff,
+  gray: (
+    base: gray,
+    light: WhiteSmoke,
+    dark: DarkSlateGray
+  )
+);
 
 /*------------------------------------------------------*\
    Spacing
 \*------------------------------------------------------*/
 
-$spacing        : 20px;
-$spacing-small  : 10px;
-$spacing-medium : 30px;
-$spacing-large  : 50px;
+$spacings: (
+  small: 5px,
+  medium: 25px,
+  large: 50px
+);
 
 /*------------------------------------------------------*\
    Breakpoints
@@ -37,11 +40,17 @@ $breakpoints: (
    Typography
 \*------------------------------------------------------*/
 
-$font-sans--light     : 'Gotham Light', 'Helvetica', sans-serif;
-$font-sans--regular   : 'Gotham Book', 'Helvetica', sans-serif;
-$font-sans--medium    : 'Gotham Medium', 'Helvetica', sans-serif;
-$font-sans--bold      : 'Gotham Bold', 'Helvetica', sans-serif;
-$font-serif           : 'Merriweather', 'Georgia', serif;
+$fonts: (
+  sans: (
+    light: #{'Gotham Light', 'Helvetica', sans-serif},
+    regular: #{'Gotham Book', 'Helvetica', sans-serif},
+    medium: #{'Gotham Medium', 'Helvetica', sans-serif},
+    bold:  #{'Gotham Bold', 'Helvetica', sans-serif}
+  ),
+  serif: (
+    regular: #{'Merriweather', 'Georgia', serif}
+  )
+);
 
 $header-sizes: (
   small: (
@@ -53,7 +62,7 @@ $header-sizes: (
     'h6': 16,
   ),
   medium: (
-    'h1': 48,
+    'h1': 148,
     'h2': 40,
     'h3': 31,
     'h4': 25,

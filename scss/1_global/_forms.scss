@@ -2,7 +2,7 @@
 // Labels
 label {
   display: block;
-  margin-bottom: $spacing;
+  margin-bottom: spacing(small);
 }
 
 // Inputs and textareas
@@ -10,12 +10,12 @@ input,
 textarea {
   display: block;
   padding: 0.5em 1em;
-  border: 1px solid $color-gray;
+  border: 1px solid color(gray, base);
   &:focus {
 
   }
   &:disabled {
-    border: 1px solid $color-lightGray;
+    border: 1px solid color(gray,light);
   }
 }
 
@@ -30,8 +30,8 @@ label input[type="radio"]:first-child {
 // Buttons
 button {
   border: none;
-  background: $color-secondary;
-  color: $color-white;
+  background: color(secondary);
+  color: color(white);
   padding: 0.5em 1em;
   &:focus, &:hover {
 
@@ -40,8 +40,8 @@ button {
 
   }
   &:disabled {
-    color: $color-gray;
-    background: $color-lightGray;
+    color: color(gray, base);
+    background: color(gray, light);
   }
 }
 
@@ -55,7 +55,7 @@ select {
 fieldset {
   border: none;
   padding: 0;
-  margin-bottom: $spacing;
+  margin-bottom: spacing(small);
   legend {
     @extend .h4;
   }
