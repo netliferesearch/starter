@@ -20,9 +20,9 @@ $colors: (
 \*------------------------------------------------------*/
 
 $spacings: (
-  small: 5px,
-  medium: 25px,
-  large: 50px
+  small: .5rem,
+  medium: 1rem,
+  large: 2rem
 );
 
 /*------------------------------------------------------*\
@@ -43,13 +43,13 @@ $breakpoints: (
 // TODO: Make a functions to handle fonts
 $fonts: (
   sans: (
-    light: #{'Gotham Light', 'Helvetica', sans-serif},
-    regular: #{'Gotham Book', 'Helvetica', sans-serif},
-    medium: #{'Gotham Medium', 'Helvetica', sans-serif},
-    bold:  #{'Gotham Bold', 'Helvetica', sans-serif}
+    light: "'Gotham Light', 'Helvetica', sans-serif",
+    regular: "'Gotham Book', 'Helvetica', sans-serif",
+    medium: "'Gotham Medium', 'Helvetica', sans-serif",
+    bold:  "'Gotham Bold', 'Helvetica', sans-serif"
   ),
   serif: (
-    regular: #{'Merriweather', 'Georgia', serif}
+    regular: "'Merriweather', 'Georgia', serif"
   )
 );
 

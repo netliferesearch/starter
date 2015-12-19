@@ -24,7 +24,7 @@ textarea {
 label input[type="checkbox"]:first-child,
 label input[type="radio"]:first-child {
   display: inline-block;
-  margin-right: 0.5em;
+  margin-right:spacing(small);
 }
 
 // Buttons
@@ -32,7 +32,7 @@ button {
   border: none;
   background: color(secondary);
   color: color(white);
-  padding: 0.5em 1em;
+  padding: spacing(small) spacing(medium);
   &:focus, &:hover {
 
   }

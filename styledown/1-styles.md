@@ -1,8 +1,13 @@
 ## Styles
 
 ### Colors
-Colors is defined with variables:
-`$color-primary` `$color-secondary` `$color-third` `$color-black` `$color-white` `$color-gray` `$color-lightGray`
+Colors is generated from a map in `_variables.scss`.
+
+Syntax: `color(color, tone[optional])`
+
+Example:
+`color: color(primary)` or
+`color: color(gray, light)`
 
 	@example
 	<div class="sg-color">

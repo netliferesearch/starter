@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     gutil = require('gulp-util');
 
 gulp.task('sass', function() {
-    return gulp.src(config.src.scss )
+    return gulp.src(config.src.scss)
       .pipe(sourcemaps.init())
       .pipe(sass({
         style: 'expanded'
