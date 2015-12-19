@@ -4,7 +4,8 @@
   https://github.com/netliferesearch/starter
 \*------------------------------------------------------*/
 
-@import 
+// TODO: Find a smart wat yo include Normalize (css import mess up the sourcemap)
+@import //'../bower_components/normalize-css/normalize',
         '../bower_components/susy/sass/susy';
 
 // Utilities

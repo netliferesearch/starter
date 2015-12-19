@@ -1,0 +1,45 @@
+
+// WillGrid
+
+// Grid, function
+
+@function split-col-width-value($col-width, $request: fraction) {
+  $fraction: false;
+  @each $var in $col-width {
+    @if (type-of($var) == 'string') {
+    } @else {
+      @if (type-of($var) == 'number') {
+        $fraction: $var;
+      }
+    }
+  }
+  @if $request == 'fraction' {
+    @return $fraction;
+  }
+}
+
+// Grid, span
+
+@mixin span($col-width: 1, $padding: "0") {
+  $fraction: split-col-width-value($col-width,fraction);
+  width: percentage($fraction);
+  @if $padding == false {
+  } @else {
+    float: left;
+    padding: 0 $grid-gutter / 2;
+  }
+}
+
+// Grid, offset
+
+@mixin offset($col-width: 1) {
+  $fraction: split-col-width-value($col-width,fraction);
+  margin-left: percentage($fraction);
+}
+
+// Grid, push
+
+@mixin push($col-width: 1) {
+  $fraction: split-col-width-value($col-width,fraction);
+  margin-right: percentage($fraction);
+}
