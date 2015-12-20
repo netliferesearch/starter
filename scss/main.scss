@@ -8,25 +8,22 @@
 @import //'../bower_components/normalize-css/normalize',
         '../bower_components/susy/sass/susy';
 
-// Utilities
-@import 'variables',
-        'functions',
+@import 'variables';
+
+// 1. Base
+@import 'functions',
         'mixins',
         'icons',
         'grid',
         'animations';
 
-
-// 1. Global
-@import '1_global/body',
-        '1_global/typography',
-        '1_global/lists',
-        '1_global/tables',
-        '1_global/forms';
+// 2. Global
+@import '2_global/body',
+        '2_global/typography',
+        '2_global/lists',
+        '2_global/tables',
+        '2_global/forms';
 
 // 2. Blocks
-@import '2_blocks/button',
-        '2_blocks/select';
-
-// Styleguide
-@import 'styleguide';
+@import '3_blocks/button',
+        '3_blocks/select';
