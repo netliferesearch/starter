@@ -11,11 +11,11 @@
 @import 'variables';
 
 // 1. Base
-@import 'functions',
-        'mixins',
-        'icons',
-        'grid',
-        'animations';
+@import '1_base/functions',
+        '1_base/mixins',
+        '1_base/icons',
+        '1_base/grid',
+        '1_base/animations';
 
 // 2. Global
 @import '2_global/body',
