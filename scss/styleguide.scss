@@ -4,6 +4,13 @@
 
 @import 'variables';
 
+// Utilities
+@import 'variables',
+        'functions',
+        'mixins',
+        'icons',
+        'animations';
+
 .sg-color {
   text-align: center;
   margin-right: 40px;
@@ -22,14 +29,14 @@
     float: left;
     margin-right: 30px;
 
-    &.color-primary   { background-color: color(primary); }
-    &.color-secondary { background-color: color(secondary); }
-    &.color-third     { background-color: color(third); }
-    &.color-black     { background-color: color(black); }
-    &.color-white     { background-color: color(white); }
-    &.color-lightGray { background-color: color(gray, light); }
-    &.color-gray      { background-color: color(gray, base); }
-    &.color-darkGray  { background-color: color(gray, dark); }
+    &.color-primary   { background: color(primary); }
+    &.color-secondary { background: color(secondary); }
+    &.color-third     { background: color(third); }
+    &.color-black     { background: color(black); }
+    &.color-white     { background: color(white); }
+    &.color-lightGray { background: color(gray, light); }
+    &.color-gray      { background: color(gray, base); }
+    &.color-darkGray  { background: color(gray, dark); }
   }
 }
 

@@ -31,3 +31,13 @@
   @warn "`#{$spacing}` is not in spacing map";
   @return null;
 }
+
+// spacing
+
+@function font($font, $family) {
+  @if map-has-key($fonts, $font) {
+      @return map-get(map-get($fonts, $font), $family);
+  }
+  @warn "`#{$font}` is not in fonts map";
+  @return null;
+}
