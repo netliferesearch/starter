@@ -4,12 +4,12 @@
 
 @import 'variables';
 
-// Utilities
-@import 'variables',
-        'functions',
-        'mixins',
-        'icons',
-        'animations';
+// 1. Base
+@import '1_base/functions',
+        '1_base/mixins',
+        '1_base/icons',
+        '1_base/grid',
+        '1_base/animations';
 
 .sg-color {
   text-align: center;

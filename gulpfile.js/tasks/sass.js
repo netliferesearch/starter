@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 
 gulp.task('sass', function() {
     return gulp.src(config.src.scss)
-      //.pipe(sourcemaps.init())
+      .pipe(sourcemaps.init())
       .pipe(sass({
         style: 'expanded'
         })
@@ -22,11 +22,11 @@ gulp.task('sass', function() {
         })
         .on('error', sass.logError)
       )
-      //.pipe(sourcemaps.write())
       .pipe(autoprefixer({
           browsers: ['last 2 versions'],
           cascade: false
       }))
+      .pipe(sourcemaps.write())
       .pipe(gulp.dest(config.dist.css))
       .pipe(minifyCSS())
       .pipe(rename({
