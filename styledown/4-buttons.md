@@ -1,19 +1,19 @@
 ## Buttons
 
 ### Large buttons
-Create your buttons with a `.button` class.
+For semantic and WCAG friendly buttons use: `<button class="button">`
 
 	@example
-	<a class="button">Button</a>
-	<a class="button button--success">Success button</a>
-	<a class="button button--warning">Warning button</a>
-	<a class="button button--danger">Danger button</a>
+	<button class="button">Button</button>
+	<button class="button button--primary">Primary</button>
+	<button class="button button--secondary">Secondary</button>
+	<button class="button button--third">Third</button>
 
 ### Small buttons
-Create your buttons with a `.button` class.
+For small buttons us `button--small`
 
 	@example
-	<a class="button">Button</a>
-	<a class="button button--small button--success">Success button</a>
-	<a class="button button--small button--warning">Warning button</a>
-	<a class="button button--small button--danger">Danger button</a>
+	<button class="button button--small">Button</button>
+	<button class="button button--small button--primary">Primary</button>
+	<button class="button button--small button--secondary">Secondary</button>
+	<button class="button button--small button--third">Third</button>

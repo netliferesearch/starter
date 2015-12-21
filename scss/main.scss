@@ -1,12 +1,14 @@
-/*------------------------------------------------------*\
-  Starter by Netlife Research
-  ---------------------------
-  https://github.com/netliferesearch/starter
-\*------------------------------------------------------*/
+/**
+ * Starter by Netlife Research
+ * ---------------------------
+ * https://github.com/netliferesearch/starter
+ * ------------------------------------------
+ */
 
-// TODO: Find a smart wat yo include Normalize (css import mess up the sourcemap)
-@import //'../bower_components/normalize-css/normalize',
-        '../bower_components/susy/sass/susy';
+// TODO: Find a smart way to include Normalize (css import mess up the sourcemap)
+
+@import '../bower_components/normalize-css/normalize';
+@import '../bower_components/susy/sass/susy';
 
 @import 'variables';
 
@@ -25,5 +27,10 @@
         '2_global/forms';
 
 // 2. Blocks
+<<<<<<< HEAD
 @import '3_blocks/button',
         '3_blocks/select';
+=======
+@import '2_blocks/button',
+        '2_blocks/select';
+>>>>>>> fa94ca1108c09f1bc20b4a0513c93b718dd57a04

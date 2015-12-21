@@ -1,8 +1,6 @@
-/*------------------------------------------------------*\
-   Mixins
-\*------------------------------------------------------*/
-
+// ------------------------------------
 // Breakpoints
+// ------------------------------------
 
 @mixin breakpoint($breakpoint) {
   $value: map-get($breakpoints, $breakpoint);
@@ -16,12 +14,72 @@
   }
 }
 
-// Font size iteration
 
-@each $size, $headers in $header-sizes {
-  @include breakpoint($size) {
-    @each $header, $font-size in $headers {
-      #{$header} { font-size: rem-calc($font-size); }
+// ------------------------------------
+// Header Sizes
+// ------------------------------------
+
+@mixin header-sizes {
+  @each $size, $headers in $header-sizes {
+    @if $size == 'base' {
+      @each $header, $font-size in $headers {
+        #{$header}, .#{$header} { font-size: rem-calc($font-size); }
+      }
     }
+    @else {
+      @include breakpoint($size) {
+        @each $header, $font-size in $headers {
+          #{$header}, .#{$header} { font-size: rem-calc($font-size); }
+        }
+      }
+    }
+  }
+}
+
+
+
+// ------------------------------------
+// Grid Classes
+// ------------------------------------
+
+@mixin grid-classes {
+  @each $size, $classes in map-get($grid, classes) {
+    @if $size == 'base' {
+      @each $span in $classes {
+        .span-#{$span} {
+          width: grid-span($span);
+        }
+        .push-#{$span} {
+          left: grid-span($span);
+        }
+        .pull-#{$span} {
+          left: grid-span($span * -1);
+        }
+      }
+    }
+    @else {
+      @include breakpoint($size) {
+        @each $span in $classes {
+          .span-#{$span}\@#{$size} {
+            width: grid-span($span);
+          }
+          .push-#{$span}\@#{$size} {
+            left: grid-span($span);
+          }
+          .pull-#{$span}\@#{$size} {
+            left: grid-span($span * -1);
+          }
+        }
+      }
+    }
+  }
+}
+
+// To set button color, background and hover
+@mixin buttonColor($bg-color, $color:null) {
+  background: $bg-color;
+  color: $color;
+  &:hover {
+    background: darken($bg-color, 10%);
   }
 }

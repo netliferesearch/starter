@@ -1,45 +1,86 @@
+body {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+// Testing out inline-block (Kayzen-GS)
+.grid {
+  // Firefox/IE collapse white-space;
+  letter-spacing: -1em;
 
-// WillGrid
+  // Webkit collapse white-space
+  display: table;
+  width: calc(100% + #{grid-gutter()});
+  margin-left: grid-gutter() * -1;
 
-// Grid, function
-
-@function split-col-width-value($col-width, $request: fraction) {
-  $fraction: false;
-  @each $var in $col-width {
-    @if (type-of($var) == 'string') {
-    } @else {
-      @if (type-of($var) == 'number') {
-        $fraction: $var;
-      }
+  // Opera collapse white-space
+  @at-root {
+    .opera-only :-o-prefocus, & {
+      word-spacing: -0.43em;
     }
   }
-  @if $request == 'fraction' {
-    @return $fraction;
+  // Required for some third-party sliders
+  table-layout: fixed;
+}
+.grid--center {
+  text-align: center;
+}
+.grid--center > * {
+  text-align: left;
+}
+
+
+
+.grid > * {
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+  padding-left: grid-gutter();
+}
+[class*="span"] {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 12px;
+}
+
+// This mixin prints grid classes for different
+// breakpoints set in _variables.scss
+@include grid-classes;
+
+
+
+
+
+.grid-overlay {
+  padding-left: 2%;
+  padding-right: 2%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+
+  * {
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  span {
+    display: block;
+    outline: 1px solid rgba(255,0,0, 0.5);
+    background-color: rgba(255,0,0, 0.05);
   }
 }
 
-// Grid, span
-
-@mixin span($col-width: 1, $padding: "0") {
-  $fraction: split-col-width-value($col-width,fraction);
-  width: percentage($fraction);
-  @if $padding == false {
-  } @else {
-    float: left;
-    padding: 0 $grid-gutter / 2;
+.grid-example {
+  span {
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    background-color: lightblue;
   }
-}
 
-// Grid, offset
-
-@mixin offset($col-width: 1) {
-  $fraction: split-col-width-value($col-width,fraction);
-  margin-left: percentage($fraction);
-}
-
-// Grid, push
-
-@mixin push($col-width: 1) {
-  $fraction: split-col-width-value($col-width,fraction);
-  margin-right: percentage($fraction);
 }

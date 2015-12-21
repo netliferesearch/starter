@@ -1,6 +1,6 @@
-/*------------------------------------------------------*\
-   Colors
-\*------------------------------------------------------*/
+// ------------------------------------
+// Colors
+// ------------------------------------
 
 $colors: (
   primary: #a8cd25,
@@ -15,9 +15,9 @@ $colors: (
   )
 );
 
-/*------------------------------------------------------*\
-   Spacing
-\*------------------------------------------------------*/
+// ------------------------------------
+// Spacing
+// ------------------------------------
 
 $spacings: (
   small: .5rem,
@@ -25,9 +25,9 @@ $spacings: (
   large: 2rem
 );
 
-/*------------------------------------------------------*\
-   Breakpoints
-\*------------------------------------------------------*/
+// ------------------------------------
+// Breakpoints
+// ------------------------------------
 
 $breakpoints: (
   small: 480,
@@ -36,38 +36,62 @@ $breakpoints: (
   wide: 1200
 );
 
-/*------------------------------------------------------*\
-   Typography
-\*------------------------------------------------------*/
+// ------------------------------------
+// Typography
+// ------------------------------------
 
 // TODO: Make a functions to handle fonts
 $fonts: (
   sans: (
-    light: "'Gotham Light', 'Helvetica', sans-serif",
-    regular: "'Gotham Book', 'Helvetica', sans-serif",
-    medium: "'Gotham Medium', 'Helvetica', sans-serif",
-    bold:  "'Gotham Bold', 'Helvetica', sans-serif"
+    light: #{'Helvetica', sans-serif},
+    regular: #{'Helvetica', sans-serif},
+    medium: #{'Helvetica', sans-serif},
+    bold:  #{'Helvetica', sans-serif}
   ),
   serif: (
-    regular: "'Merriweather', 'Georgia', serif"
+    regular: #{'Merriweather', 'Georgia', serif}
   )
 );
 
+
 $header-sizes: (
-  small: (
-    'h1': 24,
-    'h2': 20,
-    'h3': 19,
-    'h4': 18,
-    'h5': 17,
+  base: (
+    'h1': 32,
+    'h2': 28,
+    'h3': 24,
+    'h4': 20,
+    'h5': 18,
     'h6': 16,
   ),
   medium: (
-    'h1': 82,
+    'h1': 48,
     'h2': 32,
-    'h3': 32,
-    'h4': 25,
+    'h3': 28,
+    'h4': 24,
     'h5': 20,
     'h6': 16,
   ),
+) !default;
+
+
+
+
+
+
+
+
+// ------------------------------------
+// Grid Settings
+// ------------------------------------
+
+$grid: (
+  columns: 12,
+  gutters: 2%,
+
+  classes: (
+    base: (1 2 3 4 5 6 7 8 9 10 11 12),
+    small: (1 2 3 4 5 6 7 8 9 10 11 12),
+    medium: (1 2 3 4 5 6 7 8 9 10 11 12),
+    large: (1 2 3 4 5 6 7 8 9 10 11 12),
+  )
 ) !default;

@@ -1,9 +1,17 @@
-article { max-width: 40em; margin: auto; padding: 1em; } // Temporary styling for <article>
+article { max-width: 40em; margin: auto; } // Temporary styling for <article>
+
+:root {
+  font-size: 16px;
+}
 
 body {
   font-family: 'Georgia', serif;
   line-height: 1.6;
   color: color(gray, dark);
+
+  @include breakpoint(medium) {
+    font-size: 112.5%;
+  }
 }
 
 // Headings
@@ -44,6 +52,12 @@ h6, .h6 {
   text-transform: uppercase;
 }
 
+// This mixin prints header sizes for different
+// breakpoints set in _variables.scss
+@include header-sizes;
+
+
+
 // Text Block Elements
 p, ul, ol, dl, pre, blockquote, table {
   margin-top: 0;
@@ -72,7 +86,7 @@ dd {
   margin-left: 0;
 }
 dd + dt, li {
-  margin-top: 0.25em;
+  margin-top: 0.5em;
 }
 
 // Code
@@ -84,7 +98,7 @@ pre, code {
 }
 pre {}
 code {
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 pre > code {
   border: 0;
