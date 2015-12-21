@@ -74,3 +74,12 @@
     }
   }
 }
+
+// To set button color, background and hover
+@mixin buttonColor($bg-color, $color:null) {
+  background: $bg-color;
+  color: $color;
+  &:hover {
+    background: darken($bg-color, 10%);
+  }
+}
