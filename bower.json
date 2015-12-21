@@ -18,7 +18,6 @@
     "normalize-css": "normalize.css#~3.0.3",
     "html5shiv": "~3.7.3",
     "bower-webfontloader": "~1.6.6",
-    "susy": "~2.2.9",
-    "normalize-scss": "normalize.scss#~4.0.3"
+    "susy": "~2.2.9"
   }
 }
