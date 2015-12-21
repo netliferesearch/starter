@@ -4,6 +4,11 @@
 
 @import 'variables';
 
+
+body {
+  font-size: 100%;
+}
+
 .sg-color {
   text-align: center;
   margin-right: 40px;
@@ -41,6 +46,7 @@
   margin-right: 2rem;
   background: color(gray, base);
   display: inline-block;
+
   &__preview {
     display: inline-block;
     background: color(primary);
@@ -76,7 +82,9 @@
 }
 
 // Rest code first-child style
-
+code.sg {
+  font-size: 0.875rem;
+}
 code.sg:first-child {
   background: rgba(250, 250, 250, 0.5);
   color: #579;

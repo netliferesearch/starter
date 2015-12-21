@@ -1,13 +1,8 @@
-## typography
+## Typography
 
 ### Headings
 Base stylings for
-`h1'
-`h2'
-`h3'
-`h4'
-`h5'
-`h6'
+`h1, h2, h3, h4, h5, h6`
 
 	@example
 	<h1>The quick brown fox jumps over the lazy dog</h1>
@@ -18,12 +13,12 @@ Base stylings for
 	<h6>The quick brown fox jumps over the lazy dog</h6>
 
 ### Paragraphs
-Base styling for `p`
+Base styling for `p, strong, em, a`
 
 	@example
-	<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. <a href="#">The quick brown fox</a> jumps over the lazy dog.</p>
-	<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. <a>The quick brown fox</a> jumps over the lazy dog.</p>
-	<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. <a>The quick brown fox</a> jumps over the lazy dog.</p>
+	<p>The quick <strong>brown fox</strong>&nbsp; jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+	<p>The quick <em>brown fox</em>&nbsp; jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+	<p>The quick <a href="#">brown fox</a>&nbsp; jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
 
 ### Underordered list
 

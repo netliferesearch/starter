@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Netlife Research - Starter</title>
+    <title>Netlife Research - Starter</title>
     <meta name="description" content="Starter">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
@@ -18,7 +18,9 @@
   </head>
 
   <body>
-    <h3>Netlife Starter</h3>
+    <header>
+      <h1 class="h2">Netlife Starter</h1>
+    </header>
     <nav>
       {% import 'partials/navigation.nunjucks' as nav %}
     </nav>
@@ -27,5 +29,8 @@
     {% endblock %}
     <footer>
     </footer>
+
+    {% block grid %}
+    {% endblock %}
   </body>
 </html>
