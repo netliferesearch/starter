@@ -1,29 +1,36 @@
-/*------------------------------------------------------*\
-  Starter by Netlife Research
-  ---------------------------
-  https://github.com/netliferesearch/starter
-\*------------------------------------------------------*/
+/**
+ * Starter by Netlife Research
+ * ---------------------------
+ * https://github.com/netliferesearch/starter
+ * ------------------------------------------
+ */
 
-// TODO: Find a smart wat yo include Normalize (css import mess up the sourcemap)
-@import //'../bower_components/normalize-css/normalize',
-        '../bower_components/susy/sass/susy';
+// TODO: Find a smart way to include Normalize (css import mess up the sourcemap)
 
-// Utilities
-@import 'variables',
-        'functions',
-        'mixins',
-        'icons',
-        'grid',
-        'animations';
+@import '../bower_components/normalize-css/normalize';
+@import '../bower_components/susy/sass/susy';
 
+@import 'variables';
 
-// 1. Global
-@import '1_global/body',
-        '1_global/typography',
-        '1_global/lists',
-        '1_global/tables',
-        '1_global/forms';
+// 1. Base
+@import '1_base/functions',
+        '1_base/mixins',
+        '1_base/icons',
+        '1_base/grid',
+        '1_base/animations';
+
+// 2. Global
+@import '2_global/body',
+        '2_global/typography',
+        '2_global/lists',
+        '2_global/tables',
+        '2_global/forms';
 
 // 2. Blocks
+<<<<<<< HEAD
+@import '3_blocks/button',
+        '3_blocks/select';
+=======
 @import '2_blocks/button',
         '2_blocks/select';
+>>>>>>> fa94ca1108c09f1bc20b4a0513c93b718dd57a04

@@ -3,5 +3,6 @@
 	 	<a href="/index.html" class="{%if activePage == 'home' %} active {% endif %}">Starter</a>
 		<a href="styleguide" class="">Styleguide</a>
 		<a href="typo.html" class="{%if activePage == 'typo' %} active {% endif %}">Typographic test</a>
+		<a href="grid.html" class="{%if activePage == 'grid' %} active {% endif %}">Grid test</a>
 	</nav>
 {% endmacro %}

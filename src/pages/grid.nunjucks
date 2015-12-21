@@ -1,0 +1,137 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+{% block content %}
+{{nav.active('grid')}}
+<main>
+
+  <section class="wrapper">
+    <div class="grid  grid-example">
+      <div class="span-12">
+        <span>12</span>
+      </div>
+
+      <div class="span-1">
+        <span>1</span>
+      </div>
+
+      <div class="span-11">
+        <span>11</span>
+      </div>
+
+      <div class="span-2">
+        <span>2</span>
+      </div>
+
+      <div class="span-10">
+        <span>10</span>
+      </div>
+
+      <div class="span-3">
+        <span>3</span>
+      </div>
+
+      <div class="span-9">
+        <span>8</span>
+      </div>
+
+      <div class="span-4">
+        <span>4</span>
+      </div>
+
+      <div class="span-8">
+        <span>8</span>
+      </div>
+
+      <div class="span-5">
+        <span>5</span>
+      </div>
+
+      <div class="span-7">
+        <span>7</span>
+      </div>
+
+      {% for i in range(0, 2) -%}
+        <div class="span-6">
+          <span>6</span>
+        </div>
+      {%- endfor %}
+    </div>
+
+    <br>
+
+    <div class="grid  grid-example">
+      {% for i in range(0, 3) -%}
+        <div class="span-4">
+          <span>4</span>
+        </div>
+      {%- endfor %}
+
+      {% for i in range(0, 4) -%}
+        <div class="span-3">
+          <span>3</span>
+        </div>
+      {%- endfor %}
+
+      {% for i in range(0, 6) -%}
+        <div class="span-2">
+          <span>2</span>
+        </div>
+      {%- endfor %}
+
+      {% for i in range(0, 12) -%}
+        <div class="span-1">
+          <span>1</span>
+        </div>
+      {%- endfor %}
+    </div>
+
+    <br>
+
+    <div class="grid  grid-example">
+      <div class="span-6@small span-8@medium">
+        <span>Span 6@small, 8@medium</span>
+      </div>
+      <div class="span-6@small span-4@medium">
+        <span>Span 6@small, 4@medium</span>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="grid grid--center  grid-example">
+      <div class="span-10@small span-8@medium span-6@large ">
+        <span>Span 10@small, 8@medium, 6@large</span>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="grid grid-example">
+      <div class="span-6 span-5@small span-4@medium push-1@small">
+        <span>Span 6, 5@small, 4@medium – Push 1@small</span>
+      </div>
+      <div class="span-6 span-5@small span-4@medium push-1@small push-3@medium">
+        <span>Span 6, 5@small, 4@medium – Push 1@small, 3@medium</span>
+      </div>
+    </div>
+
+
+  </section>
+
+</main>
+{% endblock %}
+
+
+{% block grid %}
+<div class="grid-overlay">
+  <div class="wrapper">
+    <div class="grid">
+      {% for i in range(0, 12) -%}
+        <div class="span-1">
+          <span>&nbsp;</span>
+        </div>
+      {%- endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
