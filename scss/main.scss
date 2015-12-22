@@ -7,13 +7,13 @@
 
 // TODO: Find a smart way to include Normalize (css import mess up the sourcemap)
 
-//@import '../bower_components/normalize-css/normalize';
 @import '../bower_components/susy/sass/susy';
 
 @import 'variables';
 
 // 1. Base
-@import '1_base/functions',
+@import '1_base/normalize',
+        '1_base/functions',
         '1_base/mixins',
         '1_base/icons',
         '1_base/grid',

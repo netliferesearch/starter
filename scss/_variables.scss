@@ -43,13 +43,13 @@ $breakpoints: (
 // TODO: Make a functions to handle fonts
 $fonts: (
   sans: (
-    light: #{'Helvetica', sans-serif},
-    regular: #{'Helvetica', sans-serif},
-    medium: #{'Helvetica', sans-serif},
-    bold:  #{'Helvetica', sans-serif}
+    light: ('Helvetica', sans-serif),
+    regular: ('Helvetica', sans-serif),
+    medium: ('Helvetica', sans-serif),
+    bold:  ('Helvetica', sans-serif)
   ),
   serif: (
-    regular: #{'Merriweather', 'Georgia', serif}
+    regular: ('Merriweather', 'Georgia', serif)
   )
 );
 
