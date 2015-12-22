@@ -21,15 +21,6 @@ body {
   // Required for some third-party sliders
   table-layout: fixed;
 }
-.grid--center {
-  text-align: center;
-}
-.grid--center > * {
-  text-align: left;
-}
-
-
-
 .grid > * {
   letter-spacing: normal;
   word-spacing: normal;
@@ -47,6 +38,27 @@ body {
 // This mixin prints grid classes for different
 // breakpoints set in _variables.scss
 @include grid-classes;
+
+
+
+
+.grid--center {
+  text-align: center;
+   > * { text-align: left; }
+}
+.grid--flush {
+  margin-left: 0;
+  > * { padding-left: 0; }
+}
+.grid--reverse {
+  direction: rtl;
+  > * { direction: ltr; }
+}
+
+
+
+
+
 
 
 
