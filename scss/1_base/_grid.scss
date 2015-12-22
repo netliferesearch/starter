@@ -54,6 +54,17 @@ body {
   direction: rtl;
   > * { direction: ltr; }
 }
+.grid--fluid {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+      flex: 0 1 auto;
+  }
+  > .span-auto {
+      flex: 1;
+  }
+}
 
 
 
@@ -81,6 +92,7 @@ body {
   }
 
   span {
+    content: ' ';
     display: block;
     outline: 1px solid rgba(255,0,0, 0.5);
     background-color: rgba(255,0,0, 0.05);
@@ -88,11 +100,17 @@ body {
 }
 
 .grid-example {
-  span {
+  > * > div {
+    background-color: lightblue;
+  }
+}
+.grid-classes {
+  > *:before {
+    content: attr(class);
     display: block;
     text-align: center;
     line-height: 30px;
+    min-height: 30px;
     background-color: lightblue;
   }
-
 }

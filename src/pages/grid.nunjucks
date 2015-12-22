@@ -5,113 +5,103 @@
 <main>
 
   <section class="wrapper">
-    <div class="grid  grid-example">
+    <div class="grid  grid-example grid-classes">
       <div class="span-12">
-        <span>12</span>
       </div>
 
       <div class="span-1">
-        <span>1</span>
       </div>
 
       <div class="span-11">
-        <span>11</span>
       </div>
 
       <div class="span-2">
-        <span>2</span>
       </div>
 
       <div class="span-10">
-        <span>10</span>
       </div>
 
       <div class="span-3">
-        <span>3</span>
       </div>
 
       <div class="span-9">
-        <span>8</span>
       </div>
 
       <div class="span-4">
-        <span>4</span>
       </div>
 
       <div class="span-8">
-        <span>8</span>
       </div>
 
       <div class="span-5">
-        <span>5</span>
       </div>
 
       <div class="span-7">
-        <span>7</span>
       </div>
 
       {% for i in range(0, 2) -%}
         <div class="span-6">
-          <span>6</span>
         </div>
       {%- endfor %}
     </div>
 
     <br>
 
-    <div class="grid  grid-example">
+    <div class="grid  grid-example grid-classes">
       {% for i in range(0, 3) -%}
         <div class="span-4">
-          <span>4</span>
         </div>
       {%- endfor %}
 
       {% for i in range(0, 4) -%}
         <div class="span-3">
-          <span>3</span>
         </div>
       {%- endfor %}
 
       {% for i in range(0, 6) -%}
         <div class="span-2">
-          <span>2</span>
         </div>
       {%- endfor %}
 
       {% for i in range(0, 12) -%}
         <div class="span-1">
-          <span>1</span>
         </div>
       {%- endfor %}
     </div>
 
     <br>
 
-    <div class="grid  grid-example">
-      <div class="span-6@small span-8@medium">
-        <span>Span 6@small, 8@medium</span>
-      </div>
-      <div class="span-6@small span-4@medium">
-        <span>Span 6@small, 4@medium</span>
-      </div>
+    <div class="grid  grid-example grid-classes">
+      <div class="span-6@small span-8@medium"></div>
+      <div class="span-6@small span-4@medium"></div>
+    </div>
+
+    <div class="grid grid--center  grid-example grid-classes">
+      <div class="span-10@small span-8@medium span-6@large "></div>
     </div>
 
     <br>
 
-    <div class="grid grid--center  grid-example">
-      <div class="span-10@small span-8@medium span-6@large ">
-        <span>Span 10@small, 8@medium, 6@large</span>
-      </div>
+    <div class="grid grid-example grid-classes">
+      <div class="span-6 span-5@small span-4@medium push-1@small"></div>
+      <div class="span-6 span-5@small span-4@medium push-1@small push-3@medium"></div>
     </div>
 
     <br>
+    <br>
 
-    <div class="grid grid-example">
-      <div class="span-6 span-5@small span-4@medium push-1@small">
-        <span>Span 6, 5@small, 4@medium – Push 1@small</span>
+    <div class="grid grid--reverse grid-example grid-classes">
+      <div class="span-6 span-5@small span-4@medium pull-1@small"></div>
+      <div class="span-6 span-5@small span-4@medium pull-1@small pull-3@medium"></div>
+    </div>
+
+
+    <div class="grid grid--fluid grid-example">
+      <div class="span-9@small">
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, nulla! Exercitationem atque recusandae, iste, pariatur excepturi quibusdam perspiciatis consequatur ex corporis. Dolore nesciunt nulla modi itaque quaerat dolorem nisi eos.</div>
       </div>
-      <div class="span-6 span-5@small span-4@medium push-1@small push-3@medium">
-        <span>Span 6, 5@small, 4@medium – Push 1@small, 3@medium</span>
+      <div class="span-auto">
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
       </div>
     </div>
 
@@ -127,9 +117,7 @@
   <div class="wrapper">
     <div class="grid">
       {% for i in range(0, 12) -%}
-        <div class="span-1">
-          <span>&nbsp;</span>
-        </div>
+        <div class="span-1"><span></span></div>
       {%- endfor %}
     </div>
   </div>
