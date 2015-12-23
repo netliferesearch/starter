@@ -95,14 +95,29 @@ code.sg:first-child {
 // Styleguide menu
 
 ul.sg {
+  position: fixed;
+  top: 0;
   padding-left: 0;
   li.sg {
     display: inline-block;
     margin-right: 1rem;
     a {
-      color: color(black);
       text-decoration: none;
       font-family: font(sans);
+      color: color(gray, base);
+      &:hover {
+        color: color(black);
+      }
     }
+  }
+}
+
+body.sg {
+  padding-top: 100px ;
+}
+
+h1.sg {
+  @include breakpoint(large) {
+    font-size: 4.6rem;
   }
 }
