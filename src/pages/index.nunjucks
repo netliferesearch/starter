@@ -5,7 +5,7 @@
 
 	{{nav.active('home')}}
 
-	<h1>Find what you love and let it kill</h1>
+	<h1>Find what you love and let it kill you.</h1>
 
   <ul>
   {% for person in persons %}

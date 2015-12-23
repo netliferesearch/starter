@@ -4,6 +4,10 @@
   "description": "Protoyping starter",
   "author": "Fredrik Jensen",
   "license": "MIT",
+  "scripts": {
+    "preinstall": "node preinstall",
+    "postinstall": "node postinstall"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/fredjens/starter.git"
@@ -37,8 +41,5 @@
     "gulp-watch": "^4.3.5",
     "jshint-stylish": "^2.1.0",
     "require-dir": "^0.3.0"
-  },
-  "scripts": {
-    "postinstall": "node postinstall.js"
   }
 }

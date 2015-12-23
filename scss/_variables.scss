@@ -40,7 +40,6 @@ $breakpoints: (
 // Typography
 // ------------------------------------
 
-// TODO: Make a functions to handle fonts
 $fonts: (
   sans: (
     light: ('Helvetica', sans-serif),
@@ -52,8 +51,6 @@ $fonts: (
     regular: ('Merriweather', 'Georgia', serif)
   )
 );
-
-
 
 $header-sizes: (
   base: (

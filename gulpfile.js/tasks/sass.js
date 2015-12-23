@@ -28,11 +28,11 @@ gulp.task('sass', function() {
       }))
       .pipe(sourcemaps.write())
       .pipe(gulp.dest(config.dist.css))
+      .pipe(browserSync.reload({stream: true}))
       .pipe(minifyCSS())
       .pipe(rename({
         suffix: '.min'
       }))
       .pipe(gulp.dest(config.dist.css))
       .pipe(sass({errLogToConsole: true}))
-      .pipe(browserSync.reload({stream: true}))
 });
