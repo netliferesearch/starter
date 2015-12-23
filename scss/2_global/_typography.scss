@@ -5,7 +5,7 @@ article { max-width: 40em; margin: auto; } // Temporary styling for <article>
 }
 
 body {
-  font-family: 'Georgia', serif;
+  font-family: font(serif);
   line-height: 1.6;
   color: color(gray, dark);
 
@@ -17,7 +17,7 @@ body {
 // Headings
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: Arial, sans-serif;
+  font-family: font(sans);
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
@@ -123,4 +123,14 @@ q {
 }
 address {
   font-style: normal;
+}
+
+// To control FOUT and make browsers behave the same with WebFontLoader
+// This will hide the content for 2 seconds (set in wenFontLoader.js) and then use fallback.
+
+.wf-loading  {
+  visibility: hidden;
+}
+.wf-active, .wf-inactive {
+    visibility: visible;
 }

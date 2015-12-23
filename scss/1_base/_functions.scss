@@ -44,13 +44,18 @@
 // Font
 // ------------------------------------
 
-@function font($font, $family) {
+@function font($font, $family:null) {
   @if map-has-key($fonts, $font) {
+    @if ($family != null) {
       @return map-get(map-get($fonts, $font), $family);
+    } @else {
+      @return map-get($fonts, $font);
+    }
   }
   @warn "`#{$font}` is not in fonts map";
   @return null;
 }
+
 
 
 
