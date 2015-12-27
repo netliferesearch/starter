@@ -16,9 +16,17 @@ Base stylings for
 Base styling for `p, strong, em, a`
 
 	@example
-	<p>The quick <strong>brown fox</strong>&nbsp; jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
-	<p>The quick <em>brown fox</em>&nbsp; jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
-	<p>The quick <a href="#">brown fox</a>&nbsp; jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+	<p>The quick
+	<strong>brown fox</strong>
+	jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+
+	<p>The quick
+	<em>brown fox</em>
+	jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+
+	<p>The quick
+	<a href="#">brown fox</a>
+	jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
 
 ### Underordered list
 
