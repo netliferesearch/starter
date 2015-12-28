@@ -1,73 +1,172 @@
-body {
-  padding-left: 2%;
-  padding-right: 2%;
-}
-// Testing out inline-block (Kayzen-GS)
-.grid {
-  // Firefox/IE collapse white-space;
+// ------------------------------------
+// Grid
+// ------------------------------------
+//
+// This grid uses inline-block to lay out content into separate columns.
+// It consists of three SCSS parts.
+//
+// 1. Settings (Sass Map)
+// 2. Mixins
+// 3. Classes (if set in `$grid` settings map)
+
+
+
+
+
+
+// ------------------------------------
+// 1. Grid Settings
+// ------------------------------------
+
+$grid: (
+  container: auto,
+  columns: (8, 12),
+  gutter: 24px,
+  classes: (
+    row: 'row',
+    col: 'col',
+    push: true,
+    pull: true,
+  ),
+  breakpoints: (
+    small,
+    medium,
+    large,
+  ),
+) !default;
+
+
+
+
+
+// ------------------------------------
+// 2. Mixins
+// ------------------------------------
+
+@mixin row {
+  list-style: none;
+  margin-left: -$gutter;
   letter-spacing: -1em;
-
-  // Webkit collapse white-space
-  display: table;
-  width: calc(100% + #{grid-gutter()});
-  margin-left: grid-gutter() * -1;
-
-  // Opera collapse white-space
-  @at-root {
-    .opera-only :-o-prefocus, & {
-      word-spacing: -0.43em;
-    }
-  }
-  // Required for some third-party sliders
-  table-layout: fixed;
 }
-.grid > * {
+@mixin row-reset {
   letter-spacing: normal;
-  word-spacing: normal;
   text-rendering: auto;
-  padding-left: grid-gutter();
 }
-[class*="span"] {
-  position: relative;
-  width: 100%;
+@mixin col {
+  box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 12px;
+  position: relative;
+  min-height: 1px;
+  padding-left: $gutter;
+}
+@mixin span($width) {
+  @if type-of($width) == 'number' {
+    width: percentage($width / map-get($grid, columns));
+  }
+  @elseif type-of($width) == 'list' {
+    width: percentage(nth($width, 1) / nth($width, 3));
+  }
+  @else {
+    @warn "`#{width}` is not a number. Try `1/3` or `4/12`.";
+  }
 }
 
-// This mixin prints grid classes for different
-// breakpoints set in _variables.scss
-@include grid-classes;
 
 
 
 
-.grid--center {
+// ------------------------------------
+// 3. Create Grid Classes
+// ------------------------------------
+
+@if map-has-key($grid, classes) {
+  // Get `columns` map inside `$grid` map
+  $colgroups: map-get($grid, columns);
+
+  // Get size `gutter` from `$grid` map
+  $gutter: map-get($grid, gutter);
+
+  // Get class name of `row` from `$grid` map
+  $row: map-deep-get(row);
+
+  // Get class name of `col` from `$grid` map
+  $col: map-deep-get(col);
+
+  // Get `classes` map inside `$grid` map
+  $classes: map-get($grid, classes);
+
+  .#{$row} { @include row; }
+  .#{$row} > * { @include row-reset; }
+  [class*="#{$col}-"] { @include col; }
+
+  @each $colgroup in $colgroups {
+    @for $span from 1 through $colgroup {
+      .#{$col}-#{$span}\/#{$colgroup} { width: percentage($span / $colgroup); }
+      @if map-get($classes, push) == true {
+        .push-#{$span}\/#{$colgroup} { left: percentage($span / $colgroup); }
+      }
+      @if map-get($classes, pull) == true {
+        .pull-#{$span}\/#{$colgroup} { left: percentage(($span / $colgroup) * -1); }
+      }
+    }
+    // Create classes for each breakpoint set in `$grid` map
+    @if map-has-key($grid, breakpoints) {
+      @each $label in map-get($grid, breakpoints) {
+        @include breakpoint($label, $max:null) {
+          @for $span from 1 through $colgroup {
+            .#{$col}-#{$span}\/#{$colgroup}\@#{$label} { width: percentage($span / $colgroup); }
+            @if map-get($classes, push) == true {
+              .push-#{$span}\/#{$colgroup}\@#{$label} { left: percentage($span / $colgroup); }
+            }
+            @if map-get($classes, pull) == true {
+              .pull-#{$span}\/#{$colgroup}\@#{$label} { left: percentage(($span / $colgroup) * -1); }
+            }
+          }
+        }
+      }
+    }
+  }
+  .#{$row}--center {
+    text-align: center;
+     > * { text-align: left; }
+  }
+  .#{$row}--flush {
+    margin-left: 0;
+    > * { padding-left: 0; }
+  }
+  .#{$row}--reverse {
+    direction: rtl;
+    > * { direction: ltr; }
+  }
+  .#{$row}--fluid {
+    display: flex;
+    flex-wrap: wrap;
+    > * { flex: 0 1 auto; }
+    > .#{$col}-auto { flex: 1; }
+  }
+
+} // End test for classes in `$grid` map.
+
+
+
+
+
+
+
+
+
+
+
+
+.box {
+  margin-bottom: 15px;
+  background-clip: content-box;
+  background-color: lightblue;
   text-align: center;
-   > * { text-align: left; }
+  line-height: 30px;
+  min-height: 30px;
 }
-.grid--flush {
-  margin-left: 0;
-  > * { padding-left: 0; }
-}
-.grid--reverse {
-  direction: rtl;
-  > * { direction: ltr; }
-}
-.grid--fluid {
-  display: flex;
-  flex-wrap: wrap;
-
-  > * {
-      flex: 0 1 auto;
-  }
-  > .span-auto {
-      flex: 1;
-  }
-}
-
-
-
 
 
 
@@ -91,26 +190,8 @@ body {
     margin-bottom: 0;
   }
 
-  span {
-    content: ' ';
-    display: block;
+  .row > [class*="col"] > div {
     outline: 1px solid rgba(255,0,0, 0.5);
     background-color: rgba(255,0,0, 0.05);
-  }
-}
-
-.grid-example {
-  > * > div {
-    background-color: lightblue;
-  }
-}
-.grid-classes {
-  > *:before {
-    content: attr(class);
-    display: block;
-    text-align: center;
-    line-height: 30px;
-    min-height: 30px;
-    background-color: lightblue;
   }
 }

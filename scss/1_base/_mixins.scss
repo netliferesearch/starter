@@ -2,17 +2,58 @@
 // Breakpoints
 // ------------------------------------
 
-@mixin breakpoint($breakpoint) {
-  $value: map-get($breakpoints, $breakpoint);
-  @if $value != null {
-    @media (min-width: rem-calc($value)) {
+// Fallback if nothing is set in variables
+$breakpoints: (
+  small: 480,
+  medium: 720,
+  large: 960,
+) !default;
+
+@mixin breakpoint($label, $max:null) {
+  @if map-has-key($breakpoints, $label) {
+    $width: map-get($breakpoints, $label);
+    @if $max != null {
+      @media (max-width: rem-calc($width)) {
+        @content;
+      }
+    }
+    @else {
+      @media (min-width: rem-calc($width)) {
+        @content;
+      }
+    }
+  }
+  @elseif type-of($label) == 'number' {
+    @if $max != null {
+      @media screen and (max-width: rem-calc($label)) {
+        @content;
+      }
+    }
+    @else {
+      @media screen and (min-width: rem-calc($label)) {
+        @content;
+      }
+    }
+  }
+  @else {
+    @warn "`#{$label} is not a valid key in `#{$breakpoints}`. ";
+  }
+}
+@mixin bp($label, $max:null) {
+  @if mixin-exists(breakpoint) {
+    @include breakpoint($label, $max) {
       @content;
     }
   }
   @else {
-    @warn "No breakpoint named `#{$breakpoint}`. ";
+    @warn "`#{$label}` is not a valid key in `$breakpoints`.";
   }
 }
+
+
+
+
+
 
 
 // ------------------------------------
@@ -37,43 +78,9 @@
 }
 
 
-
 // ------------------------------------
-// Grid Classes
+// Button Stuff
 // ------------------------------------
-
-@mixin grid-classes {
-  @each $size, $classes in map-get($grid, classes) {
-    @if $size == 'base' {
-      @each $span in $classes {
-        .span-#{$span} {
-          width: grid-span($span);
-        }
-        .push-#{$span} {
-          left: grid-span($span);
-        }
-        .pull-#{$span} {
-          left: grid-span($span * -1);
-        }
-      }
-    }
-    @else {
-      @include breakpoint($size) {
-        @each $span in $classes {
-          .span-#{$span}\@#{$size} {
-            width: grid-span($span);
-          }
-          .push-#{$span}\@#{$size} {
-            left: grid-span($span);
-          }
-          .pull-#{$span}\@#{$size} {
-            left: grid-span($span * -1);
-          }
-        }
-      }
-    }
-  }
-}
 
 // To set button color, background and hover
 @mixin buttonColor($bg-color, $color:null) {
