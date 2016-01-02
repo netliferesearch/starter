@@ -36,19 +36,23 @@ Form button without classes.
 	<button type="button" disabled>Disabled</button>
 
 ### Select fields
-Select fields with and without custom styling with a `div.select` container.
+Select fields without custom styling
 
 	@example
 	<label>
-		Without custom styling
+		Label
 		<select>
 			<option>One</option>
 			<option>Two</option>
 		</select>
 	</label>
 
+### Custom select fields
+Select fields with custom styling with a `div.select` container.
+
+	@example
 	<label>
-		With custom styling
+		Label
 		<div class="select">
 			<select>
 				<option>One</option>
@@ -74,6 +78,17 @@ Checkboxes without classes.
 	<label><input type="checkbox" checked/> Checked</label>
 	<label><input type="checkbox" disabled/> Disabled</label>
 	<label><input type="checkbox" disabled checked/> Disabled and checked</label>
+
+### Custom checkboxes
+Checkboxes with custom styling with a `label.checkbox` container and a `i.checkbox__indicator`element. To have disable states styled appropriately a `checkbox--disabled` class needs to be added to the label element. 
+
+	@example
+	<label class="checkbox"><input type="checkbox"/><i class="checkbox__indicator"/> Label</label>
+	<label class="checkbox"><input type="checkbox" checked/><i class="checkbox__indicator"/> Checked</label>
+	<label class="checkbox checkbox--disabled"><input type="checkbox" disabled/><i class="checkbox__indicator"/> Disabled</label>
+	<label class="checkbox checkbox--disabled"><input type="checkbox" disabled checked/><i class="checkbox__indicator"/> Disabled and checked</label>
+	<label class="checkbox checkbox--inline"><input type="checkbox"/><i class="checkbox__indicator"/> Inline checkbox</label>
+	<label class="checkbox checkbox--inline"><input type="checkbox"/><i class="checkbox__indicator"/> Inline checkbox</label>
 
 ### Radiobuttons
 Radiobuttons without classes.
