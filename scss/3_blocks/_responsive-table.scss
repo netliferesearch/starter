@@ -1,0 +1,36 @@
+.responsive-table {
+  border: 1px solid color(gray, light);
+  th {
+    text-transform: uppercase;
+    font-size: .75rem;
+    letter-spacing: 1px;
+  }
+  th,  td {
+    padding: 10px;
+    text-align: center;
+  }
+  @media screen and (max-width: 600px) {
+    border: 0;
+    thead {
+      display: none;
+    }
+    tr {
+      margin-bottom: 1.5rem;
+      display: block;
+      border-bottom: 1px solid color(gray, light);
+    }
+    td {
+      display: block;
+      text-align: right;
+      font-size: .75rem;
+      border-left: 0;
+      padding-left: 0;
+    }
+    td:before {
+      content: attr(data-header);
+      float: left;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+}
