@@ -5,7 +5,6 @@
   "author": "Fredrik Jensen",
   "license": "MIT",
   "scripts": {
-    "preinstall": "node preinstall",
     "postinstall": "node postinstall"
   },
   "repository": {

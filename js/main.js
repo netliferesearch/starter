@@ -1,4 +1,5 @@
-console.log("hei");
+
+// Styleguide scroll-to
 
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -9,6 +10,8 @@ $(function() {
         $('html,body').animate({
           scrollTop: target.offset().top -100
         }, 300);
+        $('a').removeClass('active');
+        $(this).addClass('active');
         return false;
       }
     }

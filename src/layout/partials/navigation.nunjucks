@@ -1,8 +1,10 @@
 {% macro active(activePage='home') %}
-	<nav>
-	 	<a href="/index.html" class="{%if activePage == 'home' %} active {% endif %}">Starter</a>
-		<a href="styleguide" class="">Styleguide</a>
-		<a href="typo.html" class="{%if activePage == 'typo' %} active {% endif %}">Typographic test</a>
-		<a href="grid.html" class="{%if activePage == 'grid' %} active {% endif %}">Grid test</a>
-	</nav>
+  <nav>
+    <ul>
+      <li><a class="h3" href="/index.html" class="{%if activePage == 'home' %} active {% endif %}">Starter</a></li>
+      <li><a class="h3" href="styleguide" class="">Styleguide</a></li>
+      <li><a class="h3" href="typo.html" class="{%if activePage == 'typo' %} active {% endif %}">Typographic test</a></li>
+      <li><a class="h3" href="grid.html" class="{%if activePage == 'grid' %} active {% endif %}">Grid test</a></li>
+    </ul>
+  </nav>
 {% endmacro %}

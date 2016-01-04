@@ -40,6 +40,18 @@
   }
 }
 
+.sg-typo {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  &--sans {
+    font-family: font(sans);
+    font-weight: 600;
+  }
+  &--serif {
+    font-family: font(serif);
+  }
+}
+
 // Animations
 
 .animation {
@@ -107,6 +119,9 @@ ul.sg {
       color: color(gray, base);
       &:hover {
         color: color(black);
+      }
+      &.active {
+        color: color(primary);
       }
     }
   }

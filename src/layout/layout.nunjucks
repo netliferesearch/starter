@@ -19,7 +19,8 @@
 
   <body>
     <header>
-      <h1 class="h2">Netlife Starter</h1>
+      <h1>Netlife Starter</h1>
+      <p>For prototyping and production</p>
     </header>
     <nav>
       {% import 'partials/navigation.nunjucks' as nav %}

@@ -26,11 +26,11 @@ Example:
 `$font-sans--light` `$font-sans--book` `$font-sans--medium` `$font-sans--bold`
 
 	@example
-	<div class="sg-typo gotham-book">ABCDEFGHIJKLMOPQRSTUVWXYZÆØÅ<br />
+	<div class="sg-typo sg-typo--sans">ABCDEFGHIJKLMOPQRSTUVWXYZÆØÅ<br />
 		abcdefghijklmnopqrsyuvwxyzæøå<br />
 		123456789!"#$%&/()
 	</div>
-	<div class="sg-typo gotham-bold">ABCDEFGHIJKLMOPQRSTUVWXYZÆØÅ<br />
+	<div class="sg-typo sg-typo--serif">ABCDEFGHIJKLMOPQRSTUVWXYZÆØÅ<br />
 		abcdefghijklmnopqrsyuvwxyzæøå<br />
 		123456789!"#$%&/()
 	</div>
