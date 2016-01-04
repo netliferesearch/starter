@@ -8,6 +8,7 @@ label {
 // Inputs and textareas
 input,
 textarea {
+  // TODO Add cross browser height fix
   display: block;
   padding: 0.5em 1em;
   border: 1px solid color(gray, base);

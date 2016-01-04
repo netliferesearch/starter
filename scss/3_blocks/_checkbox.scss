@@ -1,0 +1,30 @@
+.checkbox {
+
+  &--disabled {
+
+  }
+  &--inline {
+
+  }
+  &__indicator {
+
+  }
+  input {
+
+    &:checked ~ .checkbox__indicator {
+
+    }
+
+    &:focus ~ .checkbox__indicator {
+
+    }
+
+    &:active ~ .checkbox__indicator {
+
+    }
+
+    &:disabled ~ .checkbox__indicator {
+
+    }
+  }
+}
