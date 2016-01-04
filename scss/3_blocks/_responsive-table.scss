@@ -9,7 +9,7 @@
     padding: 10px;
     text-align: center;
   }
-  @media screen and (max-width: 600px) {
+  @include breakpoint(medium, max) {
     border: 0;
     thead {
       display: none;

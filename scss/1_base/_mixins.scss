@@ -39,6 +39,7 @@ $breakpoints: (
     @warn "`#{$label} is not a valid key in `#{$breakpoints}`. ";
   }
 }
+// Hva gjør denne?
 @mixin bp($label, $max:null) {
   @if mixin-exists(breakpoint) {
     @include breakpoint($label, $max) {

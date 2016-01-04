@@ -37,13 +37,14 @@
 
 
 ### Responsive table
-Adding the class `.responsive-table` gives a responsive table.
-To add the label for every row add `<td data-header="Header">` on every table line.
+Adding `.responsive-table` classes gives a nice responsive table.
+
+To get nice labels on mobile add `td data-header="Header"` on every table line.
 
 	@example
 	<table class="responsive-table">
 		<thead>
-			<tr>
+			<tr class="responsive-table__cell">
 				<th>Header one</th>
 				<th>Header two</th>
 				<th>Header three</th>
