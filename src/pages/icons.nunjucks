@@ -1,0 +1,128 @@
+<!-- icons.nunjucks -->
+{% extends "layout.nunjucks" %}
+{% block content %}
+{{nav.active('icons')}}
+
+<h1>Icons</h1>
+
+<svg class="icon">
+  <use xlink:href="#arrow-down-left2" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#arrow-down-right2" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#arrow-down2" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#arrow-left2" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#arrow-right2" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#arrow-up-left2" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#arrow-up-right2" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#arrow-up2" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#check" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#cross" />
+</svg>
+
+<svg class="icon evil">
+  <use xlink:href="#evil" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#facebook2" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#file-excel" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#file-pdf" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#file-word" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#file" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#github" />
+</svg>
+
+<svg class="icon happy">
+  <use xlink:href="#happy" />
+</svg>
+
+<svg class="icon html-five">
+  <use xlink:href="#html-five" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#inbox" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#instagram" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#lock" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#mail" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#mapmarker" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#move" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#open" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#repeat" />
+</svg>
+
+<svg class="icon smile">
+  <use xlink:href="#smile" />
+</svg>
+
+<svg class="icon tongue">
+  <use xlink:href="#tongue" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#unlocked" />
+</svg>
+
+{% endblock %}

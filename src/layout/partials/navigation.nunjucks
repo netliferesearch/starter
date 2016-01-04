@@ -5,6 +5,7 @@
       <li><a class="h3" href="styleguide" class="">Styleguide</a></li>
       <li><a class="h3" href="typo.html" class="{%if activePage == 'typo' %} active {% endif %}">Typographic test</a></li>
       <li><a class="h3" href="grid.html" class="{%if activePage == 'grid' %} active {% endif %}">Grid test</a></li>
+      <li><a class="h3" href="icons.html" class="{%if activePage == 'icons' %} active {% endif %}">Icons</a></li>
     </ul>
   </nav>
 {% endmacro %}

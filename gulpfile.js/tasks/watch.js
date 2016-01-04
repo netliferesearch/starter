@@ -10,5 +10,6 @@ gulp.task('watch', function() {
     gulp.watch(config.src.pages, ['nunjucks']);
     gulp.watch(config.src.styleguide, ['styleguide']);
     gulp.watch(config.src.images, ['images']);
+    gulp.watch(config.src.icons), ['svg-store'];
     gulp.watch(config.dist.pages+"*.html").on('change', browserSync.reload);
 })

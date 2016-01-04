@@ -18,6 +18,7 @@
   </head>
 
   <body>
+    {% include 'partials/svg-icons.nunjucks' %}
     <header>
       <h1>Netlife Starter</h1>
       <p>For prototyping and production</p>

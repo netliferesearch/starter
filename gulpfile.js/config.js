@@ -2,7 +2,7 @@
   Gulp config
 \*------------------------------------------------------*/
 
-// Set paths 
+// Set paths
 
 module.exports = {
   project: './',
@@ -14,6 +14,7 @@ module.exports = {
     pages: 'src/pages/*.+(html|nunjucks)',
     data: '../../src/data/data.json',
     images: './src/images/**',
+    icons: './src/icons/svg/*.svg',
     styleguide: './styledown/*.md'
   },
   dist: {
