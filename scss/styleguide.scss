@@ -109,19 +109,23 @@ code.sg:first-child {
 ul.sg {
   position: fixed;
   top: 0;
+  margin: 0;
   padding-left: 0;
+  background: color(white);
   li.sg {
     display: inline-block;
     margin-right: 1rem;
     a {
       text-decoration: none;
       font-family: font(sans);
-      color: color(gray, base);
+      color: color(black);
+      opacity: .25;
       &:hover {
-        color: color(black);
+        opacity: .7;
       }
       &.active {
-        color: color(primary);
+        color: color(secondary);
+        opacity: 1;
       }
     }
   }
