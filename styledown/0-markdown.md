@@ -10,4 +10,4 @@ Style and components library.
 - [Table](#table)
 - [Form](#form)
 - [Animations](#animations)
-- [Responsive images](#responsive-images)
+- [Images](#images)

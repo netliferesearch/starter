@@ -1,6 +1,6 @@
 ## Images
 
-### Default images
+### Default image
 Images have `max-width: 100%`
 
 Remeber to use the `alt` attribute for accessibility.
@@ -8,7 +8,7 @@ Remeber to use the `alt` attribute for accessibility.
 	@example
 	<img src="../images/large.jpg" alt="Moonlanding">
 
-### Responsive images
+### Responsive image
 Use responsive images for larges images.
 
 	@example
@@ -18,4 +18,14 @@ Use responsive images for larges images.
 						../images/medium.jpg 1024w,
 						../images/large.jpg 2000w"
 				alt="Moonlanding." />
+	</picture>
+
+### Round image
+Add the class `round-image`
+
+	@example
+	<picture>
+		<div class="round-image">
+			<img src="../images/large-square.jpg" class="round-image__image" alt="Moonlanding">
+		</div>
 	</picture>

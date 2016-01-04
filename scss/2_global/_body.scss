@@ -11,10 +11,3 @@ body {
   // Prevent top margin on children from bleeding outside top of body, creating annoying vertical scroll
   padding-top: 1px;
 }
-
-// Fluid images
-img {
-  max-width: 100%;
-  height: auto;
-  width: auto; /* for ie 8 */
-}

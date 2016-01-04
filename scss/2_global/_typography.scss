@@ -9,6 +9,7 @@ body {
   line-height: 1.6;
   color: color(gray, dark);
 
+  // Er dette så lurt? Lett å miste kontroll?
   @include breakpoint(medium) {
     font-size: 112.5%;
   }
