@@ -17,6 +17,7 @@
         '1_base/mixins',
         '1_base/icons',
         '1_base/grid',
+        '1_base/images',
         '1_base/animations';
 
 // 2. Global
@@ -25,10 +26,12 @@
         '2_global/typography',
         '2_global/lists',
         '2_global/tables',
-        '2_global/forms';
+        '2_global/forms',
+        '2_global/icons';
 
 // 2. Blocks
 @import '3_blocks/button',
         '3_blocks/checkbox',
         '3_blocks/select',
-        '3_blocks/responsive-table';
+        '3_blocks/responsive-table',
+        '3_blocks/round-image';

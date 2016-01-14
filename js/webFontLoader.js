@@ -2,7 +2,7 @@
 WebFont.load({
 
   google: {
-    families: ['Hind:300,400,600,700', 'Lora']
+    families: ['Work Sans:300,400,600,700', 'Lora']
   },
 
   /* SELF HOSTED
