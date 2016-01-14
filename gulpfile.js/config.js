@@ -6,10 +6,10 @@
 
 module.exports = {
   project: './',
-  bower: 'bower_components/',
+  npm: 'node_modules/',
   src: {
     js: 'js/**/*.js',
-    scss: './scss/**/*.scss',
+    scss: 'scss/**/*.scss',
     layout: 'src/layout/',
     pages: 'src/pages/*.+(html|nunjucks)',
     data: '../../src/data/data.json',

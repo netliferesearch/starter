@@ -11,7 +11,11 @@
     "type": "git",
     "url": "git://github.com/fredjens/starter.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "picturefill": "^3.0.1",
+    "susy": "^2.2.10",
+    "webfontloader": "^1.6.20"
+  },
   "devDependencies": {
     "browser-sync": "^2.9.11",
     "gulp": "^3.9.0",
@@ -42,6 +46,7 @@
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.5",
     "jshint-stylish": "^2.1.0",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
+    "gulp-cssstats": "^1.0.1"
   }
 }
