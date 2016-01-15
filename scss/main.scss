@@ -15,9 +15,6 @@
 @import '1_tools/normalize',
         '1_tools/functions',
         '1_tools/mixins',
-        '1_tools/icons',
-        '1_tools/grid',
-        '1_tools/images',
         '1_tools/animations';
 
 // 2. Base
@@ -25,7 +22,9 @@
         '2_base/fonts',
         '2_base/typography',
         '2_base/lists',
+        '2_base/icons',
         '2_base/tables',
+        '2_base/images',
         '2_base/forms',
         '2_base/icons';
 
@@ -33,5 +32,6 @@
 @import '3_blocks/button',
         '3_blocks/checkbox',
         '3_blocks/select',
+        '3_blocks/grid',
         '3_blocks/responsive-table',
         '3_blocks/round-image';
