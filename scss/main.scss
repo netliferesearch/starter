@@ -11,23 +11,23 @@
 
 @import 'variables';
 
-// 1. Base
-@import '1_base/normalize',
-        '1_base/functions',
-        '1_base/mixins',
-        '1_base/icons',
-        '1_base/grid',
-        '1_base/images',
-        '1_base/animations';
+// 1. Tools
+@import '1_tools/normalize',
+        '1_tools/functions',
+        '1_tools/mixins',
+        '1_tools/icons',
+        '1_tools/grid',
+        '1_tools/images',
+        '1_tools/animations';
 
-// 2. Global
-@import '2_global/body',
-        '2_global/fonts',
-        '2_global/typography',
-        '2_global/lists',
-        '2_global/tables',
-        '2_global/forms',
-        '2_global/icons';
+// 2. Base
+@import '2_base/body',
+        '2_base/fonts',
+        '2_base/typography',
+        '2_base/lists',
+        '2_base/tables',
+        '2_base/forms',
+        '2_base/icons';
 
 // 2. Blocks
 @import '3_blocks/button',

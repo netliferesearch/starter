@@ -9,7 +9,7 @@ module.exports = {
   bower: 'bower_components/',
   src: {
     js: 'js/**/*.js',
-    scss: './scss/**/*.scss',
+    scss: 'scss/**/*.scss',
     layout: 'src/layout/',
     pages: 'src/pages/*.+(html|nunjucks)',
     data: '../../src/data/data.json',
