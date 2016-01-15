@@ -6,7 +6,7 @@
 
 module.exports = {
   project: './',
-  bower: 'bower_components/',
+  npm: 'node_modules/',
   src: {
     js: 'js/**/*.js',
     scss: 'scss/**/*.scss',

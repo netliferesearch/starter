@@ -7,11 +7,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify');
 
 gulp.task('javascripts', function() {
-  gulp.src([config.bower+'modernizr/modernizr.js',
-            config.bower+'jquery/dist/jquery.js',
-            config.bower+'picturefill/dist/picturefill.js',
-            config.bower+'fastclick/lib/fastclick.js',
-            config.bower+'bower-webfontloader/webfont.js',
+  gulp.src([config.npm+'picturefill/dist/picturefill.js',
+            config.npm+'webfontloader/webfontloader.js',
             config.src.js])
   .pipe(concat('main.js'))
   .pipe(gulp.dest(config.dist.js))
