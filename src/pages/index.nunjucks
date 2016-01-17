@@ -4,7 +4,10 @@
 {% block content %}
 
   {{nav.active('home')}}
-  <p></p>
+  <p data-toggle-name="foobar">This will be toggled.</p>
+  <a data-toggle-target="foobar">Toggle visiblity</a>
+
+
   <blockquote>
     <p>My dear,<br />
     Find what you love and let it kill you.

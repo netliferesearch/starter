@@ -8,7 +8,7 @@ module.exports = {
   project: './dist/',
   npm: 'node_modules/',
   src: {
-    js: 'js/**/*.js',
+    js: 'js/main.js',
     scss: 'scss/**/*.scss',
     layout: 'src/layout/',
     pages: 'src/pages/*.+(html|nunjucks)',
