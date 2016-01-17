@@ -6,6 +6,7 @@
       <li><a class="h3" href="typo.html" class="{%if activePage == 'typo' %} active {% endif %}">Typographic test</a></li>
       <li><a class="h3" href="grid.html" class="{%if activePage == 'grid' %} active {% endif %}">Grid test</a></li>
       <li><a class="h3" href="icons.html" class="{%if activePage == 'icons' %} active {% endif %}">Icons</a></li>
+      <li><a class="h3" href="js.html" class="{%if activePage == 'js' %} active {% endif %}">JS (readymades)</a></li>
     </ul>
   </nav>
 {% endmacro %}

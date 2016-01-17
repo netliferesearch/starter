@@ -1,0 +1,12 @@
+.tab-panes .tab-pane {
+	display: none;
+}
+.tab-panes .active{
+	display: block;
+}
+
+.tab {
+	&.active {
+		color: color(primary);
+	}
+}

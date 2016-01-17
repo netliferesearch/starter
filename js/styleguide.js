@@ -1,4 +1,6 @@
 
+var $ = require('jquery-browserify')
+
 // Styleguide scroll-to
 
 $(function() {
