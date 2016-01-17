@@ -107,26 +107,15 @@ code.sg:first-child {
 // Styleguide menu
 
 ul.sg {
-  position: fixed;
-  top: 0;
-  margin: 0;
-  padding-left: 0;
   background: color(white);
+  padding-left: 0;
   li.sg {
     display: inline-block;
     margin-right: 1rem;
     a {
       text-decoration: none;
       font-family: font(sans);
-      color: color(black);
-      opacity: .25;
-      &:hover {
-        opacity: .7;
-      }
-      &.active {
-        color: color(secondary);
-        opacity: 1;
-      }
+      color: color(primary);
     }
   }
 }
