@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     rename = require('gulp-rename'),
     browserSync = require('browser-sync'),
+    notify = require('gulp-notify'),
     gutil = require('gulp-util');
 
 gulp.task('sass', function() {
@@ -16,10 +17,9 @@ gulp.task('sass', function() {
       .pipe(sass({
         style: 'expanded'
         })
-        .on('error', function(err){
-            browserSync.notify(err.message, 10000);
-            this.emit('end');
-        })
+        .on("error", notify.onError(function (error) {
+          return "Error: " + error.message;
+        }))
         .on('error', sass.logError)
       )
       .pipe(autoprefixer({

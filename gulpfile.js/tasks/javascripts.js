@@ -8,7 +8,6 @@ var gulp = require('gulp'),
 
 gulp.task('javascripts', function() {
   gulp.src([config.npm+'picturefill/dist/picturefill.js',
-            config.npm+'webfontloader/webfontloader.js',
             config.src.js])
   .pipe(concat('main.js'))
   .pipe(gulp.dest(config.dist.js))

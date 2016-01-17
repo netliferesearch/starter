@@ -5,7 +5,7 @@
 // Set paths
 
 module.exports = {
-  project: './',
+  project: './dist/',
   npm: 'node_modules/',
   src: {
     js: 'js/**/*.js',
