@@ -12,7 +12,7 @@
 @import 'variables';
 
 // 1. Tools
-@import '1_tools/normalize',
+@import //'1_tools/normalize', Skal vi fjerne Normalize?
         '1_tools/functions',
         '1_tools/mixins',
         '1_tools/animations';
@@ -35,6 +35,3 @@
         '3_blocks/grid',
         '3_blocks/responsive-table',
         '3_blocks/round-image';
-
-
-        
