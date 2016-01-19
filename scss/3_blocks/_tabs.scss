@@ -1,12 +1,30 @@
-.tab-panes .tab-pane {
-	display: none;
-}
-.tab-panes .active{
-	display: block;
+.tab-container{
+  width:60%;
+  margin: 20px 0;
 }
 
-.tab {
-	&.active {
-		color: color(primary);
-	}
+.tabs{
+  height: 30px;
+  line-height: 30px;
+}
+
+.tabs .tab {
+  display:inline-block;
+  cursor:pointer;
+  width:100px;
+  text-align:center;
+}
+
+.tabs .active {
+  background-color: #efefef
+}
+
+.tab-panes .tab-pane{
+  border:1px solid #333333;
+  width:400px;
+  padding:20px;
+  display: none
+}
+.tab-panes .active{
+  display: block
 }

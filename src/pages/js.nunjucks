@@ -8,25 +8,49 @@
 https://www.npmjs.com/package/toggle
 <section>
   <a class="button" data-toggle-target="foobar">Toggle visiblity</a>
-  <h1 data-toggle-name="foobar">This will be toggled.</h1>
+  <div style="background: slateGray; height: 4rem; width: 4rem;" data-toggle-name="foobar"></div>
 </section>
+
+<hr />
+<h2>Accordion</h2>
+https://www.npmjs.com/package/c2-accordion
+<div class="Accordion">
+    <div class="item" data-status="disabled">
+        <div class="control">
+            <a class="target" href="#">Item 1</a>
+        </div>
+        <div class="panel">Content</div>
+    </div>
+    <div class="item" data-status="disabled">
+        <div class="control">
+            <a class="target" href="#">Item 2</a>
+        </div>
+        <div class="panel">Content</div>
+    </div>
+    <div class="item" data-status="disabled">
+        <div class="control">
+            <a class="target" href="#">Item 3</a>
+        </div>
+        <div class="panel">Content</div>
+    </div>
+</div>
 
 <hr />
 <h2>Tabs</h2>
 https://www.npmjs.com/package/tabs
-<section>
-  <div class="tab-container">
-  	<div class="tabs">
-  		<a class="tab active">Home</a>
-  		<a class="tab">Profile</a>
-  		<a class="tab">Messages</a>
-  	</div>
-  	<div class="tab-panes">
-  		<div class="tab-pane active">home</div>
-  		<div class="tab-pane">profile</div>
-  		<div class="tab-pane" >message</div>
-  	</div>
-  </div>
-</section>
+<div class="tab-container">
+	<div class="tabs">
+		<a class="tab active">Home</a>
+		<a class="tab">Profile</a>
+		<a class="tab">Messages</a>
+	</div>
+	<div class="tab-panes">
+		<div class="tab-pane active">home</div>
+		<div class="tab-pane">profile</div>
+		<div class="tab-pane" >message</div>
+	</div>
+</div>
+
+<hr />
 
 {% endblock %}

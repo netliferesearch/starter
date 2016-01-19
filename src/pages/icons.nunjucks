@@ -6,10 +6,6 @@
 <h1>Icons</h1>
 
 <svg class="icon">
-  <use xlink:href="#arrow-down-left2" />
-</svg>
-
-<svg class="icon">
   <use xlink:href="#arrow-down-right2" />
 </svg>
 

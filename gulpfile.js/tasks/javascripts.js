@@ -8,9 +8,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify');
 
 gulp.task('javascripts', function() {
-   gulp.src([config.src.js])
-   .pipe(browserify())
-  .pipe(concat('main.js'))
+  gulp.src([config.src.browserify])
+  .pipe(browserify())
   .pipe(gulp.dest(config.dist.js))
   .pipe(uglify())
   .pipe(rename('main.min.js'))

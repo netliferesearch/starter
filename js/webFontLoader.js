@@ -1,6 +1,5 @@
 
-
-WebFont.load({
+require('webfontloader').load({
 
   google: {
     families: ['Work Sans:300,400,600,700', 'Lora']

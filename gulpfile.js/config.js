@@ -8,13 +8,14 @@ module.exports = {
   project: './dist/',
   npm: 'node_modules/',
   src: {
-    js: 'js/main.js',
+    js: 'js/**/*.js',
+    browserify: 'js/main.js',
     scss: 'scss/**/*.scss',
     layout: 'src/layout/',
     pages: 'src/pages/*.+(html|nunjucks)',
     data: '../../src/data/data.json',
     images: './src/images/**',
-    icons: './src/icons/svg/*.svg',
+    icons: 'src/icons/svg/*.svg',
     styleguide: './styledown/*.md'
   },
   dist: {

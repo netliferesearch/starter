@@ -12,6 +12,7 @@
     "url": "git://github.com/fredjens/starter.git"
   },
   "dependencies": {
+    "c2-accordion": "^2.6.2",
     "jquery": "^2.2.0",
     "picturefill": "^3.0.1",
     "susy": "^2.2.10",

@@ -1,0 +1,40 @@
+.item {
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+.panel[aria-hidden="true"],
+[data-status="disabled"] .panel {
+    display: none;
+}
+
+
+            .Wrap {
+                margin: 0 auto;
+                max-width: 1200px;
+            }
+            .Accordion {
+                margin: 0 0 50px;
+                border-top: 1px solid #000;
+            }
+            .Accordion .item {
+                background: #eee;
+                border-bottom: 1px solid #000;
+            }
+            .Accordion .target {
+                display: block;
+                padding: 10px 20px;
+                background: #ccc;
+                color: #000;
+                text-decoration: none;
+                outline: 0;
+                transition: background .3s;
+                cursor: pointer;
+            }
+            .Accordion .target:focus {
+                background: #bbb;
+            }
+            .Accordion .panel {
+                padding: 15px 20px;
+                outline: 0;
+            }

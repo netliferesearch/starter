@@ -35,4 +35,13 @@
         '3_blocks/grid',
         '3_blocks/responsive-table',
         '3_blocks/round-image',
-        '3_blocks/tabs';
+        '3_blocks/tabs',
+        '3_blocks/accordion';
+
+.half {
+  @include span(1 of 2);
+}
+
+.row {
+  @include container();
+}
