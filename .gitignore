@@ -3,6 +3,7 @@
 bower_components/
 node_modules/
 dist/
+css-stats/
 
 # OS generated files #
 ######################
@@ -38,5 +39,3 @@ npm-debug.log
 ######################
 *.sublime-project
 *.sublime-workspace
-
-

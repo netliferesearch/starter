@@ -1,4 +1,17 @@
 .button {
+  // Button base styling (from Foundation) - Needs to be cleaned up
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin: spacing(small);
+  padding: spacing(medium) spacing(large);
+  background: color(gray, light);
+  font-family: font(sans);
+  font-size: rem-calc(16);
+  color: color(black);
   // Small button
   &--small {
     padding: spacing(small) spacing(medium);
@@ -16,19 +29,6 @@
   &--third {
     @include buttonColor(color(third), color(white));
   }
-  // Button base styling (from Foundation)
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 1;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin: spacing(small);
-  padding: spacing(medium) spacing(large);
-  background: color(gray, light);
-  font-family: font(sans);
-  font-size: rem-calc(16);
-  color: color(black);
   // Removes the focus ring around an element when a mouse input is detected.
   [data-whatinput='mouse'] & {
     outline: 0;

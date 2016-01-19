@@ -12,7 +12,7 @@
 @import 'variables';
 
 // 1. Tools
-@import //'1_tools/normalize', Skal vi fjerne Normalize?
+@import '1_tools/normalize',
         '1_tools/functions',
         '1_tools/mixins',
         '1_tools/animations';
@@ -22,26 +22,17 @@
         '2_base/fonts',
         '2_base/typography',
         '2_base/lists',
-        '2_base/icons',
         '2_base/tables',
         '2_base/images',
-        '2_base/forms',
-        '2_base/icons';
+        '2_base/forms';
 
 // 2. Blocks
 @import '3_blocks/button',
         '3_blocks/checkbox',
         '3_blocks/select',
+        '3_blocks/icons',
         '3_blocks/grid',
         '3_blocks/responsive-table',
         '3_blocks/round-image',
         '3_blocks/tabs',
         '3_blocks/accordion';
-
-.half {
-  @include span(1 of 2);
-}
-
-.row {
-  @include container();
-}
