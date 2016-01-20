@@ -2,10 +2,13 @@
 {% extends "layout.nunjucks" %}
 {% block content %}
 {{nav.active('grid')}}
+<br>
+<hr>
+<br>
 <main>
 
   <section class="wrapper">
-    <div class="row">
+    <div class="row  grid-example">
       <div class="col-12/12">
         <div class="box">12</div>
       </div>
@@ -57,7 +60,7 @@
       {%- endfor %}
     </div>
 
-    <div class="row">
+    <div class="row  grid-example">
       {% for i in range(0, 3) -%}
         <div class="col-4/12">
           <div class="box">4</div>
@@ -85,54 +88,31 @@
 
     <br>
 
-    <div class="row">
+    <div class="row  grid-example">
       <div class="col-6/12@small col-8/12@medium"><div class="box"><small>6@small 8@medium</small></div></div>
       <div class="col-6/12@small col-4/12@medium"><div class="box"><small>6@small 4@medium</small></div></div>
     </div>
 
-    <div class="row row--center">
+    <div class="row row--center  grid-example">
       <div class="col-10/12@small col-8/12@medium col-6/12@large "><div class="box"><small>10@small 8@medium 6@large</small></div></div>
     </div>
 
     <br>
 
-    <div class="row ">
-      <div class="col-6/12 col-5/12@small col-4/12@medium push-1/12@small">
+    <div class="row  row--center  grid-example">
+      <div class="col-10/12 col-5/12@small col-7/12@medium">
         <div class="box">
-          <small>6 5@small 4@medium push-1@small</small>
+          <small>10 5@small 7@medium</small>
         </div>
       </div>
-      <div class="col-6/12 col-5/12@small col-4/12@medium push-1/12@small push-3/12@medium">
+      <div class="col-10/12 col-5/12@small col-3/12@medium">
         <div class="box">
-          <small>6 5@small 4@medium push-1@small push-3@medium</small>
+          <small>10 5@small 3@medium</small>
         </div>
       </div>
     </div>
 
     <br>
-
-    <div class="row">
-      <div class="col-12/12 col-8/12@medium">
-        <div class="row">
-          <div class="col-4/8">
-            <div class="box">
-              <small>4 of 8 inside 8</small>
-            </div>
-          </div>
-          <div class="col-4/8">
-            <div class="box">
-              <small>4 of 8 inside 8</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12/12 col-4/12@medium">
-        <div class="box">
-          <small>6 4@medium</small>
-        </div>
-      </div>
-    </div>
-
 
     <div class="row row--fluid grid-example">
       <div class="col-9/12@small">
