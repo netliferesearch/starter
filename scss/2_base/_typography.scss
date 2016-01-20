@@ -8,11 +8,6 @@ body {
   font-family: font(serif);
   line-height: 1.6;
   color: color(gray, dark);
-
-  // Er dette så lurt? Lett å miste kontroll?
-  @include breakpoint(medium) {
-    font-size: 112.5%;
-  }
 }
 
 // Headings
@@ -124,6 +119,12 @@ q {
 }
 address {
   font-style: normal;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: color(gray, light);
 }
 
 // To control FOUT and make browsers behave the same with WebFontLoader
