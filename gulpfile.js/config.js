@@ -5,7 +5,7 @@
 // Set paths
 
 module.exports = {
-  project: './dist/',
+  project: 'dist/',
   npm: 'node_modules/',
   src: {
     js: 'js/**/*.js',
@@ -19,10 +19,10 @@ module.exports = {
     styleguide: './styledown/*.md'
   },
   dist: {
-    js: './dist/js/',
-    css: './dist/css/',
-    images: './dist/images/',
-    pages: './dist/',
-    styleguide: './dist/styleguide/'
+    js: 'dist/js/',
+    css: 'dist/css/',
+    images: 'dist/images/',
+    pages: 'dist/',
+    styleguide: 'dist/styleguide/'
   }
 }
