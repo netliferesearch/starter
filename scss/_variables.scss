@@ -1,5 +1,12 @@
 // ------------------------------------
 // Colors
+//
+//  Use like this:
+//  color: color(primary)
+//
+//  For color variation we use sass mix
+//  color: colorVariation(primary, darken, 1)
+//
 // ------------------------------------
 
 $palette: (
@@ -12,14 +19,14 @@ $palette: (
     gray: #444
   ),
   darken: (
-    ‘dark’: 5%,
-    'darker' : 10%,
-    'darkest' : 15%
+    1: 20%,
+    2: 40%,
+    3: 60%
   ),
   lighten: (
-    ‘light’: 5%,
-    'lighter' : 15%,
-    'lightest' : 15%
+    1: 20%,
+    2: 40%,
+    3: 60%
   )
 );
 

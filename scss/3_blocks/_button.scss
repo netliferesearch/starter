@@ -12,6 +12,7 @@
   font-family: font(sans);
   font-size: rem-calc(16);
   color: color(black);
+  @include buttonColor(color(gray),color(white));
   // Small button
   &--small {
     padding: spacing(small) spacing(medium);
@@ -19,7 +20,7 @@
   }
   // Primary
   &--primary {
-    @include buttonColor(color(primary));
+    @include buttonColor(color(primary),color(black));
   }
   // Secondary
   &--secondary {

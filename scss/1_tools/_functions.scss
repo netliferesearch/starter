@@ -21,6 +21,28 @@
   @return null;
 }
 
+// Color variation
+@function colorVariation($color, $variation, $step) {
+  @if map-deep-get($palette, colors, $color) {
+    @if $variation == lighten {
+      @return mix(
+        white,
+        map-deep-get($palette, 'colors', $color),
+        map-deep-get($palette, $variation, $step)
+      );
+    } @else if $variation == darken {
+      @return mix(
+        black,
+        map-deep-get($palette, 'colors', $color),
+        map-deep-get($palette, $variation, $step)
+      );
+    }
+    @warn "Variation does not exits";
+  }
+  @warn "Check if color is is in map";
+  @return null;
+}
+
 
 // ------------------------------------
 // Spacing
