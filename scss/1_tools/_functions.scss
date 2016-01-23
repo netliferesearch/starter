@@ -13,13 +13,9 @@
 // Colors
 // ------------------------------------
 
-@function color($color, $tone:null) {
-  @if map-has-key($colors, $color) {
-    @if ($tone != null) {
-      @return map-get(map-get($colors, $color), $tone);
-    } @else {
-      @return map-get($colors, $color);
-    }
+@function color($color) {
+  @if map-deep-get($palette, 'colors', $color) {
+    @return map-deep-get($palette, 'colors', $color);
   }
   @warn "`#{$color}` is not in color map";
   @return null;

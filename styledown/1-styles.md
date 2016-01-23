@@ -18,7 +18,7 @@ Example:
 		<div class="sg-color__swatch color-white"></div>
 		<div class="sg-color__swatch color-gray"></div>
 		<div class="sg-color__swatch color-darkGray"></div>
-		<div class="sg-color__swatch color-lightgGray"></div>
+		<div class="sg-color__swatch color-lightGray"></div>
 	</div>
 
 ### Fonts

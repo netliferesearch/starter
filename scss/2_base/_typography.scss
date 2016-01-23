@@ -7,7 +7,7 @@ html {
 body {
   font-family: font(serif);
   line-height: 1.6;
-  color: color(gray, dark);
+  color: color(gray);
 }
 
 // Headings
@@ -88,7 +88,7 @@ dd + dt, li {
 // Code
 pre, code {
   font-family: monospace;
-  background-color: color(gray, light);
+  background-color: color(gray);
   border-radius: 3px;
   padding: 0 0.25rem;
 }
@@ -124,7 +124,7 @@ address {
 hr {
   border: 0;
   height: 1px;
-  background-color: color(gray, light);
+  background-color: color(gray);
 }
 
 // To control FOUT and make browsers behave the same with WebFontLoader

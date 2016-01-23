@@ -2,16 +2,24 @@
 // Colors
 // ------------------------------------
 
-$colors: (
-  primary: #a8cd25,
-  secondary: #1D0C9A,
-  third: #8A5BD3,
-  black: #000,
-  white: #fff,
-  gray: (
-    base: gray,
-    light: lightGray,
-    dark: DarkSlateGray
+$palette: (
+  colors: (
+    primary: #a8cd25,
+    secondary: #1D0C9A,
+    third: #8A5BD3,
+    black: #000,
+    white: #fff,
+    gray: #444
+  ),
+  darken: (
+    ‘dark’: 5%,
+    'darker' : 10%,
+    'darkest' : 15%
+  ),
+  lighten: (
+    ‘light’: 5%,
+    'lighter' : 15%,
+    'lightest' : 15%
   )
 );
 

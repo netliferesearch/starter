@@ -11,12 +11,12 @@ textarea {
   // TODO Add cross browser height fix
   display: block;
   padding: 0.5em 1em;
-  border: 1px solid color(gray, base);
+  border: 1px solid color(gray);
   &:focus {
 
   }
   &:disabled {
-    border: 1px solid color(gray,light);
+    border: 1px solid color(gray);
   }
 }
 
@@ -41,8 +41,8 @@ button {
 
   }
   &:disabled {
-    color: color(gray, base);
-    background: color(gray, light);
+    color: color(gray);
+    background: color(gray);
   }
 }
 

@@ -10,9 +10,9 @@
     width: 100%;
     padding: 0.5em;
     padding-right: 2.5em;
-    background-color: color(gray, light);
+    background-color: color(gray);
     color: color(black);
-    border: 1px solid color(gray, base);
+    border: 1px solid color(gray);
     border-radius: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -44,7 +44,7 @@
     right: 1em;
     width: 1em;
     height: 1em;
-    background-color: color(gray, light);
+    background-color: color(gray);
     border-left: 2px solid color(black);
     border-bottom: 2px solid color(black);
     transform: rotate(-45deg);

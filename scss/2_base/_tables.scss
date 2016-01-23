@@ -10,12 +10,12 @@ caption {
   text-align: left;
 }
 th, td {
-  border-top: 1px solid  color(gray, light);;
+  border-top: 1px solid  color(gray);;
   vertical-align: top;
   padding-right: 0.25em;
 }
 th + *,
 td + * {
-  border-left: 1px solid  color(gray, light);
+  border-left: 1px solid  color(gray);
   padding-left: 0.25em;
 }

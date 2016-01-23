@@ -2,7 +2,7 @@
 // Need to be BEMified
 
 .responsive-table {
-  border: 1px solid color(gray, light);
+  border: 1px solid color(gray);
   th {
     text-transform: uppercase;
     font-size: .75rem;
@@ -20,7 +20,7 @@
     tr {
       margin-bottom: 1.5rem;
       display: block;
-      border-bottom: 1px solid color(gray, light);
+      border-bottom: 1px solid color(gray);
     }
     td {
       display: block;

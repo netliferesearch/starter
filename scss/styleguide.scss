@@ -34,9 +34,9 @@
     &.color-third     { background: color(third); }
     &.color-black     { background: color(black); }
     &.color-white     { background: color(white); }
-    &.color-lightGray { background: color(gray, light); }
-    &.color-gray      { background: color(gray, base); }
-    &.color-darkGray  { background: color(gray, dark); }
+    &.color-lightGray { background: color(gray); }
+    &.color-gray      { background: color(gray); }
+    &.color-darkGray  { background: color(gray); }
   }
 }
 
@@ -58,7 +58,7 @@
   width: 5rem;
   height: 5rem;
   margin-right: 2rem;
-  background: color(gray, base);
+  background: color(gray);
   display: inline-block;
 
   &__preview {
