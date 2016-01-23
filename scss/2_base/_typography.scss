@@ -48,12 +48,6 @@ h6, .h6 {
   text-transform: uppercase;
 }
 
-// This mixin prints header sizes for different
-// breakpoints set in _variables.scss
-@include header-sizes;
-
-
-
 // Text Block Elements
 p, ul, ol, dl, pre, blockquote, table {
   margin-top: 0;
@@ -136,3 +130,7 @@ hr {
 .wf-active, .wf-inactive {
     visibility: visible;
 }
+
+// This mixin prints header sizes for different
+// breakpoints set in _variables.scss
+@include font-sizes;

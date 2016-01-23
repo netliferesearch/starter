@@ -61,26 +61,44 @@ $breakpoints: (
 // Header Sizes
 // ------------------------------------
 
-@mixin header-sizes {
-  @each $size, $headers in $header-sizes {
+@mixin font-sizes {
+  @each $size, $headers in $font-sizes {
     @if $size == 'base' {
       @each $header, $font-size in $headers {
-        #{$header}, .#{$header} { font-size: rem-calc($font-size); }
+        #{$header}, .#{$header} {
+          @include make-font-size($font-size);
+        }
       }
     }
     @else {
       @include breakpoint($size) {
         @each $header, $font-size in $headers {
-          #{$header}, .#{$header} { font-size: rem-calc($font-size); }
+          #{$header}, .#{$header} {
+            @include make-font-size($font-size);
+          }
         }
       }
     }
   }
 }
 
+// Utility function for mixin font-size
+@mixin make-font-size($font-size) {
+  // If $fs-font-size is a list, include
+  // both font-size and line-height
+  @if type-of($font-size) == "list" {
+    font-size: #{nth($font-size, 1)/16}rem;
+    @if (length($font-size) > 1) {
+      line-height: nth($font-size, 2);
+    }
+  }
+  @else {
+    font-size: rem-calc($font-size);
+  }
+}
 
 // ------------------------------------
-// Button Stuff
+// Button
 // ------------------------------------
 
 // To set button color, background and hover
