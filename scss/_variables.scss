@@ -1,13 +1,12 @@
-// ------------------------------------
-// Colors
-//
-//  Use like this:
-//  color: color(primary)
-//
-//  For color variation we use sass mix
-//  color: colorVariation(primary, darken, 1)
-//
-// ------------------------------------
+/* Colors
+
+  color: color(primary)
+
+  For color variation we use sass mix
+  color: colorVariation(primary, darken, 1)
+
+Styleguide 3.1.1.
+*/
 
 $palette: (
   colors: (
@@ -78,7 +77,7 @@ $font-sizes: (
     'p': 16
   ),
   medium: (
-    'h1': (144, .9),
+    'h1': (44, .9),
     'h2': 32,
     'h3': 28,
     'h4': 24,

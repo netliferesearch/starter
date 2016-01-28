@@ -1,3 +1,15 @@
+/*
+Button
+
+Markup:
+<button class="button {$modifiers}">Button</button>
+
+.button--primary   - Primary button
+.button--secondary  - Secondary button
+
+Styleguide 1
+*/
+
 .button {
   // Button base styling (from Foundation) - Needs to be cleaned up
   display: inline-block;

@@ -40,6 +40,7 @@
     "gulp-include": "^2.0.2",
     "gulp-inject": "^3.0.0",
     "gulp-jshint": "^2.0.0",
+    "gulp-kss": "0.0.2",
     "gulp-minify-css": "^1.1.6",
     "gulp-newer": "^1.0.0",
     "gulp-notify": "^2.2.0",
