@@ -2,7 +2,7 @@
 Button
 
 Markup:
-<button class="button {$modifiers}">Button</button>
+<button class="button {{modifier_class}}">Button</button>
 
 .button--primary   - Primary button
 .button--secondary  - Secondary button

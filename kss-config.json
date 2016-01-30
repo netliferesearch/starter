@@ -1,0 +1,15 @@
+{
+  "source": [
+    "src/scss"
+  ],
+  "homepage": [
+      "index.md"
+  ],
+  "destination":  "dist/styleguide/",
+  "css": [
+    "../css/main.css"
+  ],
+  "js": [
+    "../js/main.js"
+  ]
+}

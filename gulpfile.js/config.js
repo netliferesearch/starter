@@ -8,9 +8,9 @@ module.exports = {
   project: 'dist/',
   npm: 'node_modules/',
   src: {
-    js: 'js/**/*.js',
-    browserify: 'js/main.js',
-    scss: 'scss/**/*.scss',
+    js: 'src/js/**/*.js',
+    browserify: 'src/js/main.js',
+    scss: 'src/scss/**/*.scss',
     layout: 'src/layout/',
     pages: 'src/pages/*.+(html|nunjucks)',
     data: '../../src/data/data.json',

@@ -1,4 +1,0 @@
-Styleguide
-==========
-
-KSS styleguide
