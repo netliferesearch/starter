@@ -12,7 +12,6 @@
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
-    padding-top: 22px;
 }
 .kss-style a {
     color: #525252;
@@ -56,6 +55,10 @@
 }
 .kss-style h1 {
     font-size: 4.5rem;
+    margin-top: 0;
+}
+#kssref-0 {
+    margin-top: 20px;
 }
 .kss-style h2 {
     font-size: 2.4rem;
@@ -93,7 +96,7 @@
 .kss-style samp {
     font-family: Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
     color: #2b2b2b;
-    font-size: 1em
+    font-size: 1rem;
 }
 .kss-style pre {
     white-space: pre;
@@ -279,12 +282,12 @@
     }
     #kss-node .kss-nav__menu-child li:first-child {
         margin-top: 10px;
-        border-top: 1px solid #ccc;
+        border-top: 5px solid #eee;
         padding: 10px 0 0
     }
     #kss-node .kss-nav__menu-child li:last-child {
         margin-bottom: 10px;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 5px solid #eee;
         padding: 0 0 10px
     }
 }
@@ -309,7 +312,8 @@
     font-size: 1.5rem;
     line-height: 16px;
     color: #666;
-    margin-top: 16px;
+    padding-top: 38px;
+    margin-bottom: 6px;
 }
 #kss-node .kss-title__ref:before {
     content: 'Section '
@@ -351,10 +355,7 @@
 #kss-node .kss-parameters__description {
     display: table-cell
 }
-#kss-node .kss-modifier__wrapper {
-    border: 1px solid #ccc;
-    padding: 10px
-}
+
 #kss-node .kss-modifier__heading {
     margin: -10px -10px 10px -10px;
     padding: 10px;
@@ -384,8 +385,9 @@
     margin: 0
 }
 #kss-node .kss-markup {
-    margin: -1px 0 24px 0;
-    border: 1px solid #999
+    margin: -6px 0 24px 0;
+    border: 5px solid #eee;
+    display: none;
 }
 #kss-node .kss-markup pre {
     margin: 0
@@ -411,7 +413,7 @@
     color: #080
 }
 #kss-node .kwd {
-    color: #008
+    color: #3f3fd1
 }
 #kss-node .com {
     color: #800
@@ -428,13 +430,13 @@
     color: #660
 }
 #kss-node .tag {
-    color: #008
+    color: #166877
 }
 #kss-node .atn {
-    color: #606
+    color: rgb(59, 164, 60)
 }
 #kss-node .atv {
-    color: #080
+    color: #961a91
 }
 #kss-node .dec,
 #kss-node .var {
@@ -501,18 +503,14 @@ projection {
     background: #fcfcfc
 }
 
-
-
-
-.animation {
-  width: 5rem;
-  height: 5rem;
-  margin-right: 2rem;
-  background: #444;
-  display: inline-block; }
-  .animation__preview {
+.kss-button-html {
+    border: 6px solid #eee;
+    padding: 10px 15px;
     display: inline-block;
-    background: #a8cd25;
-    width: 5rem;
-    height: 5rem;
-    margin-right: 3rem; }
+    cursor: pointer;
+    margin-top: 2rem;
+    color: #444;
+    font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}

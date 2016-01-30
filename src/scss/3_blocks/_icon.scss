@@ -1,0 +1,56 @@
+/*
+Icon
+
+Styling for SVG icons.
+
+Markup:
+<svg class="icon">
+  <use xlink:href="#{{modifier_class}}" />
+</svg>
+
+arrow-down-right2 - arrow-down-right2
+arrow-down2 - arrow-down2
+arrow-left2 - Third button
+arrow-right2 - Small button
+arrow-up-left2 - arrow-up-left2
+arrow-up-right2 - arrow-up-right2
+arrow-up2 - arrow-up2
+check - check
+cross - cross
+evil - evil
+facebook2 - facebook2
+file-excel - file-excel
+file-pdf - file-pdf
+file-word - file-word
+file - file
+github - github
+happy - happy
+html-five - html-five
+inbox - inbox
+instagram - instagram
+lock - lock
+mail - mail
+mapmarker - mapmarker
+move -move
+open - open
+repeat - repeat
+smile - smile
+tongue - tongue
+unlocked - unlocked
+
+Styleguide 3.6
+*/
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+  padding: .5rem;
+  margin: 0 1rem 1rem 0;
+  fill: color(secondary);
+  &.evil, &.tongue, &.smile, &.happy {
+    fill: color(third);
+  }
+  &.html-five {
+    fill: color(primary);
+  }
+}

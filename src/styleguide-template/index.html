@@ -114,9 +114,6 @@
 
     {{#if markup}}
       <div class="kss-modifier__wrapper">
-        <div class="kss-modifier__heading kss-style">
-          Example{{#if modifiers}}s{{/if}}
-        </div>
       {{#if modifiers}}
         <div class="kss-modifier__default-name kss-style">
           Default styling
@@ -138,7 +135,8 @@
       {{/eachModifier}}
       </div>
 
-      <div class="kss-markup kss-style">
+      <a class="kss-button-html" data-toggle-target="kss-markup-box{{autoincrement}}"> HTML</a>
+      <div class="kss-markup slideFromLeft kss-style" data-toggle-name="kss-markup-box{{autoincrement}}">
         <pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
       </div>
     {{/if}}
