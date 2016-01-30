@@ -1,7 +1,16 @@
-/*------------------------------------------------------*\
-  Vertical align
-\*------------------------------------------------------*/
+/*
+Helpers
 
+Helper classes.
+Use @extend %class
+
+%verticalAlign - Vertical alignment
+%horizontalAlign - Horizontal alignment
+%centerAlign - Center alignment
+%clearfix - To clearfix a float element
+
+Styleguide 1.3
+*/
 %verticalAlign {
   position: relative;
   top: 50%;
