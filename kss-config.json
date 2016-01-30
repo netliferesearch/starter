@@ -2,6 +2,9 @@
   "source": [
     "src/scss"
   ],
+  "title": [
+      "Styleguide"
+  ],
   "homepage": [
       "index.md"
   ],
@@ -11,5 +14,8 @@
   ],
   "js": [
     "../js/main.js"
+  ],
+  "placeholder": [
+    "{modifier}"
   ]
 }
