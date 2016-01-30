@@ -1,18 +1,37 @@
-// ------------------------------------
-// Rem Calc
-// ------------------------------------
+/*
+Functions
 
-// rem-calc(00px)
+Handy functions.
+
+Styleguide 1.2
+*/
+
+/////////////////////////
+
+/*
+rem-calc($size)
+
+Convert px to rem.
+
+$size - The px size
+
+Styleguide 1.2.1
+*/
 @function rem-calc($size) {
   $remSize: $size / 16;
   @return #{$remSize}rem;
 }
 
 
-// ------------------------------------
-// Colors
-// ------------------------------------
+/*
+color($color)
 
+Color function.
+
+$color - The color variable from variables.scss
+
+Styleguide 1.2.2
+*/
 @function color($color) {
   @if map-deep-get($palette, 'colors', $color) {
     @return map-deep-get($palette, 'colors', $color);
@@ -21,7 +40,17 @@
   @return null;
 }
 
-// Color variation
+/*
+colorVariation($color, $variation, $step)
+
+Color function.
+
+$color - The color variable from variables.scss
+$variation - 'lighten' or 'darken'
+$step - 'numeric' The interval of the variation set in from variables.scss
+
+Styleguide 1.2.2
+*/
 @function colorVariation($color, $variation, $step) {
   @if map-deep-get($palette, colors, $color) {
     @if $variation == lighten {
@@ -44,10 +73,15 @@
 }
 
 
-// ------------------------------------
-// Spacing
-// ------------------------------------
+/*
+spacing($spacing)
 
+Spacing.
+
+$spacing - The spacing variable from variables.scss
+
+Styleguide 1.2.3
+*/
 @function spacing($spacing) {
   @if map-has-key($spacings, $spacing) {
     @return map-get($spacings,$spacing);
@@ -58,10 +92,16 @@
 
 
 
-// ------------------------------------
-// Font
-// ------------------------------------
+/*
+font($font, $family)
 
+To get a font stack from variables.scss.
+
+$front - The font variable from variables.scss
+$family - The font family variable from variables.scss (optional)
+
+Styleguide 1.2.4
+*/
 @function font($font, $family:null) {
   @if map-has-key($fonts, $font) {
     @if ($family != null) {

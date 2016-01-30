@@ -25,14 +25,13 @@
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a href="./">
-          <span class="kss-nav__ref">0</span
-          ><span class="kss-nav__name">Overview</span>
+            <span class="kss-nav__name">Introduction</span>
         </a>
       </li>
     {{#eachRoot}}
       <li class="kss-nav__menu-item">
         <a href="section-{{referenceURI}}.html">
-          <span class="kss-nav__ref">{{#ifNumeric reference}}{{reference}}{{else}}{{autoincrement}}{{/ifNumeric}}</span
+          <span class="kss-nav__ref">{{#ifNumeric reference}}{{reference}}{{/ifNumeric}}</span
           ><span class="kss-nav__name">{{header}}</span>
         </a>
       {{#ifReference ../rootName}}
@@ -41,7 +40,7 @@
           {{#ifDepth 2 ../../../options.[nav-depth]}}
             <li class="kss-nav__menu-item">
               <a href="section-{{../../referenceURI}}.html#kssref-{{referenceURI}}">
-                <span class="kss-nav__ref {{#ifDepth 3 100}}kss-nav__ref-child{{/ifDepth}}">{{#ifNumeric reference}}{{reference}}{{else}}{{autoincrement}}{{/ifNumeric}}</span
+                <span class="kss-nav__ref {{#ifDepth 3 100}}kss-nav__ref-child{{/ifDepth}}">{{#ifNumeric reference}}{{reference}}{{/ifNumeric}}</span
                 ><span class="kss-nav__name">{{header}}</span>
               </a>
             </li>

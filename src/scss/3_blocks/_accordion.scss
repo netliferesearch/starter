@@ -1,3 +1,32 @@
+/*
+Accordion (JS)
+
+https://www.npmjs.com/package/c2-accordion
+
+Markup:
+<div class="Accordion">
+    <div class="item" data-status="disabled">
+        <div class="control">
+            <a class="target" href="#">Item 1</a>
+        </div>
+        <div class="panel">Content</div>
+    </div>
+    <div class="item" data-status="disabled">
+        <div class="control">
+            <a class="target" href="#">Item 2</a>
+        </div>
+        <div class="panel">Content</div>
+    </div>
+    <div class="item" data-status="disabled">
+        <div class="control">
+            <a class="target" href="#">Item 3</a>
+        </div>
+        <div class="panel">Content</div>
+    </div>
+</div>
+
+Styleguide 3.5
+*/
 
 
 // Need to be BEMified

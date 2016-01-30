@@ -158,3 +158,33 @@ input[type="radio"] {
 }
 
 */
+
+/*
+Forms
+
+Base styling for forms.
+
+Markup:
+<label>
+    Label
+    <input type="text" placeholder="Placeholder"/>
+</label>
+
+<label>
+    Disabled
+    <input type="text" disabled/>
+</label>
+<label>
+    Label
+    <textarea></textarea>
+</label>
+<fieldset>
+    <legend>Legend</legend>
+    Fields here
+</fieldset>
+<label><input type="checkbox"/> Label</label>
+<label><input type="radio"/> Label</label>
+<button type="button">Button</button>
+
+Styleguide 2.3
+*/

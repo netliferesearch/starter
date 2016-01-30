@@ -1,24 +1,39 @@
-/*------------------------------------------------------*\
-  Animations
-\*------------------------------------------------------*/
+/*
+Animations
 
-%scaleUp {
+Animation classes for keyframe animations.
+
+Markup:
+<div class="animation {{modifier_class}}">
+    <div class="animation__preview"></div>
+</div>
+
+.scaleUp - Scale up
+.slideFromLeft - Slide from left
+.slideFromRight - Slide from right
+.rotate - Rotate
+.shake - Shake
+
+Styleguide 1.1
+*/
+
+.scaleUp {
   animation: scaleUp 1000ms linear both;
 }
 
-%slideFromLeft {
+.slideFromLeft {
   animation: slideFromLeft 1000ms linear both;
 }
 
-%slideFromRight {
+.slideFromRight {
   animation: slideFromRight 1000ms linear both;
 }
 
-%rotate {
+.rotate {
   animation: rotate 1000ms linear both;
 }
 
-%shake {
+.shake {
   animation: shake 600ms linear both;
 }
 
