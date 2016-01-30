@@ -1,7 +1,12 @@
 /*
 Checkbox
 
-Styleguide 2
+Markup:
+<label>Label
+    <input type="checkbox" class="button {{modifier_class}}">Checkbox</button>
+</label>
+
+Styleguide 3.2
 */
 
 .checkbox {

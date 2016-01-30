@@ -7,6 +7,5 @@ gulp.task('default', [
             'javascripts',
             'images',
             'sass',
-            'watch',
-            'styleguide'
+            'watch'
         ]);

@@ -9,13 +9,23 @@
 
 @import 'variables';
 
-// 1. Tools
+/*
+Tools
+
+Styleguide 1
+*/
+
 @import '1_tools/normalize',
         '1_tools/functions',
         '1_tools/mixins',
         '1_tools/animations';
 
-// 2. Base
+/*
+Base
+
+Styleguide 2
+*/
+
 @import '2_base/body',
         '2_base/fonts',
         '2_base/typography',
@@ -24,7 +34,11 @@
         '2_base/images',
         '2_base/forms';
 
-// 2. Blocks
+/*
+Blocks
+
+Styleguide 3
+*/
 @import '3_blocks/button',
         '3_blocks/checkbox',
         '3_blocks/select',

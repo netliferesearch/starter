@@ -5,7 +5,7 @@
   "author": "Fredrik Jensen",
   "license": "MIT",
   "scripts": {
-    "kss": "kss-node --config kss-config.json"
+    "kss": "kss-node --config kss-config.json --template src/styleguide-template"
   },
   "repository": {
     "type": "git",
