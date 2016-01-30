@@ -12,7 +12,7 @@
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
-    padding-top: 16px;
+    padding-top: 22px;
 }
 .kss-style a {
     color: #525252;
@@ -43,7 +43,7 @@
 .kss-style h4,
 .kss-style h5,
 .kss-style h6 {
-    margin: 24px 0 0 0;
+    margin: 5px 0 0 0;
     font-family: 'avant-garde', Helvetica, 'Helvetica Neue', Arial, sans-serif;
     color: #111;
     line-height: 1.15em;
@@ -55,8 +55,7 @@
     font-weight: bold
 }
 .kss-style h1 {
-    font-size: 4rem;
-    margin-top: 20px;
+    font-size: 4.5rem;
 }
 .kss-style h2 {
     font-size: 2.4rem;
@@ -307,9 +306,10 @@
 }
 #kss-node .kss-title__ref {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 16px;
-    color: #666
+    color: #666;
+    margin-top: 16px;
 }
 #kss-node .kss-title__ref:before {
     content: 'Section '
