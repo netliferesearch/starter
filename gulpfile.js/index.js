@@ -24,6 +24,6 @@ gulp.task('css-stats', require('./tasks/css-stats'));
 gulp.task('sass', require('./tasks/sass'));
 gulp.task('browserify', ['eslint'], require('./tasks/browserify'));
 
-gulp.task('build', ['assets', 'browserify', 'sass']);
+gulp.task('build', ['assets', 'sass-lint', 'browserify', 'sass']);
 gulp.task('default', ['build', 'browser-sync', 'watch']);
 gulp.task('watch', require('./tasks/watch'));

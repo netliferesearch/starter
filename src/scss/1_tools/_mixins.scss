@@ -102,7 +102,7 @@ $breakpoints: (
 // ------------------------------------
 
 // To set button color, background and hover
-@mixin buttonColor($bg-color, $color:null) {
+@mixin button-color($bg-color, $color:null) {
   background: $bg-color;
   color: $color;
   &:hover {
