@@ -1,13 +1,15 @@
+'use strict';
 
 var gulp = require('gulp'),
-    config = require('../config'),
     svgstore = require('gulp-svgstore'),
     svgmin = require('gulp-svgmin'),
     cheerio = require('gulp-cheerio'),
     inject = require('gulp-inject'),
     path = require('path');
 
-    gulp.task('svg-store', function () {
+var config = require('../config');
+
+module.exports = function() {
         var svgs = gulp
             .src(config.src.icons)
             .pipe(svgmin(function (file) {
@@ -35,4 +37,4 @@ var gulp = require('gulp'),
               .src('./src/layout/partials/svg-icons.nunjucks')
               .pipe(inject(svgs, { transform: fileContents }))
               .pipe(gulp.dest('./src/layout/partials/'));
-    });
+};

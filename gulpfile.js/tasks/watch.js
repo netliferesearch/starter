@@ -1,15 +1,17 @@
+'use strict';
 
 var gulp = require('gulp'),
-    browserSync = require('browser-sync'),
-    config = require('../config');
+    browserSync = require('browser-sync');
 
-gulp.task('watch', function() {
+var config = require('../config');
+
+module.exports = function() {
     gulp.watch(config.src.scss, ['sass']);
-    gulp.watch(config.src.js, [ 'javascripts' ]).on('change', browserSync.reload);
-    gulp.watch(config.src.layout+"*.nunjucks", ['nunjucks']);
-    gulp.watch(config.src.pages, ['nunjucks']);
+    gulp.watch(config.src.data, ['data']);
+    gulp.watch(config.src.js, [ 'browserify' ]);
+    gulp.watch(config.src.app).on('change', browserSync.reload);
     gulp.watch(config.src.styleguide, ['styleguide']);
     gulp.watch(config.src.images, ['images']);
-    gulp.watch(config.src.icons, ['svg-store']).on('change', browserSync.reload);
-    gulp.watch(config.dist.pages+"*.html").on('change', browserSync.reload);
-})
+    gulp.watch(config.src.icons, ['inline-svg']).on('change', browserSync.reload);
+    gulp.watch(config.src.html, ['html', 'browserify']);
+};

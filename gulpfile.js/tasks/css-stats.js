@@ -1,9 +1,12 @@
-var gulp = require('gulp'),
-    config = require('../config'),
-    cssstats = require('gulp-cssstats');
+'use strict';
 
-gulp.task('cssstats', function() {
+var gulp = require('gulp'),
+    cssstats = require('cssstats');
+
+var config = require('../config');
+
+module.exports = function() {
   gulp.src(config.dist.css+'main.css')
     .pipe(cssstats())
     .pipe(gulp.dest('./css-stats'));
-});
+};

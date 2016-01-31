@@ -1,28 +1,25 @@
-/*------------------------------------------------------*\
-  Gulp config
-\*------------------------------------------------------*/
+'use strict';
 
-// Set paths
+/**
+ * Gulp config
+ */
 
 module.exports = {
-  project: 'dist/',
-  npm: 'node_modules/',
-  src: {
-    js: 'src/js/**/*.js',
-    browserify: 'src/js/main.js',
-    scss: 'src/scss/**/*.scss',
-    layout: 'src/layout/',
-    pages: 'src/pages/*.+(html|nunjucks)',
-    data: '../../src/data/data.json',
-    images: './src/images/**',
-    icons: 'src/icons/svg/*.svg',
-    styleguide: './styledown/*.md'
-  },
-  dist: {
-    js: 'dist/js/',
-    css: 'dist/css/',
-    images: 'dist/images/',
-    pages: 'dist/',
-    styleguide: 'dist/styleguide/'
-  }
-}
+    project: 'dist',
+    npm: 'node_modules/',
+    gulpFiles: 'gulpfile.js/**/*.js',
+    src: {
+        js: 'src/js/**/*.js',
+        browserify: 'src/js/main.js',
+        scss: 'src/scss/**/*.scss',
+        images: 'src/assets/images/**',
+        icons: 'src/assets/icons/svg/*.svg'
+    },
+    dist: {
+        root: 'dist',
+        js: 'dist/js/',
+        css: 'dist/css/',
+        images: 'dist/images/',
+        icons: 'src/html/svg-icons'
+    }
+};

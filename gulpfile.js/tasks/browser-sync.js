@@ -1,12 +1,14 @@
+'use strict';
 
 var gulp = require('gulp'),
-    config = require('../config'),
     browserSync = require('browser-sync');
 
-gulp.task('browserSync', function() {
+var config = require('../config');
+
+module.exports = function() {
     browserSync.init({
         server: {
             baseDir: config.project
         }
     });
-});
+};
