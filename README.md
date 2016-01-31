@@ -8,17 +8,10 @@
     Netlife Research front-end starter for prototyping and production
 
 
-### Install the starter
-```npm i```
-
-### Run
-```npm run dev```
-
-### Deploy to Github pages
-```npm run deploy```
-
-### Generate styleguide
-```npm run styleguide```
+Install: ```npm i```
+Run ```npm run dev```
+Deploy to Github pages ```npm run deploy```
+Generate styleguide ```npm run styleguide```
 
 ### This starter contains
 * Runs on NodeJS with Browsersync
