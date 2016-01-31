@@ -9,8 +9,11 @@
 
 
 Install: ```npm i```
+
 Run ```npm run dev```
+
 Deploy to Github pages ```npm run deploy```
+
 Generate styleguide ```npm run styleguide```
 
 ### This starter contains
