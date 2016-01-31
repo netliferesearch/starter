@@ -10,7 +10,8 @@
   ],
   "destination":  "dist/styleguide/",
   "css": [
-    "../css/main.css"
+    "../css/main.min.css",
+    "../css/styleguide.min.css"
   ],
   "js": [
     "../js/main.js"

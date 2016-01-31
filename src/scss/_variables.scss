@@ -7,7 +7,23 @@ Styleguide 0
 /*
 Colors
 
+Markup:
+<div class="sg-color">
+    <div class="sg-color__swatch {{modifier_class}}-lighten1">Lighten 3</div>
+    <div class="sg-color__swatch {{modifier_class}}-lighten2">Lighten 2</div>
+    <div class="sg-color__swatch {{modifier_class}}-lighten3">Lighten 1</div>
+    <div class="sg-color__swatch {{modifier_class}}">Default</div>
+    <div class="sg-color__swatch {{modifier_class}}-darken1">Darken 1</div>
+    <div class="sg-color__swatch {{modifier_class}}-darken2">Darken 2</div>
+    <div class="sg-color__swatch {{modifier_class}}-darken3">Darken 3</div>
+</div>
 
+.primary - Primary
+.secondary - Secondary
+.third - Third
+.black - Black
+.gray - Gray
+.white - White
 
 Styleguide 0.1
 */
@@ -30,7 +46,7 @@ $palette: (
         1: 20%,
         2: 40%,
         3: 60%
-        )
+    )
 );
 
 // ------------------------------------
@@ -81,7 +97,7 @@ $font-sizes: (
         'p': 16
     ),
     medium: (
-        'h1': (44, .9),
+        'h1': (54, .9),
         'h2': 32,
         'h3': 28,
         'h4': 24,
