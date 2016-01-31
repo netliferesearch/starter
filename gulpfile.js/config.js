@@ -1,8 +1,8 @@
 'use strict';
 
-/**
- * Gulp config
- */
+/*
+    Gulp config
+*/
 
 module.exports = {
     project: 'dist',

@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 var config = require('../config');
 
 module.exports = function() {
-  gulp.src(config.dist.css+'main.css')
-    .pipe(cssstats())
-    .pipe(gulp.dest('./css-stats'));
+    gulp.src(config.dist.css + 'main.css')
+        .pipe(cssstats())
+        .pipe(gulp.dest('./css-stats'));
 };

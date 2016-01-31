@@ -1,5 +1,4 @@
-
-var $ = require('jquery-browserify')
+'use strict';
 
 require('picturefill');
 require('toggle');

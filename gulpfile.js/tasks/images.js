@@ -7,8 +7,8 @@ var gulp = require('gulp'),
 var config = require('../config');
 
 module.exports = function() {
-  return gulp.src(config.src.images)
-      .pipe(newer(config.dist.images))
-      .pipe(imagemin())
-      .pipe(gulp.dest(config.dist.images));
+    return gulp.src(config.src.images)
+        .pipe(newer(config.dist.images))
+        .pipe(imagemin())
+        .pipe(gulp.dest(config.dist.images));
 };
