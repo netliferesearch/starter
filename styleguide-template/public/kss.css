@@ -65,8 +65,8 @@
     margin-top: 0;
     margin-bottom: 0 !important;
 }
-#kssref-0 h1 {
-    margin-bottom: 1rem;
+.kss-overview  h1 {
+    margin: 22px 0 1rem 0;
 }
 .kss-style h2 {
     font-size: 2.4rem;
@@ -223,7 +223,6 @@
     width: 100%;
     margin: 0 auto;
     max-width: 1000px;
-    padding-top: 38px;
 }
 @media screen and (min-width: 769px) {
     #kss-node .kss-main {
@@ -314,7 +313,7 @@
     font-weight: normal
 }
 #kss-node .kss-section {
-    margin-bottom: 48px
+    margin-bottom: 10px
 }
 #kss-node .kss-title {
     margin-bottom: 0
@@ -334,7 +333,7 @@
     color: #000;
     text-decoration: none;
     border-bottom: 0;
-    margin-bottom: 1rem;
+    padding: 38px 0 1rem 0;
 }
 #kss-node .kss-title__permalink:hover,
 #kss-node .kss-title__permalink:focus,
