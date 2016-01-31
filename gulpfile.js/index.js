@@ -23,7 +23,8 @@ gulp.task('css-stats', require('./tasks/css-stats'));
 // Build
 gulp.task('sass', require('./tasks/sass'));
 gulp.task('browserify', ['eslint'], require('./tasks/browserify'));
+gulp.task('deploy', require('./tasks/deploy'));
 
-gulp.task('build', ['assets', 'sass-lint', 'browserify', 'sass']);
+gulp.task('build', ['assets', 'sass-lint', 'browserify', 'sass', 'deploy']);
 gulp.task('default', ['build', 'browser-sync', 'watch']);
 gulp.task('watch', require('./tasks/watch'));
