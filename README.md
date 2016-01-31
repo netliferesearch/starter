@@ -5,22 +5,22 @@
      \__ \ || (_| | |  | ||  __/ |   
     |___/\__\__,_|_|   \__\___|_|   
 
-    Netlife Research front-end starter for prototyping and production
+    Netlife Research front-end starter
 
 
 * Install: ```npm i```
 * Run: ```npm run dev```
-* Deploy to Github pages ```npm run deploy```
-* Generate styleguide ```npm run styleguide```
+* Deploy to Github pages: ```npm run deploy```
+* Generate styleguide: ```npm run styleguide```
 
 ### This starter contains
-* Runs on NodeJS with Browsersync
-* Gulp for task management
-* Autoprefixer with postCSS
-* JS dependencies with Browserify
-* Living styleguide with KSS
-* Inline SVG generator
-* Code linting with ESLint and SASS lint
+* Runs on [NodeJS](https://nodejs.org/en/) with [Browsersync](https://www.browsersync.io/)
+* [Gulp](http://gulpjs.com/) for task management
+* [Autoprefixer](https://github.com/postcss/autoprefixer) with postCSS
+* JS dependencies with [Browserify](http://browserify.org/)
+* Living styleguide with [KSS](http://warpspire.com/kss/) via the [NodeJS implementation[(https://github.com/kss-node/kss-node)]
+* [Inline SVG](https://www.npmjs.com/package/gulp-inline-svg) generator
+* Code linting with [ESLint](http://eslint.org/) and [SASS lint](https://github.com/sasstools/sass-lint/tree/master)
 
 ### Install only once
 * Install homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
