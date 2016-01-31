@@ -5,11 +5,10 @@
   "author": "Fredrik Jensen",
   "license": "MIT",
   "scripts": {
-    "postinstall": "npm run build",
-    "build": "gulp build",
+    "postinstall": "npm run dev",
+    "deploy": "npm run styleguide & gulp deploy",
     "dev": "gulp",
-    "styleguide": "kss-node --config kss-config.json --template styleguide-template",
-    "start": "node server"
+    "styleguide": "kss-node --config kss-config.json --template styleguide-template"
   },
   "repository": {
     "type": "git",
@@ -50,6 +49,7 @@
     "gulp-svgstore": "^5.0.5",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.7",
+    "kss": "^2.4.0",
     "require-dir": "^0.3.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"

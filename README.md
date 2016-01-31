@@ -12,26 +12,23 @@
 ```npm i```
 
 ### Run
-Work ```gulp```
+```npm run dev```
 
-### Gulp + Browsersync
-Browsersync with libsass and autoprefixer
+### Deploy to Github pages
+```npm run deploy```
 
+### Generate styleguide
+```npm run styleguide```
 
-### Static site generator
-With JSON and Nunjucks
-
-https://mozilla.github.io/nunjucks/
-
-
-### Styleguide
-Styleguide generated with styledown
-https://github.com/styledown/styledown
-
+### This starter contains
+* Runs on NodeJS with Browsersync
+* Gulp for task management
+* Autoprefixer with postCSS
+* JS dependencies with Browserify
+* Living styleguide with KSS
+* Inline SVG generator
+* Code linting with ESLint and SASS lint
 
 ### Install only once
-
 * Install homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 * Install nodejs: `brew install nodejs`
-* Install bower: `npm install -g bower`
-* Install gulp: `npm install -g gulp`
