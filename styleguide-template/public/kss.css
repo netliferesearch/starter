@@ -17,14 +17,21 @@
     color: #525252;
     text-decoration: none;
     transition-property: color;
-    transition-duration: .5s
+    transition-duration: .5s;
+    border-bottom: 2px solid #eee;
+}
+.kss-style p {
+    font-size: 1rem;
+    margin-top: 0;
 }
 .kss-style a:visited {
     color: #525252
+    border-bottom: 2px solid #eee;
 }
 .kss-style a:hover,
 .kss-style a:focus {
     color: #525252;
+    border-bottom: 2px solid #999;
 }
 .kss-style a:active {
     color: #404040;
@@ -32,9 +39,6 @@
 .kss-style a:hover,
 .kss-style a:active {
     outline: 0
-}
-.kss-style p {
-    margin: 12px 0 24px 0
 }
 .kss-style h1,
 .kss-style h2,
@@ -58,7 +62,11 @@
     margin-top: 0;
 }
 #kssref-0 {
-    margin-top: 20px;
+    margin-top: 0;
+    margin-bottom: 0 !important;
+}
+#kssref-0 h1 {
+    margin-bottom: 1rem;
 }
 .kss-style h2 {
     font-size: 2.4rem;
@@ -97,6 +105,7 @@
     font-family: Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
     color: #2b2b2b;
     font-size: 1rem;
+    font-weight: 600;
 }
 .kss-style pre {
     white-space: pre;
@@ -214,16 +223,19 @@
     width: 100%;
     margin: 0 auto;
     max-width: 1000px;
+    padding-top: 38px;
 }
 @media screen and (min-width: 769px) {
     #kss-node .kss-main {
         width: 80%;
         margin-left: 20%;
-        padding: 0 20px 0 30px
     }
 }
 #kss-node .kss-sidebar {
-    border-bottom: 1px solid #ddd
+    border-bottom: 1px solid #ddd;
+}
+#kss-node .kss-sidebar a {
+    border-bottom: 0;
 }
 @media screen and (min-width: 769px) {
     #kss-node .kss-sidebar {
@@ -312,7 +324,6 @@
     font-size: 1.5rem;
     line-height: 16px;
     color: #666;
-    padding-top: 38px;
     margin-bottom: 6px;
 }
 #kss-node .kss-title__ref:before {
@@ -321,7 +332,9 @@
 #kss-node .kss-title__permalink {
     display: block;
     color: #000;
-    text-decoration: none
+    text-decoration: none;
+    border-bottom: 0;
+    margin-bottom: 1rem;
 }
 #kss-node .kss-title__permalink:hover,
 #kss-node .kss-title__permalink:focus,
@@ -501,6 +514,10 @@ projection {
 #kss-node ol.linenums li.L6,
 #kss-node ol.linenums li.L8 {
     background: #fcfcfc
+}
+
+.kss-description {
+    padding-bottom: 1rem;
 }
 
 .kss-button-html {

@@ -1,7 +1,7 @@
 /*
 Variables
 
-Styleguide Variables
+Styleguide 0
 */
 
 /*
@@ -9,28 +9,28 @@ Colors
 
 
 
-Styleguide Variables
+Styleguide 0.1
 */
 
 $palette: (
-  colors: (
-    primary: #a8cd25,
-    secondary: #1d0c9a,
-    third: #8a5bd3,
-    black: #000,
-    white: #fff,
-    gray: #444
-  ),
-  darken: (
-    1: 20%,
-    2: 40%,
-    3: 60%
-  ),
-  lighten: (
-    1: 20%,
-    2: 40%,
-    3: 60%
-  )
+    colors: (
+        primary: #a8cd25,
+        secondary: #1d0c9a,
+        third: #8a5bd3,
+        black: #000,
+        white: #fff,
+        gray: #444
+    ),
+    darken: (
+        1: 20%,
+        2: 40%,
+        3: 60%
+    ),
+    lighten: (
+        1: 20%,
+        2: 40%,
+        3: 60%
+        )
 );
 
 // ------------------------------------
@@ -38,9 +38,9 @@ $palette: (
 // ------------------------------------
 
 $spacings: (
-  small: .5rem,
-  medium: 1rem,
-  large: 2rem
+    small: .5rem,
+    medium: 1rem,
+    large: 2rem
 );
 
 // ------------------------------------
@@ -48,10 +48,10 @@ $spacings: (
 // ------------------------------------
 
 $breakpoints: (
-  small: 480,
-  medium: 720,
-  large: 960,
-  wide: 1200,
+    small: 480,
+    medium: 720,
+    large: 960,
+    wide: 1200,
 );
 
 // ------------------------------------
@@ -59,34 +59,34 @@ $breakpoints: (
 // ------------------------------------
 
 $fonts: (
-  sans: ('Work Sans','Helvetica', sans-serif),
-  serif: ('Merriweather', 'Georgia', serif),
-  // If extra level needed
-  sans-weight: (
-    light: ('Open Sans Light','Helvetica', sans-serif),
-    regular: ('Open Sans Regular','Helvetica', sans-serif),
-    medium: ('Open Sans Medium','Helvetica', sans-serif),
-    bold:  ('Open Sans Bold','Helvetica', sans-serif)
-  ),
+    sans: ('Work Sans', 'Helvetica', sans-serif),
+    serif: ('Merriweather', 'Georgia', serif),
+    // If extra level needed
+    sans-weight: (
+        light: ('Open Sans Light', 'Helvetica', sans-serif),
+        regular: ('Open Sans Regular', 'Helvetica', sans-serif),
+        medium: ('Open Sans Medium', 'Helvetica', sans-serif),
+        bold:  ('Open Sans Bold', 'Helvetica', sans-serif)
+    ),
 );
 
 $font-sizes: (
-  base: (
-    'h1': 32,
-    'h2': 28,
-    'h3': 24,
-    'h4': 20,
-    'h5': 18,
-    'h6': 16,
-    'p': 16
-  ),
-  medium: (
-    'h1': (44, .9),
-    'h2': 32,
-    'h3': 28,
-    'h4': 24,
-    'h5': 20,
-    'h6': 16,
-    'p': (20, 1.8)
-  ),
+    base: (
+        'h1': 32,
+        'h2': 28,
+        'h3': 24,
+        'h4': 20,
+        'h5': 18,
+        'h6': 16,
+        'p': 16
+    ),
+    medium: (
+        'h1': (44, .9),
+        'h2': 32,
+        'h3': 28,
+        'h4': 24,
+        'h5': 20,
+        'h6': 16,
+        'p': (20, 1.8)
+    ),
 ) !default;

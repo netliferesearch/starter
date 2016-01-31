@@ -6,7 +6,7 @@ https://www.npmjs.com/package/toggle
 Markup:
 <section>
   <a class="button" data-toggle-target="foobar">Toggle visiblity</a>
-  <div style="background: slateGray; height: 4rem; width: 4rem;" data-toggle-name="foobar"></div>
+  <div style="background: slateGray; height: 4rem; width: 100%;" data-toggle-name="foobar"></div>
 </section>
 
 Styleguide 3.4
