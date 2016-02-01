@@ -28,7 +28,6 @@ Styleguide 3.1
     font-size: rem-calc(16);
     appearance: none;
 
-    // Small button
     &__child {
         background: #000;
     }
@@ -38,17 +37,14 @@ Styleguide 3.1
         font-size: rem-calc(14);
       }
 
-    // Primary
     &--primary {
         @include button-color(color(primary), color(black));
     }
 
-    // Secondary
     &--secondary {
         @include button-color(color(secondary), color(white));
     }
 
-    // Third
     &--third {
         @include button-color(color(third), color(white));
     }
