@@ -18,8 +18,8 @@ $size - The px size
 Styleguide 1.2.1
 */
 @function rem-calc($size) {
-  $remSize: $size / 16;
-  @return #{$remSize}rem;
+    $rem-size: $size / 16;
+    @return #{$rem-size}rem;
 }
 
 
@@ -32,12 +32,16 @@ $color - The color variable from variables.scss
 
 Styleguide 1.2.2
 */
-@function color($color) {
-  @if map-deep-get($palette, 'colors', $color) {
-    @return map-deep-get($palette, 'colors', $color);
-  }
-  @warn "`#{$color}` is not in color map";
-  @return null;
+@function color($color, $tone: null) {
+    @if map-has-key($colors, $color) {
+        @if ($tone != null) {
+            @return map-get(map-get($colors, $color), $tone);
+        } @else {
+            @return map-get($colors, $color);
+        }
+    }
+    @warn '`#{$color}` is not in color map';
+    @return null;
 }
 
 /*
@@ -52,26 +56,25 @@ $step - 'numeric' The interval of the variation set in from variables.scss
 Styleguide 1.2.2
 */
 @function colorVariation($color, $variation, $step) {
-  @if map-deep-get($palette, colors, $color) {
-    @if $variation == lighten {
-      @return mix(
-        white,
-        map-deep-get($palette, 'colors', $color),
-        map-deep-get($palette, $variation, $step)
-      );
-    } @else if $variation == darken {
-      @return mix(
-        black,
-        map-deep-get($palette, 'colors', $color),
-        map-deep-get($palette, $variation, $step)
-      );
+    @if map-deep-get($palette, colors, $color) {
+        @if $variation == lighten {
+            @return mix(
+                white,
+                map-deep-get($palette, 'colors', $color),
+                map-deep-get($palette, $variation, $step)
+            );
+            } @else if $variation == darken {
+            @return mix(
+                black,
+                map-deep-get($palette, 'colors', $color),
+                map-deep-get($palette, $variation, $step)
+            );
+        }
+        @warn "Variation does not exits";
     }
-    @warn "Variation does not exits";
-  }
-  @warn "Check if color is is in map";
-  @return null;
+    @warn "Check if color is is in map";
+    @return null;
 }
-
 
 /*
 spacing($spacing)
@@ -83,11 +86,11 @@ $spacing - The spacing variable from variables.scss
 Styleguide 1.2.3
 */
 @function spacing($spacing) {
-  @if map-has-key($spacings, $spacing) {
-    @return map-get($spacings,$spacing);
-  }
-  @warn "`#{$spacing}` is not in spacing map";
-  @return null;
+    @if map-has-key($spacings, $spacing) {
+        @return map-get($spacings, $spacing);
+    }
+    @warn '`#{$spacing}` is not in spacing map';
+    @return null;
 }
 
 
@@ -102,16 +105,16 @@ $family - The font family variable from variables.scss (optional)
 
 Styleguide 1.2.4
 */
-@function font($font, $family:null) {
-  @if map-has-key($fonts, $font) {
-    @if ($family != null) {
-      @return map-get(map-get($fonts, $font), $family);
-    } @else {
-      @return map-get($fonts, $font);
+@function font($font, $family: null) {
+    @if map-has-key($fonts, $font) {
+        @if ($family != null) {
+            @return map-get(map-get($fonts, $font), $family);
+        } @else {
+            @return map-get($fonts, $font);
+        }
     }
-  }
-  @warn "`#{$font}` is not in fonts map";
-  @return null;
+    @warn '`#{$font}` is not in fonts map';
+    @return null;
 }
 
 

@@ -7,6 +7,12 @@
 
 @import '../../node_modules/susy/sass/susy';
 
+/*
+Variables
+
+Styleguide 0
+*/
+
 @import 'variables';
 
 /*
@@ -16,11 +22,10 @@ Code used by the other components and helper classes.
 
 Styleguide 1
 */
-
-@import '1_tools/normalize',
-        '1_tools/functions',
-        '1_tools/mixins',
-        '1_tools/animations';
+@import '1_tools/normalize';
+@import '1_tools/functions';
+@import '1_tools/mixins';
+@import '1_tools/animations';
 
 /*
 Base
@@ -29,14 +34,13 @@ Styling of default html elements.
 
 Styleguide 2
 */
-
-@import '2_base/body',
-        '2_base/fonts',
-        '2_base/typography',
-        '2_base/lists',
-        '2_base/tables',
-        '2_base/images',
-        '2_base/forms';
+@import '2_base/body';
+@import '2_base/fonts';
+@import '2_base/typography';
+@import '2_base/lists';
+@import '2_base/tables';
+@import '2_base/images';
+@import '2_base/forms';
 
 /*
 Blocks
@@ -45,13 +49,13 @@ Design components, seperated as blocks.
 
 Styleguide 3
 */
-@import '3_blocks/button',
-        '3_blocks/checkbox',
-        '3_blocks/select',
-        '3_blocks/icon',
-        '3_blocks/grid',
-        '3_blocks/responsive-table',
-        '3_blocks/round-image',
-        '3_blocks/tabs',
-        '3_blocks/accordion',
-        '3_blocks/toggle';
+@import '3_blocks/button';
+@import '3_blocks/checkbox';
+@import '3_blocks/select';
+@import '3_blocks/icon';
+@import '3_blocks/grid';
+@import '3_blocks/responsive-table';
+@import '3_blocks/round-image';
+@import '3_blocks/tabs';
+@import '3_blocks/accordion';
+@import '3_blocks/toggle';

@@ -28,10 +28,6 @@ Styleguide 3.1
     font-size: rem-calc(16);
     appearance: none;
 
-    &__child {
-        background: #000;
-    }
-
     &--small {
         padding: spacing(small) spacing(medium);
         font-size: rem-calc(14);
