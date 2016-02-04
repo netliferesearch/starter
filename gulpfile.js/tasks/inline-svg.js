@@ -34,7 +34,7 @@ module.exports = function() {
         return file.contents.toString();
     }
     return gulp
-      .src('./src/layout/partials/svg-icons.nunjucks')
+      .src('./src/icons/svg-icons.html')
       .pipe(inject(svgs, { transform: fileContents }))
-      .pipe(gulp.dest('./src/layout/partials/'));
+      .pipe(gulp.dest(config.dist.root));
 };

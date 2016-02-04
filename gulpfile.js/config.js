@@ -12,8 +12,8 @@ module.exports = {
         js: 'src/js/**/*.js',
         browserify: 'src/js/main.js',
         scss: 'src/scss/**/*.scss',
-        images: 'src/assets/images/**',
-        icons: 'src/assets/icons/svg/*.svg'
+        images: 'src/images/**',
+        icons: 'src/icons/svg/*.svg'
     },
     dist: {
         root: 'dist',
