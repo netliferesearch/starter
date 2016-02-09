@@ -13,6 +13,15 @@ Markup:
     </select>
   </div>
 </label>
+<label>
+  Disabled
+  <div class="select select--disabled">
+    <select disabled>
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+  </div>
+</label>
 
 Styleguide 3.7
 */
@@ -49,6 +58,10 @@ Styleguide 3.7
       // Styling here will affect the dropdown list in IE
 
     }
+    &:disabled {
+      color: lighten(color(gray),50%);
+      border-color: lighten(color(gray),50%);
+    }
   }
   // Dropdown arrow
   &:after {
@@ -64,5 +77,9 @@ Styleguide 3.7
     border-left: 2px solid color(black);
     border-bottom: 2px solid color(black);
     transform: rotate(-45deg);
+  }
+  &--disabled:after {
+    border-left-color: lighten(color(gray),50%);
+    border-bottom-color: lighten(color(gray),50%);
   }
 }
