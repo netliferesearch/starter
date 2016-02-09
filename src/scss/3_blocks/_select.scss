@@ -1,5 +1,21 @@
+/*
+Select
 
-// Need to be BEMified
+Custom styling of the select box trigger.
+
+Markup:
+<label>
+  Label
+  <div class="select">
+    <select>
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+  </div>
+</label>
+
+Styleguide 3.7
+*/
 
 .select {
   display: block;
@@ -10,7 +26,7 @@
     width: 100%;
     padding: 0.5em;
     padding-right: 2.5em;
-    background-color: color(gray);
+    background-color: color(white);
     color: color(black);
     border: 1px solid color(gray);
     border-radius: 0;
@@ -44,7 +60,7 @@
     right: 1em;
     width: 1em;
     height: 1em;
-    background-color: color(gray);
+    background-color: color(white);
     border-left: 2px solid color(black);
     border-bottom: 2px solid color(black);
     transform: rotate(-45deg);
