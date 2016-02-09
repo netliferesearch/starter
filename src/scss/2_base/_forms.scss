@@ -1,3 +1,50 @@
+/*
+Forms
+
+Base styling for forms.
+
+Markup:
+<label>
+    Label
+    <input type="text" placeholder="Placeholder"/>
+</label>
+<label>
+    Disabled
+    <input type="text" disabled/>
+</label>
+<label>
+    Label
+    <textarea></textarea>
+</label>
+<label><input type="checkbox"/> Label</label>
+<label><input type="checkbox" checked/> Label</label>
+<label><input type="checkbox" disabled/> Disabled</label>
+<label><input type="radio" name="test"/> Label</label>
+<label><input type="radio" name="test" checked/> Label</label>
+<label><input type="radio" name="test" disabled/> Disabled</label>
+<label>
+    Label
+    <select>
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+</label>
+<label>
+    Disabled
+    <select disabled>
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+</label>
+<fieldset>
+    <legend>Legend</legend>
+    Fields here
+</fieldset>
+<button type="button">Button</button>
+<button type="submit">Submit</button>
+
+Styleguide 2.3
+*/
 
 // Labels
 label {
@@ -157,34 +204,4 @@ input[type="radio"] {
   }
 }
 
-*/
-
-/*
-Forms
-
-Base styling for forms.
-
-Markup:
-<label>
-    Label
-    <input type="text" placeholder="Placeholder"/>
-</label>
-
-<label>
-    Disabled
-    <input type="text" disabled/>
-</label>
-<label>
-    Label
-    <textarea></textarea>
-</label>
-<fieldset>
-    <legend>Legend</legend>
-    Fields here
-</fieldset>
-<label><input type="checkbox"/> Label</label>
-<label><input type="radio"/> Label</label>
-<button type="button">Button</button>
-
-Styleguide 2.3
 */
