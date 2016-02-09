@@ -2,40 +2,99 @@
 Checkbox
 
 Markup:
-<label>Label
-    <input type="checkbox" class="button {{modifier_class}}">Checkbox</button>
+<label class="checkbox">
+    <input type="checkbox"/>
+    <i class="checkbox__indicator"></i>
+    Label
+</label>
+<label class="checkbox">
+    <input type="checkbox" checked/>
+    <i class="checkbox__indicator"></i>
+    Label
+</label>
+<label class="checkbox checkbox--disabled">
+    <input type="checkbox" disabled/>
+    <i class="checkbox__indicator"></i>
+    Disabled
+</label>
+<label class="checkbox checkbox--disabled">
+    <input type="checkbox" checked disabled/>
+    <i class="checkbox__indicator"></i>
+    Disabled
 </label>
 
-Styleguide 3.2
+Styleguide 3.8
 */
 
 .checkbox {
-
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding-left: 2rem;
   &--disabled {
-
+    color: lighten(color(gray),50%);
+	  cursor: default;
   }
   &--inline {
-
+    display: inline-block;
   }
   &__indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width:  1.33rem;
+    height: 1.33rem;
+    line-height: 1.33rem;
+    background-color: color(white);
+    border: 1px solid color(gray); // Always use a border on input elements for accessibility. High contrast mode in Windows will remove all background styling and render the field invisible if border is not used.
+    user-select: none;
+    text-align: center;
+    border-radius: 0px;
+  }
+  &--radio {
 
   }
   input {
-
+    width: 1rem;
+    margin-top: 8px;
+    margin-left: -16px; // The original input may become visible as a fallback on older IE browsers and should be positioned
+    border: none;
+    position: absolute;
+    opacity: 0;
     &:checked ~ .checkbox__indicator {
-
+      background-color: color(gray);
+      border-color: color(gray); // Always use a border on input elements for accessibility. High contrast mode in Windows will remove all background styling and render the field invisible if border is not used.
+      color: color(white);
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 0.7em;
+        height: 0.7em;
+        vertical-align: to  p;
+        border-left: 3px solid white;
+        border-bottom: 3px solid white;
+        transform: translateY(-25%) rotate(-45deg);
+      }
     }
 
     &:focus ~ .checkbox__indicator {
-
+      box-shadow: 0 0 0 .2rem lighten(color(primary),15%), 0 0 0 .2rem lighten(color(primary),15%);
     }
 
     &:active ~ .checkbox__indicator {
-
+      color: color(white);
+      background-color: color(primary);
+      border-color: color(primary);
     }
 
     &:disabled ~ .checkbox__indicator {
+      border-color: lighten(color(gray),50%);
+    }
 
+    &:disabled:checked ~ .checkbox__indicator {
+      background-color: lighten(color(gray),50%);
+      border-color: lighten(color(gray),50%);
     }
   }
 }
