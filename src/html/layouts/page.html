@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="no">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="/css/main.min.css">
+    </head>
+    <body>
+        {{> nav }}
+        <h1>{{ title }}</h1>
+        <p>{{ description }}</p>
+        {{{ contents }}}
+        {{> footer }}
+        <script src="/js/main.min.js"></script>
+    </body>
+</html>
