@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     svgmin = require('gulp-svgmin'),
     cheerio = require('gulp-cheerio'),
     inject = require('gulp-inject'),
+    browserSync = require('browser-sync'),
     path = require('path');
 
 var config = require('../config');
@@ -36,5 +37,6 @@ module.exports = function() {
     return gulp
       .src('./src/icons/svg-icons.html')
       .pipe(inject(svgs, { transform: fileContents }))
-      .pipe(gulp.dest(config.dist.root));
+      .pipe(gulp.dest(config.dist.root))
+      .pipe(browserSync.reload({stream: true}));
 };
