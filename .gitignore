@@ -2,7 +2,6 @@
 # Dependencies #
 bower_components/
 node_modules/
-dist/
 css-stats/
 .publish
 
