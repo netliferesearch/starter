@@ -3,13 +3,13 @@ Colors
 
 Markup:
 <div class="sg-color">
-    <div class="sg-color__swatch {{modifier_class}}-lighten3">Lighten 3</div>
-    <div class="sg-color__swatch {{modifier_class}}-lighten2">Lighten 2</div>
-    <div class="sg-color__swatch {{modifier_class}}-lighten1">Lighten 1</div>
     <div class="sg-color__swatch {{modifier_class}}">Default</div>
-    <div class="sg-color__swatch {{modifier_class}}-darken1">Darken 1</div>
-    <div class="sg-color__swatch {{modifier_class}}-darken2">Darken 2</div>
-    <div class="sg-color__swatch {{modifier_class}}-darken3">Darken 3</div>
+    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-lighten3">Lighten 3</div>
+    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-lighten2">Lighten 2</div>
+    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-lighten1">Lighten 1</div>
+    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-darken1">Darken 1</div>
+    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-darken2">Darken 2</div>
+    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-darken3">Darken 3</div>
 </div>
 
 .primary - Primary

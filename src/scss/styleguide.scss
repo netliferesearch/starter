@@ -7,33 +7,43 @@
 
 // colors
 
+@function sg-text-color($color) {
+  @if ($color) {
+    @if (lightness($color) > 50) {
+      @return #000000; // Lighter backgorund, return dark color
+    } @else {
+      @return #ffffff; // Darker background, return light color
+    }
+  }
+}
+
 @mixin sg-color($color) {
     .#{$color} {
-        @extend %swatch;
+        color: sg-text-color(color($color));
         background: color($color);
     }
     .#{$color}-lighten1 {
-        @extend %swatch;
+        color: sg-text-color(colorVariation($color, lighten, 1));
         background: colorVariation($color, lighten, 1);
     }
     .#{$color}-lighten2 {
-        @extend %swatch;
+        color: sg-text-color(colorVariation($color, lighten, 2));
         background: colorVariation($color, lighten, 2);
     }
     .#{$color}-lighten3 {
-        @extend %swatch;
+        color: sg-text-color(colorVariation($color, lighten, 3));
         background: colorVariation($color, lighten, 3);
     }
     .#{$color}-darken1 {
-        @extend %swatch;
+        color: sg-text-color(colorVariation($color, darken, 1));
         background: colorVariation($color, darken, 1);
     }
     .#{$color}-darken2 {
-        @extend %swatch;
+        color: sg-text-color(colorVariation($color, darken, 2));
         background: colorVariation($color, darken, 2);
     }
     .#{$color}-darken3 {
-        @extend %swatch;
+        color: sg-text-color(colorVariation($color, darken, 3));
         background: colorVariation($color, darken, 3);
     }
 }
@@ -56,13 +66,16 @@
         text-transform: uppercase;
         font-size: .8rem;
         font-weight: 600;
+        margin-right: 10px;
         margin-bottom: 10px;
         float: left;
         width: 8rem;
+        padding-top: 55px;
+        height: 130px;
+        border: 1px solid #eee;
+        &--small {
+          padding-top: 20px;
+          height: 60px;
+        }
     }
-}
-
-%swatch {
-    padding-top: 38px;
-    height: 100px;
 }
