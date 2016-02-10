@@ -28,10 +28,10 @@ module.exports = function() {
         }))
         // .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.dist.css))
-        .pipe(browserSync.reload({stream: true}))
         .pipe(cssnano())
         .pipe(rename({
             suffix: '.min'
         }))
-      .pipe(gulp.dest(config.dist.css));
+        .pipe(gulp.dest(config.dist.css))
+        .pipe(browserSync.reload({stream: true}));
 };
