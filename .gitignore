@@ -13,13 +13,6 @@ css-stats/
 ehthumbs.db
 Thumbs.db
 
-# Statamic files #
-######################
-_cache/*
-!_cache/index.html
-_logs/*
-!_logs/index.html
-
 # Scss Cache #
 ######################
 .scssc
