@@ -1,0 +1,2318 @@
+@charset "UTF-8";
+/**
+ * Starter by Netlife Research
+ * ---------------------------
+ * https://github.com/netliferesearch/starter
+ * ------------------------------------------
+ */
+/*
+Variables
+
+Styleguide 0
+*/
+/*
+Colors
+
+Markup:
+<div class="sg-color">
+    <div class="sg-color__swatch {{modifier_class}}">Default</div>
+    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-lighten3">Lighten 3</div>
+    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-lighten2">Lighten 2</div>
+    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-lighten1">Lighten 1</div>
+    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-darken1">Darken 1</div>
+    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-darken2">Darken 2</div>
+    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-darken3">Darken 3</div>
+</div>
+
+.primary - Primary
+.secondary - Secondary
+.third - Third
+.black - Black
+.gray - Gray
+
+Styleguide 0.1
+*/
+/*
+Tools
+
+Code used by the other components and helper classes.
+
+Styleguide 1
+*/
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/*
+Functions
+
+Handy functions.
+
+Styleguide 1.2
+*/
+/*
+rem-calc($size)
+
+Convert px to rem.
+
+$size - The px size
+
+Styleguide 1.2.1
+*/
+/*
+color($color)
+
+Color function.
+
+$color - The color variable from variables.scss
+
+Styleguide 1.2.2
+*/
+/*
+colorVariation($color, $variation, $step)
+
+Color function.
+
+$color - The color variable from variables.scss
+$variation - 'lighten' or 'darken'
+$step - 'numeric' The interval of the variation set in from variables.scss
+
+Styleguide 1.2.2
+*/
+/*
+spacing($spacing)
+
+Spacing.
+
+$spacing - The spacing variable from variables.scss
+
+Styleguide 1.2.3
+*/
+/*
+font($font, $family)
+
+To get a font stack from variables.scss.
+
+$front - The font variable from variables.scss
+$family - The font family variable from variables.scss (optional)
+
+Styleguide 1.2.4
+*/
+/*
+Animations
+
+Animation classes for keyframe animations.
+Use @extend %class
+
+%scaleUp - Scale up
+%slideFromLeft - Slide from left
+%slideFromRight - Slide from right
+%rotate - Rotate
+%shake - Shake
+
+Styleguide 1.1
+*/
+.slideFromLeft {
+  -webkit-animation: slideFromLeft 1000ms linear both;
+  animation: slideFromLeft 1000ms linear both; }
+
+@-webkit-keyframes rotate {
+  0.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  3.33% {
+    -webkit-transform: matrix3d(0.82, 0.572, 0, 0, -0.572, 0.82, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.82, 0.572, 0, 0, -0.572, 0.82, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  6.67% {
+    -webkit-transform: matrix3d(0.457, 0.889, 0, 0, -0.889, 0.457, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.457, 0.889, 0, 0, -0.889, 0.457, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  10.00% {
+    -webkit-transform: matrix3d(0.143, 0.99, 0, 0, -0.99, 0.143, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.143, 0.99, 0, 0, -0.99, 0.143, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  13.33% {
+    -webkit-transform: matrix3d(-0.031, 1, 0, 0, -1, -0.031, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.031, 1, 0, 0, -1, -0.031, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  16.67% {
+    -webkit-transform: matrix3d(-0.102, 0.995, 0, 0, -0.995, -0.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.102, 0.995, 0, 0, -0.995, -0.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  20.00% {
+    -webkit-transform: matrix3d(-0.111, 0.994, 0, 0, -0.994, -0.111, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.111, 0.994, 0, 0, -0.994, -0.111, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  23.33% {
+    -webkit-transform: matrix3d(-0.09, 0.996, 0, 0, -0.996, -0.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.09, 0.996, 0, 0, -0.996, -0.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  26.67% {
+    -webkit-transform: matrix3d(-0.06, 0.998, 0, 0, -0.998, -0.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.06, 0.998, 0, 0, -0.998, -0.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  30.00% {
+    -webkit-transform: matrix3d(-0.033, 0.999, 0, 0, -0.999, -0.033, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.033, 0.999, 0, 0, -0.999, -0.033, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  33.33% {
+    -webkit-transform: matrix3d(-0.014, 1, 0, 0, -1, -0.014, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.014, 1, 0, 0, -1, -0.014, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  36.67% {
+    -webkit-transform: matrix3d(-0.002, 1, 0, 0, -1, -0.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.002, 1, 0, 0, -1, -0.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  40.00% {
+    -webkit-transform: matrix3d(0.004, 1, 0, 0, -1, 0.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.004, 1, 0, 0, -1, 0.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  43.33% {
+    -webkit-transform: matrix3d(0.005, 1, 0, 0, -1, 0.005, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.005, 1, 0, 0, -1, 0.005, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  46.67% {
+    -webkit-transform: matrix3d(0.005, 1, 0, 0, -1, 0.005, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.005, 1, 0, 0, -1, 0.005, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  50.00% {
+    -webkit-transform: matrix3d(0.004, 1, 0, 0, -1, 0.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.004, 1, 0, 0, -1, 0.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  53.33% {
+    -webkit-transform: matrix3d(0.002, 1, 0, 0, -1, 0.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.002, 1, 0, 0, -1, 0.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  56.67% {
+    -webkit-transform: matrix3d(0.001, 1, 0, 0, -1, 0.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.001, 1, 0, 0, -1, 0.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  60.00% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  63.33% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  66.67% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  70.00% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  73.33% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  76.67% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  80.00% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  83.33% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  86.67% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  90.00% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  93.33% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  96.67% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100.00% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
+
+@keyframes rotate {
+  0.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  3.33% {
+    -webkit-transform: matrix3d(0.82, 0.572, 0, 0, -0.572, 0.82, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.82, 0.572, 0, 0, -0.572, 0.82, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  6.67% {
+    -webkit-transform: matrix3d(0.457, 0.889, 0, 0, -0.889, 0.457, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.457, 0.889, 0, 0, -0.889, 0.457, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  10.00% {
+    -webkit-transform: matrix3d(0.143, 0.99, 0, 0, -0.99, 0.143, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.143, 0.99, 0, 0, -0.99, 0.143, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  13.33% {
+    -webkit-transform: matrix3d(-0.031, 1, 0, 0, -1, -0.031, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.031, 1, 0, 0, -1, -0.031, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  16.67% {
+    -webkit-transform: matrix3d(-0.102, 0.995, 0, 0, -0.995, -0.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.102, 0.995, 0, 0, -0.995, -0.102, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  20.00% {
+    -webkit-transform: matrix3d(-0.111, 0.994, 0, 0, -0.994, -0.111, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.111, 0.994, 0, 0, -0.994, -0.111, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  23.33% {
+    -webkit-transform: matrix3d(-0.09, 0.996, 0, 0, -0.996, -0.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.09, 0.996, 0, 0, -0.996, -0.09, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  26.67% {
+    -webkit-transform: matrix3d(-0.06, 0.998, 0, 0, -0.998, -0.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.06, 0.998, 0, 0, -0.998, -0.06, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  30.00% {
+    -webkit-transform: matrix3d(-0.033, 0.999, 0, 0, -0.999, -0.033, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.033, 0.999, 0, 0, -0.999, -0.033, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  33.33% {
+    -webkit-transform: matrix3d(-0.014, 1, 0, 0, -1, -0.014, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.014, 1, 0, 0, -1, -0.014, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  36.67% {
+    -webkit-transform: matrix3d(-0.002, 1, 0, 0, -1, -0.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(-0.002, 1, 0, 0, -1, -0.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  40.00% {
+    -webkit-transform: matrix3d(0.004, 1, 0, 0, -1, 0.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.004, 1, 0, 0, -1, 0.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  43.33% {
+    -webkit-transform: matrix3d(0.005, 1, 0, 0, -1, 0.005, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.005, 1, 0, 0, -1, 0.005, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  46.67% {
+    -webkit-transform: matrix3d(0.005, 1, 0, 0, -1, 0.005, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.005, 1, 0, 0, -1, 0.005, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  50.00% {
+    -webkit-transform: matrix3d(0.004, 1, 0, 0, -1, 0.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.004, 1, 0, 0, -1, 0.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  53.33% {
+    -webkit-transform: matrix3d(0.002, 1, 0, 0, -1, 0.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.002, 1, 0, 0, -1, 0.002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  56.67% {
+    -webkit-transform: matrix3d(0.001, 1, 0, 0, -1, 0.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.001, 1, 0, 0, -1, 0.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  60.00% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  63.33% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  66.67% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  70.00% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  73.33% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  76.67% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  80.00% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  83.33% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  86.67% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  90.00% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  93.33% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  96.67% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100.00% {
+    -webkit-transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
+
+@-webkit-keyframes slideFromRight {
+  0.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 100, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 100, 0, 1, 1); }
+  3.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 61.232, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 61.232, 0, 1, 1); }
+  6.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 30.227, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 30.227, 0, 1, 1); }
+  10.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 9.141, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 9.141, 0, 1, 1); }
+  13.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1.986, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1.986, 0, 1, 1); }
+  16.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.524, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.524, 0, 1, 1); }
+  20.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -7.08, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -7.08, 0, 1, 1); }
+  23.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5.722, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5.722, 0, 1, 1); }
+  26.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.838, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.838, 0, 1, 1); }
+  30.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -2.094, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -2.094, 0, 1, 1); }
+  33.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.872, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.872, 0, 1, 1); }
+  36.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.131, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.131, 0, 1, 1); }
+  40.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.237, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.237, 0, 1, 1); }
+  43.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.341, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.341, 0, 1, 1); }
+  46.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.312, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.312, 0, 1, 1); }
+  50.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.227, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.227, 0, 1, 1); }
+  53.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.139, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.139, 0, 1, 1); }
+  56.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.068, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.068, 0, 1, 1); }
+  60.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.021, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.021, 0, 1, 1); }
+  63.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.004, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.004, 0, 1, 1); }
+  66.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.015, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.015, 0, 1, 1); }
+  70.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.016, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.016, 0, 1, 1); }
+  73.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.013, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.013, 0, 1, 1); }
+  76.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.009, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.009, 0, 1, 1); }
+  80.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.005, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.005, 0, 1, 1); }
+  83.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.002, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.002, 0, 1, 1); }
+  86.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1); }
+  90.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1); }
+  93.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1); }
+  96.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1); }
+  100.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1); } }
+
+@keyframes slideFromRight {
+  0.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 100, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 100, 0, 1, 1); }
+  3.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 61.232, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 61.232, 0, 1, 1); }
+  6.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 30.227, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 30.227, 0, 1, 1); }
+  10.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 9.141, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 9.141, 0, 1, 1); }
+  13.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1.986, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1.986, 0, 1, 1); }
+  16.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.524, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.524, 0, 1, 1); }
+  20.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -7.08, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -7.08, 0, 1, 1); }
+  23.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5.722, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5.722, 0, 1, 1); }
+  26.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.838, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.838, 0, 1, 1); }
+  30.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -2.094, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -2.094, 0, 1, 1); }
+  33.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.872, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.872, 0, 1, 1); }
+  36.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.131, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.131, 0, 1, 1); }
+  40.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.237, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.237, 0, 1, 1); }
+  43.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.341, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.341, 0, 1, 1); }
+  46.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.312, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.312, 0, 1, 1); }
+  50.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.227, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.227, 0, 1, 1); }
+  53.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.139, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.139, 0, 1, 1); }
+  56.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.068, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.068, 0, 1, 1); }
+  60.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.021, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.021, 0, 1, 1); }
+  63.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.004, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.004, 0, 1, 1); }
+  66.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.015, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.015, 0, 1, 1); }
+  70.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.016, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.016, 0, 1, 1); }
+  73.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.013, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.013, 0, 1, 1); }
+  76.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.009, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.009, 0, 1, 1); }
+  80.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.005, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.005, 0, 1, 1); }
+  83.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.002, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.002, 0, 1, 1); }
+  86.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1); }
+  90.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1); }
+  93.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1); }
+  96.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1); }
+  100.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.001, 0, 1, 1); } }
+
+@-webkit-keyframes slideFromLeft {
+  0.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -100, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -100, 0, 1, 1); }
+  3.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -61.232, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -61.232, 0, 1, 1); }
+  6.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -30.227, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -30.227, 0, 1, 1); }
+  10.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -9.141, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -9.141, 0, 1, 1); }
+  13.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.986, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.986, 0, 1, 1); }
+  16.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.524, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.524, 0, 1, 1); }
+  20.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 7.08, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 7.08, 0, 1, 1); }
+  23.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.722, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.722, 0, 1, 1); }
+  26.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 3.838, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 3.838, 0, 1, 1); }
+  30.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.094, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.094, 0, 1, 1); }
+  33.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.872, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.872, 0, 1, 1); }
+  36.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.131, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.131, 0, 1, 1); }
+  40.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.237, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.237, 0, 1, 1); }
+  43.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.341, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.341, 0, 1, 1); }
+  46.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.312, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.312, 0, 1, 1); }
+  50.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.227, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.227, 0, 1, 1); }
+  53.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.139, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.139, 0, 1, 1); }
+  56.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.068, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.068, 0, 1, 1); }
+  60.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.021, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.021, 0, 1, 1); }
+  63.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.004, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.004, 0, 1, 1); }
+  66.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.015, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.015, 0, 1, 1); }
+  70.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.016, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.016, 0, 1, 1); }
+  73.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.013, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.013, 0, 1, 1); }
+  76.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.009, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.009, 0, 1, 1); }
+  80.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.005, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.005, 0, 1, 1); }
+  83.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.002, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.002, 0, 1, 1); }
+  86.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1); }
+  90.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1); }
+  93.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1); }
+  96.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1); }
+  100.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1); } }
+
+@keyframes slideFromLeft {
+  0.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -100, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -100, 0, 1, 1); }
+  3.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -61.232, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -61.232, 0, 1, 1); }
+  6.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -30.227, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -30.227, 0, 1, 1); }
+  10.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -9.141, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -9.141, 0, 1, 1); }
+  13.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.986, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.986, 0, 1, 1); }
+  16.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.524, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.524, 0, 1, 1); }
+  20.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 7.08, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 7.08, 0, 1, 1); }
+  23.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.722, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.722, 0, 1, 1); }
+  26.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 3.838, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 3.838, 0, 1, 1); }
+  30.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.094, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.094, 0, 1, 1); }
+  33.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.872, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.872, 0, 1, 1); }
+  36.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.131, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.131, 0, 1, 1); }
+  40.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.237, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.237, 0, 1, 1); }
+  43.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.341, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.341, 0, 1, 1); }
+  46.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.312, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.312, 0, 1, 1); }
+  50.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.227, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.227, 0, 1, 1); }
+  53.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.139, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.139, 0, 1, 1); }
+  56.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.068, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.068, 0, 1, 1); }
+  60.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.021, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.021, 0, 1, 1); }
+  63.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.004, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.004, 0, 1, 1); }
+  66.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.015, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.015, 0, 1, 1); }
+  70.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.016, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.016, 0, 1, 1); }
+  73.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.013, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.013, 0, 1, 1); }
+  76.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.009, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.009, 0, 1, 1); }
+  80.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.005, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.005, 0, 1, 1); }
+  83.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.002, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.002, 0, 1, 1); }
+  86.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1); }
+  90.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1); }
+  93.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1); }
+  96.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1); }
+  100.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.001, 0, 1, 1); } }
+
+@-webkit-keyframes scaleUp {
+  0.00% {
+    -webkit-transform: matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  3.33% {
+    -webkit-transform: matrix3d(0.694, 0, 0, 0, 0, 0.694, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.694, 0, 0, 0, 0, 0.694, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  6.67% {
+    -webkit-transform: matrix3d(0.849, 0, 0, 0, 0, 0.849, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.849, 0, 0, 0, 0, 0.849, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  10.00% {
+    -webkit-transform: matrix3d(0.954, 0, 0, 0, 0, 0.954, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.954, 0, 0, 0, 0, 0.954, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  13.33% {
+    -webkit-transform: matrix3d(1.01, 0, 0, 0, 0, 1.01, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.01, 0, 0, 0, 0, 1.01, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  16.67% {
+    -webkit-transform: matrix3d(1.033, 0, 0, 0, 0, 1.033, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.033, 0, 0, 0, 0, 1.033, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  20.00% {
+    -webkit-transform: matrix3d(1.035, 0, 0, 0, 0, 1.035, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.035, 0, 0, 0, 0, 1.035, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  23.33% {
+    -webkit-transform: matrix3d(1.029, 0, 0, 0, 0, 1.029, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.029, 0, 0, 0, 0, 1.029, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  26.67% {
+    -webkit-transform: matrix3d(1.019, 0, 0, 0, 0, 1.019, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.019, 0, 0, 0, 0, 1.019, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  30.00% {
+    -webkit-transform: matrix3d(1.01, 0, 0, 0, 0, 1.01, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.01, 0, 0, 0, 0, 1.01, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  33.33% {
+    -webkit-transform: matrix3d(1.004, 0, 0, 0, 0, 1.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.004, 0, 0, 0, 0, 1.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  36.67% {
+    -webkit-transform: matrix3d(1.001, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.001, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  40.00% {
+    -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  43.33% {
+    -webkit-transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  46.67% {
+    -webkit-transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  50.00% {
+    -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  53.33% {
+    -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  56.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  60.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  63.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  66.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  70.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  73.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  76.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  80.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  83.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  86.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  90.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  93.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  96.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
+
+@keyframes scaleUp {
+  0.00% {
+    -webkit-transform: matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  3.33% {
+    -webkit-transform: matrix3d(0.694, 0, 0, 0, 0, 0.694, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.694, 0, 0, 0, 0, 0.694, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  6.67% {
+    -webkit-transform: matrix3d(0.849, 0, 0, 0, 0, 0.849, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.849, 0, 0, 0, 0, 0.849, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  10.00% {
+    -webkit-transform: matrix3d(0.954, 0, 0, 0, 0, 0.954, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.954, 0, 0, 0, 0, 0.954, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  13.33% {
+    -webkit-transform: matrix3d(1.01, 0, 0, 0, 0, 1.01, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.01, 0, 0, 0, 0, 1.01, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  16.67% {
+    -webkit-transform: matrix3d(1.033, 0, 0, 0, 0, 1.033, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.033, 0, 0, 0, 0, 1.033, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  20.00% {
+    -webkit-transform: matrix3d(1.035, 0, 0, 0, 0, 1.035, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.035, 0, 0, 0, 0, 1.035, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  23.33% {
+    -webkit-transform: matrix3d(1.029, 0, 0, 0, 0, 1.029, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.029, 0, 0, 0, 0, 1.029, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  26.67% {
+    -webkit-transform: matrix3d(1.019, 0, 0, 0, 0, 1.019, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.019, 0, 0, 0, 0, 1.019, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  30.00% {
+    -webkit-transform: matrix3d(1.01, 0, 0, 0, 0, 1.01, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.01, 0, 0, 0, 0, 1.01, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  33.33% {
+    -webkit-transform: matrix3d(1.004, 0, 0, 0, 0, 1.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.004, 0, 0, 0, 0, 1.004, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  36.67% {
+    -webkit-transform: matrix3d(1.001, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.001, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  40.00% {
+    -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  43.33% {
+    -webkit-transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  46.67% {
+    -webkit-transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.998, 0, 0, 0, 0, 0.998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  50.00% {
+    -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  53.33% {
+    -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  56.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  60.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  63.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  66.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  70.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  73.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  76.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  80.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  83.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  86.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  90.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  93.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  96.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
+
+@-webkit-keyframes shake {
+  0.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1); }
+  3.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 3.3, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 3.3, 0, 1, 1); }
+  6.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.6, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.6, 0, 1, 1); }
+  10.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10, 0, 1, 1); }
+  13.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.3, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.3, 0, 1, 1); }
+  16.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 16.6, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 16.6, 0, 1, 1); }
+  20.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 20, 0, 2, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 20, 0, 2, 1); }
+  23.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.4, 0, 2, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.4, 0, 2, 1); }
+  26.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.8, 0, 2, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.8, 0, 2, 1); }
+  30.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1); }
+  33.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.6, 0, 2, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.6, 0, 2, 1); }
+  36.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.2, 0, 2, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.2, 0, 2, 1); }
+  40.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -20, 0, 3, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -20, 0, 3, 1); }
+  43.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.4, 0, 3, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.4, 0, 3, 1); }
+  46.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.8, 0, 3, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.8, 0, 3, 1); }
+  50.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 3, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 3, 1); }
+  53.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.6, 0, 3, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.6, 0, 3, 1); }
+  56.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.2, 0, 3, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.2, 0, 3, 1); }
+  60.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 20, 0, 4, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 20, 0, 4, 1); }
+  63.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.4, 0, 4, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.4, 0, 4, 1); }
+  66.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.8, 0, 4, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.8, 0, 4, 1); }
+  70.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 4, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 4, 1); }
+  73.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.6, 0, 4, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.6, 0, 4, 1); }
+  76.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.2, 0, 4, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.2, 0, 4, 1); }
+  80.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -20, 0, 5, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -20, 0, 5, 1); }
+  83.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -16.7, 0, 5, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -16.7, 0, 5, 1); }
+  86.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.4, 0, 5, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.4, 0, 5, 1); }
+  90.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -10, 0, 5, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -10, 0, 5, 1); }
+  93.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.7, 0, 5, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.7, 0, 5, 1); }
+  96.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.4, 0, 5, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.4, 0, 5, 1); }
+  100.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 5, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 5, 1); } }
+
+@keyframes shake {
+  0.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1); }
+  3.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 3.3, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 3.3, 0, 1, 1); }
+  6.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.6, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.6, 0, 1, 1); }
+  10.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 10, 0, 1, 1); }
+  13.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.3, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.3, 0, 1, 1); }
+  16.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 16.6, 0, 1, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 16.6, 0, 1, 1); }
+  20.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 20, 0, 2, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 20, 0, 2, 1); }
+  23.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.4, 0, 2, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.4, 0, 2, 1); }
+  26.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.8, 0, 2, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.8, 0, 2, 1); }
+  30.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1); }
+  33.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.6, 0, 2, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.6, 0, 2, 1); }
+  36.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.2, 0, 2, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.2, 0, 2, 1); }
+  40.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -20, 0, 3, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -20, 0, 3, 1); }
+  43.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.4, 0, 3, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.4, 0, 3, 1); }
+  46.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.8, 0, 3, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.8, 0, 3, 1); }
+  50.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 3, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 3, 1); }
+  53.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.6, 0, 3, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.6, 0, 3, 1); }
+  56.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.2, 0, 3, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.2, 0, 3, 1); }
+  60.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 20, 0, 4, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 20, 0, 4, 1); }
+  63.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.4, 0, 4, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.4, 0, 4, 1); }
+  66.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.8, 0, 4, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 6.8, 0, 4, 1); }
+  70.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 4, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 4, 1); }
+  73.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.6, 0, 4, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.6, 0, 4, 1); }
+  76.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.2, 0, 4, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.2, 0, 4, 1); }
+  80.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -20, 0, 5, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -20, 0, 5, 1); }
+  83.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -16.7, 0, 5, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -16.7, 0, 5, 1); }
+  86.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.4, 0, 5, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -13.4, 0, 5, 1); }
+  90.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -10, 0, 5, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -10, 0, 5, 1); }
+  93.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.7, 0, 5, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -6.7, 0, 5, 1); }
+  96.67% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.4, 0, 5, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -3.4, 0, 5, 1); }
+  100.00% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 5, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 5, 1); } }
+
+/*
+Base
+
+Styling of default html elements.
+
+Styleguide 2
+*/
+html {
+  box-sizing: border-box;
+  height: 100%; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  margin: 0 2%;
+  min-height: 100%;
+  padding-top: 1px; }
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url("OpenSans-Regular-webfont.eot");
+  src: url("OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-Regular-webfont.woff") format("woff"), url("OpenSans-Regular-webfont.ttf") format("truetype"), url("OpenSans-Regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans Italic';
+  src: url("OpenSans-Italic-webfont.eot");
+  src: url("OpenSans-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-Italic-webfont.woff") format("woff"), url("OpenSans-Italic-webfont.ttf") format("truetype"), url("OpenSans-Italic-webfont.svg#open_sansitalic") format("svg");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url("OpenSans-Bold-webfont.eot");
+  src: url("OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-Bold-webfont.woff") format("woff"), url("OpenSans-Bold-webfont.ttf") format("truetype"), url("OpenSans-Bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open Sans Bold Italic';
+  src: url("OpenSans-BoldItalic-webfont.eot");
+  src: url("OpenSans-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-BoldItalic-webfont.woff") format("woff"), url("OpenSans-BoldItalic-webfont.ttf") format("truetype"), url("OpenSans-BoldItalic-webfont.svg#open_sansbold_italic") format("svg");
+  font-weight: 700;
+  font-style: italic; }
+
+/*
+Typography
+
+Base styling for typograhpy.
+
+Markup:
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+<p>The <strong>bold fox</strong> jumps over the <em>italic dog</em>. The <a href="#">linked parrot</a> just watch. The <strong>bold fox</strong> jumps over the <em>italic dog</em>. The <a href="#">linked parrot</a> just watch.</p>
+<ul>
+    <li>Item</li>
+    <li>Item</li>
+    <li>Item</li>
+</ul>
+<ol>
+    <li>Item</li>
+    <li>Item</li>
+    <li>Item</li>
+</ol>
+
+Styleguide 2.1
+*/
+html {
+  font-size: 100%; }
+
+body {
+  font-family: "Merriweather", "Georgia", serif;
+  line-height: 1.6;
+  color: #444; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, fieldset legend, .h5, .h6 {
+  font-family: "Work Sans", "Helvetica", sans-serif;
+  font-weight: 800;
+  margin-bottom: 0.4rem; }
+
+h1, h2,
+.h1, .h2 {
+  line-height: 1.1; }
+
+h3, h4,
+.h3, .h4, fieldset legend {
+  line-height: 1.3; }
+
+h1, .h1 {
+  letter-spacing: -0.025em; }
+
+h2, .h2 {
+  font-size: 2rem;
+  letter-spacing: -0.025em; }
+
+h3, .h3 {
+  font-size: 1.25rem; }
+
+h4, .h4, fieldset legend {
+  font-size: 1.125rem; }
+
+h5, .h5 {
+  font-size: 1rem; }
+
+h6, .h6 {
+  font-size: 0.875rem;
+  text-transform: uppercase; }
+
+p, ul, ol, dl, pre, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 2em; }
+  p:only-child, p:last-child, ul:only-child, ul:last-child, ol:only-child, ol:last-child, dl:only-child, dl:last-child, pre:only-child, pre:last-child, blockquote:only-child, blockquote:last-child, table:only-child, table:last-child {
+    margin-bottom: 0; }
+
+p {
+  font-size: inherit;
+  line-height: 1.6; }
+
+ul, ol {
+  padding-left: 1.4rem; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin-left: 0; }
+
+dd + dt, li {
+  margin-top: 0.5em; }
+
+/*pre, code {
+  font-family: monospace;
+  background-color: color(gray);
+  border-radius: 3px;
+  padding: 0 0.25rem;
+}
+pre {}
+code {
+  font-size: 1rem;
+}
+pre > code {
+  border: 0;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}*/
+blockquote {
+  margin-left: 1.4rem; }
+
+blockquote > p:only-of-type {
+  margin-bottom: 0; }
+
+blockquote > footer {
+  text-align: right;
+  margin-top: 0.6rem; }
+
+q {
+  font-style: italic;
+  quotes: '«' '»' "‘" "’"; }
+
+address {
+  font-style: normal; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #444; }
+
+.wf-loading {
+  visibility: hidden; }
+
+.wf-active, .wf-inactive {
+  visibility: visible; }
+
+h1, .h1 {
+  font-size: 2rem; }
+
+h2, .h2 {
+  font-size: 1.75rem; }
+
+h3, .h3 {
+  font-size: 1.5rem; }
+
+h4, .h4, fieldset legend {
+  font-size: 1.25rem; }
+
+h5, .h5 {
+  font-size: 1.125rem; }
+
+h6, .h6 {
+  font-size: 1rem; }
+
+p, .p {
+  font-size: 1rem; }
+
+@media (min-width: 45rem) {
+  h1, .h1 {
+    font-size: 3.375rem;
+    line-height: 0.9; }
+  h2, .h2 {
+    font-size: 2rem; }
+  h3, .h3 {
+    font-size: 1.75rem; }
+  h4, .h4, fieldset legend {
+    font-size: 1.5rem; }
+  h5, .h5 {
+    font-size: 1.25rem; }
+  h6, .h6 {
+    font-size: 1rem; }
+  p, .p {
+    font-size: 1.25rem;
+    line-height: 1.8; } }
+
+nav ol,
+nav ul {
+  list-style: none;
+  padding-left: 0; }
+
+/*
+Table
+
+Base styling for typograhpy.
+
+Markup:
+<table>
+    <thead>
+        <tr>
+            <th>Header</th>
+            <th>Header</th>
+            <th>Header</th>
+            <th>Header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+        </tr>
+    </tbody>
+</table>
+
+Styleguide 2.2
+*/
+/* Messed up the styleguide:
+article { max-width: 40em; margin: auto; } // Temporary styling for <article>
+*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  text-align: left; }
+
+caption {
+  font-family: Georgia, sans-serif;
+  margin-bottom: 0.4rem;
+  text-align: left; }
+
+th, td {
+  border-top: 1px solid #444;
+  vertical-align: top;
+  padding-right: 0.25em; }
+
+th + *,
+td + * {
+  border-left: 1px solid #444;
+  padding-left: 0.25em; }
+
+figure {
+  margin-left: 0;
+  margin-right: 0; }
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  /* for ie 8 */ }
+
+/*
+Forms
+
+Base styling for forms.
+
+Markup:
+<label>
+    Label
+    <input type="text" placeholder="Placeholder"/>
+</label>
+<label>
+    Disabled
+    <input type="text" disabled/>
+</label>
+<label>
+    Label
+    <textarea></textarea>
+</label>
+<label><input type="checkbox"/> Label</label>
+<label><input type="checkbox" checked/> Label</label>
+<label><input type="checkbox" disabled/> Disabled</label>
+<label><input type="radio" name="test"/> Label</label>
+<label><input type="radio" name="test" checked/> Label</label>
+<label><input type="radio" name="test" disabled/> Disabled</label>
+<label>
+    Label
+    <select>
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+</label>
+<label>
+    Disabled
+    <select disabled>
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+</label>
+<fieldset>
+    <legend>Legend</legend>
+    Fields here
+</fieldset>
+<button type="button">Button</button>
+<button type="submit">Submit</button>
+
+Styleguide 2.3
+*/
+label {
+  display: block;
+  margin-bottom: 1rem; }
+
+input,
+textarea {
+  /* To get your input fields to render consistently across all browsers, you need to use both height and line-height, and avoid vertical padding. */
+  line-height: 2em;
+  min-height: 2em;
+  padding: 0 1em;
+  display: block;
+  border: 1px solid #444; }
+  input:disabled,
+  textarea:disabled {
+    border: 1px solid #c4c4c4; }
+
+label input[type="checkbox"]:first-child,
+label input[type="radio"]:first-child {
+  display: inline-block;
+  margin-right: 0.5rem; }
+
+button {
+  border: none;
+  background: #1d0c9a;
+  color: #fff;
+  padding: 0.5rem 1rem; }
+  button:focus, button:hover {
+    background: #14086b; }
+  button:disabled {
+    color: #444;
+    background: #444; }
+
+select {
+  display: block; }
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 1rem 0; }
+
+/*
+Blocks
+
+Design components, seperated as blocks.
+
+Styleguide 3
+*/
+/*
+Button
+
+Styling for buttons.
+
+Markup:
+<button class="button {{modifier_class}}">Button</button>
+
+.button--primary - Primary button
+.button--secondary - Secondary button
+.button--third - Third button
+.button--small - Small button
+
+Styleguide 3.1
+*/
+.button {
+  background: #444;
+  color: #fff;
+  display: inline-block;
+  background: #444;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 1;
+  color: #fff;
+  font-family: "Work Sans", "Helvetica", sans-serif;
+  font-size: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  .button:hover {
+    background: #2b2b2b; }
+  .button--small {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem; }
+  .button--primary {
+    background: #a8cd25;
+    color: #000; }
+    .button--primary:hover {
+      background: #85a21d; }
+  .button--secondary {
+    background: #1d0c9a;
+    color: #fff; }
+    .button--secondary:hover {
+      background: #14086b; }
+  .button--third {
+    background: #8a5bd3;
+    color: #fff; }
+    .button--third:hover {
+      background: #6e35c6; }
+  [data-whatinput='mouse'] .button {
+    outline: 0; }
+
+/*
+Checkboxes
+
+Custom styling of checkboxes and radiobuttons.
+
+Markup:
+<label class="checkbox">
+    <input type="checkbox"/>
+    <i class="checkbox__indicator"></i>
+    Label
+</label>
+<label class="checkbox">
+    <input type="checkbox" checked/>
+    <i class="checkbox__indicator"></i>
+    Label
+</label>
+<label class="checkbox checkbox--disabled">
+    <input type="checkbox" disabled/>
+    <i class="checkbox__indicator"></i>
+    Disabled
+</label>
+<label class="checkbox checkbox--disabled">
+    <input type="checkbox" checked disabled/>
+    <i class="checkbox__indicator"></i>
+    Disabled
+</label>
+<label class="checkbox">
+    <input type="radio" name="radiotest"/>
+    <i class="checkbox__indicator"></i>
+    Label
+</label>
+<label class="checkbox">
+    <input type="radio" name="radiotest" checked/>
+    <i class="checkbox__indicator"></i>
+    Label
+</label>
+<label class="checkbox checkbox--disabled">
+    <input type="radio" disabled/>
+    <i class="checkbox__indicator"></i>
+    Disabled
+</label>
+<label class="checkbox checkbox--disabled">
+    <input type="radio" checked disabled/>
+    <i class="checkbox__indicator"></i>
+    Disabled
+</label>
+
+Styleguide 3.8
+*/
+.checkbox {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding-left: 2rem; }
+  .checkbox--disabled {
+    color: #c4c4c4;
+    cursor: default; }
+  .checkbox--inline {
+    display: inline-block; }
+  .checkbox__indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 1.33rem;
+    height: 1.33rem;
+    line-height: 1.33rem;
+    background-color: #fff;
+    border: 1px solid #444;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    border-radius: 0px; }
+  .checkbox input {
+    width: 1rem;
+    margin-top: 8px;
+    margin-left: -16px;
+    border: none;
+    position: absolute;
+    opacity: 0;
+    /* RADIO BUTTONS */ }
+    .checkbox input:checked ~ .checkbox__indicator {
+      background-color: #444;
+      border-color: #444;
+      color: #fff; }
+      .checkbox input:checked ~ .checkbox__indicator:before {
+        content: '';
+        display: inline-block;
+        width: 0.7em;
+        height: 0.7em;
+        border-left: 3px solid white;
+        border-bottom: 3px solid white;
+        -webkit-transform: translateY(-25%) rotate(-45deg);
+        transform: translateY(-25%) rotate(-45deg); }
+    .checkbox input:focus ~ .checkbox__indicator {
+      box-shadow: 0 0 0 0.2rem #c4e25d, 0 0 0 0.2rem #c4e25d; }
+    .checkbox input:active ~ .checkbox__indicator {
+      color: #fff;
+      background-color: #a8cd25;
+      border-color: #a8cd25; }
+    .checkbox input:disabled ~ .checkbox__indicator {
+      border-color: #c4c4c4; }
+    .checkbox input:disabled:checked ~ .checkbox__indicator {
+      background-color: #c4c4c4;
+      border-color: #c4c4c4; }
+    .checkbox input[type="radio"] ~ .checkbox__indicator {
+      border-radius: 50%; }
+    .checkbox input[type="radio"]:checked ~ .checkbox__indicator:before {
+      background: #fff;
+      width: 0.55em;
+      height: 0.55em;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      -webkit-transform: translateY(-20%);
+      transform: translateY(-20%); }
+
+/*
+Select
+
+Custom styling of the select box trigger.
+
+Markup:
+<label>
+  Label
+  <div class="select">
+    <select>
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+  </div>
+</label>
+<label>
+  Disabled
+  <div class="select select--disabled">
+    <select disabled>
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+  </div>
+</label>
+
+Styleguide 3.7
+*/
+.select {
+  display: block;
+  position: relative;
+  max-width: 15em; }
+  .select select {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    padding-right: 2.5em;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #444;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+    .select select::-ms-expand {
+      display: none; }
+    .select select:focus:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000; }
+    .select select:disabled {
+      color: #c4c4c4;
+      border-color: #c4c4c4; }
+  .select:after {
+    content: '';
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: calc(50% - 0.75em);
+    right: 1em;
+    width: 1em;
+    height: 1em;
+    background-color: #fff;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  .select--disabled:after {
+    border-left-color: #c4c4c4;
+    border-bottom-color: #c4c4c4; }
+
+/*
+Icon
+
+Styling for SVG icons.
+
+Markup:
+<svg class="icon">
+  <use xlink:href="}" />
+</svg>
+
+arrow-down-right2 - arrow-down-right2
+arrow-down2 - arrow-down2
+arrow-left2 - Third button
+arrow-right2 - Small button
+arrow-up-left2 - arrow-up-left2
+arrow-up-right2 - arrow-up-right2
+arrow-up2 - arrow-up2
+check - check
+cross - cross
+evil - evil
+facebook2 - facebook2
+file-excel - file-excel
+file-pdf - file-pdf
+file-word - file-word
+file - file
+github - github
+happy - happy
+html-five - html-five
+inbox - inbox
+instagram - instagram
+lock - lock
+mail - mail
+mapmarker - mapmarker
+move -move
+open - open
+repeat - repeat
+smile - smile
+tongue - tongue
+unlocked - unlocked
+
+Styleguide 3.6
+*/
+.icon {
+  width: 4rem;
+  height: 4rem;
+  padding: .5rem;
+  margin: 0 1rem 1rem 0;
+  fill: #1d0c9a; }
+  .icon.evil, .icon.tongue, .icon.smile, .icon.happy {
+    fill: #8a5bd3; }
+  .icon.html-five {
+    fill: #a8cd25; }
+
+.row {
+  list-style: none;
+  margin-left: -2%;
+  letter-spacing: -1em; }
+
+.row > * {
+  letter-spacing: normal;
+  text-rendering: auto; }
+
+.row > [class*="col-"] {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  min-height: 1px;
+  padding-left: 2%; }
+
+.col-1\/12 {
+  width: 8.33333%; }
+
+.col-2\/12 {
+  width: 16.66667%; }
+
+.col-3\/12 {
+  width: 25%; }
+
+.col-4\/12 {
+  width: 33.33333%; }
+
+.col-5\/12 {
+  width: 41.66667%; }
+
+.col-6\/12 {
+  width: 50%; }
+
+.col-7\/12 {
+  width: 58.33333%; }
+
+.col-8\/12 {
+  width: 66.66667%; }
+
+.col-9\/12 {
+  width: 75%; }
+
+.col-10\/12 {
+  width: 83.33333%; }
+
+.col-11\/12 {
+  width: 91.66667%; }
+
+.col-12\/12 {
+  width: 100%; }
+
+@media (min-width: 30rem) {
+  .col-1\/12\@small {
+    width: 8.33333%; }
+  .col-2\/12\@small {
+    width: 16.66667%; }
+  .col-3\/12\@small {
+    width: 25%; }
+  .col-4\/12\@small {
+    width: 33.33333%; }
+  .col-5\/12\@small {
+    width: 41.66667%; }
+  .col-6\/12\@small {
+    width: 50%; }
+  .col-7\/12\@small {
+    width: 58.33333%; }
+  .col-8\/12\@small {
+    width: 66.66667%; }
+  .col-9\/12\@small {
+    width: 75%; }
+  .col-10\/12\@small {
+    width: 83.33333%; }
+  .col-11\/12\@small {
+    width: 91.66667%; }
+  .col-12\/12\@small {
+    width: 100%; } }
+
+@media (min-width: 45rem) {
+  .col-1\/12\@medium {
+    width: 8.33333%; }
+  .col-2\/12\@medium {
+    width: 16.66667%; }
+  .col-3\/12\@medium {
+    width: 25%; }
+  .col-4\/12\@medium {
+    width: 33.33333%; }
+  .col-5\/12\@medium {
+    width: 41.66667%; }
+  .col-6\/12\@medium {
+    width: 50%; }
+  .col-7\/12\@medium {
+    width: 58.33333%; }
+  .col-8\/12\@medium {
+    width: 66.66667%; }
+  .col-9\/12\@medium {
+    width: 75%; }
+  .col-10\/12\@medium {
+    width: 83.33333%; }
+  .col-11\/12\@medium {
+    width: 91.66667%; }
+  .col-12\/12\@medium {
+    width: 100%; } }
+
+@media (min-width: 60rem) {
+  .col-1\/12\@large {
+    width: 8.33333%; }
+  .col-2\/12\@large {
+    width: 16.66667%; }
+  .col-3\/12\@large {
+    width: 25%; }
+  .col-4\/12\@large {
+    width: 33.33333%; }
+  .col-5\/12\@large {
+    width: 41.66667%; }
+  .col-6\/12\@large {
+    width: 50%; }
+  .col-7\/12\@large {
+    width: 58.33333%; }
+  .col-8\/12\@large {
+    width: 66.66667%; }
+  .col-9\/12\@large {
+    width: 75%; }
+  .col-10\/12\@large {
+    width: 83.33333%; }
+  .col-11\/12\@large {
+    width: 91.66667%; }
+  .col-12\/12\@large {
+    width: 100%; } }
+
+.row--center {
+  text-align: center; }
+  .row--center > * {
+    text-align: left; }
+
+.row--flush {
+  margin-left: 0; }
+  .row--flush > * {
+    padding-left: 0; }
+
+.row--reverse {
+  direction: rtl; }
+  .row--reverse > * {
+    direction: ltr; }
+
+.row--fluid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .row--fluid > * {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto; }
+  .row--fluid > .col-auto {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+
+.grid-overlay {
+  padding-left: 2%;
+  padding-right: 2%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; }
+  .grid-overlay * {
+    height: 100%;
+    margin-bottom: 0; }
+  .grid-overlay .row > [class*="col"] > div {
+    outline: 1px solid rgba(255, 0, 0, 0.1);
+    background-color: rgba(255, 0, 0, 0.025); }
+
+.grid-example .box {
+  outline: 1px solid rgba(0, 0, 200, 0.3);
+  background-color: rgba(0, 0, 200, 0.1);
+  margin-bottom: 0.5rem; }
+
+.responsive-table {
+  border: 1px solid #444; }
+  .responsive-table th {
+    text-transform: uppercase;
+    font-size: .75rem;
+    letter-spacing: 1px; }
+  .responsive-table th, .responsive-table td {
+    padding: 10px;
+    text-align: center; }
+  @media (max-width: 45rem) {
+    .responsive-table {
+      border: 0; }
+      .responsive-table thead {
+        display: none; }
+      .responsive-table tr {
+        margin-bottom: 1.5rem;
+        display: block;
+        border-bottom: 1px solid #444; }
+      .responsive-table td {
+        display: block;
+        text-align: right;
+        font-size: .75rem;
+        border-left: 0;
+        padding-left: 0; }
+      .responsive-table td:before {
+        content: attr(data-header);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold; } }
+
+.round-image {
+  width: 100%;
+  height: 0;
+  padding: 50% 0;
+  border-radius: 50%;
+  overflow: hidden; }
+  .round-image__image {
+    margin-top: -50%;
+    width: 100%; }

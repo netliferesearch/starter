@@ -29,6 +29,7 @@
     "webfontloader": "^1.6.20"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
     "bytes": "^2.2.0",
     "kss": "^2.4.0",
     "lodash.merge": "^4.1.0",
