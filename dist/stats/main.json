@@ -1,8 +1,8 @@
 {
-  "size": 85986,
-  "gzipSize": 10173,
+  "size": 83934,
+  "gzipSize": 9672,
   "rules": {
-    "total": 531,
+    "total": 517,
     "size": {
       "graph": [
         3,
@@ -521,32 +521,18 @@
         5,
         4,
         5,
-        2,
-        2,
-        2,
-        4,
-        1,
-        4,
-        1,
-        2,
-        1,
-        2,
-        2,
-        2,
-        8,
-        1,
         2
       ],
       "max": 15,
-      "average": 1.9981167608286252
+      "average": 1.9864603481624759
     }
   },
   "selectors": {
-    "total": 645,
+    "total": 630,
     "type": 192,
-    "class": 470,
+    "class": 455,
     "id": 0,
-    "pseudoClass": 40,
+    "pseudoClass": 39,
     "pseudoElement": 7,
     "values": [
       "html",
@@ -1178,30 +1164,15 @@
       ".responsive-table td",
       ".responsive-table td:before",
       ".round-image",
-      ".round-image__image",
-      ".tab-container",
-      ".tabs",
-      ".tabs .tab",
-      ".tabs .active",
-      ".tab-panes .tab-pane",
-      ".tab-panes .active",
-      ".item",
-      ".panel[aria-hidden=\"true\"]",
-      "[data-status=\"disabled\"] .panel",
-      ".Wrap",
-      ".Accordion",
-      ".Accordion .item",
-      ".Accordion .target",
-      ".Accordion .target:focus",
-      ".Accordion .panel"
+      ".round-image__image"
     ],
     "specificity": {
       "max": 42,
-      "average": 9.488372093023257
+      "average": 9.301587301587302
     }
   },
   "declarations": {
-    "total": 1061,
+    "total": 1027,
     "properties": {
       "font-family": [
         "sans-serif",
@@ -1226,10 +1197,7 @@
         "0 2px",
         "0 2%",
         "0 0 1rem 0",
-        "0 1rem 1rem 0",
-        "20px 0",
-        "0 auto",
-        "0 0 50px"
+        "0 1rem 1rem 0"
       ],
       "display": [
         "block",
@@ -1255,11 +1223,6 @@
         "flex",
         "none",
         "block",
-        "block",
-        "inline-block",
-        "none",
-        "block",
-        "none",
         "block"
       ],
       "vertical-align": [
@@ -1284,8 +1247,7 @@
         "4rem",
         "100%",
         "100%",
-        "0",
-        "30px"
+        "0"
       ],
       "background-color": [
         "transparent",
@@ -1297,23 +1259,19 @@
         "#fff",
         "#fff",
         "rgba(255, 0, 0, 0.025)",
-        "rgba(0, 0, 200, 0.1)",
-        "#efefef"
+        "rgba(0, 0, 200, 0.1)"
       ],
       "outline": [
         "0",
         "0",
         "1px solid rgba(255, 0, 0, 0.1)",
-        "1px solid rgba(0, 0, 200, 0.3)",
-        "0",
-        "0"
+        "1px solid rgba(0, 0, 200, 0.3)"
       ],
       "border-bottom": [
         "1px dotted",
         "3px solid white",
         "2px solid #000",
-        "1px solid #444",
-        "1px solid #000"
+        "1px solid #444"
       ],
       "font-weight": [
         "bold",
@@ -1372,10 +1330,7 @@
         "#14086b",
         "#8a5bd3",
         "#6e35c6",
-        "#fff",
-        "#eee",
-        "#ccc",
-        "#bbb"
+        "#fff"
       ],
       "color": [
         "#000",
@@ -1393,8 +1348,7 @@
         "#fff",
         "#000",
         "transparent",
-        "#c4c4c4",
-        "#000"
+        "#c4c4c4"
       ],
       "line-height": [
         "0",
@@ -1407,8 +1361,7 @@
         "1.8",
         "2em",
         "1",
-        "1.33rem",
-        "30px"
+        "1.33rem"
       ],
       "position": [
         "relative",
@@ -1444,15 +1397,13 @@
         "3px solid #fff",
         "1px solid #444",
         "1px solid #444",
-        "0",
-        "1px solid #333333"
+        "0"
       ],
       "overflow": [
         "hidden",
         "auto",
         "visible",
         "auto",
-        "hidden",
         "hidden",
         "hidden"
       ],
@@ -1462,8 +1413,7 @@
         "content-box",
         "border-box",
         "inherit",
-        "border-box",
-        "content-box"
+        "border-box"
       ],
       "font": [
         "inherit"
@@ -1486,9 +1436,7 @@
         "default",
         "pointer",
         "pointer",
-        "default",
-        "pointer",
-        "pointer"
+        "default"
       ],
       "padding": [
         "0",
@@ -1504,10 +1452,7 @@
         "0.5em",
         ".5rem",
         "10px",
-        "50% 0",
-        "20px",
-        "10px 20px",
-        "15px 20px"
+        "50% 0"
       ],
       "border-collapse": [
         "collapse",
@@ -2212,8 +2157,7 @@
         "center",
         "left",
         "center",
-        "right",
-        "center"
+        "right"
       ],
       "quotes": [
         "'«' '»' \"‘\" \"’\""
@@ -2286,14 +2230,10 @@
         "100%",
         "100%",
         "100%",
-        "100%",
-        "60%",
-        "100px",
-        "400px"
+        "100%"
       ],
       "border-top": [
-        "1px solid #444",
-        "1px solid #000"
+        "1px solid #444"
       ],
       "padding-right": [
         "0.25em",
@@ -2312,8 +2252,7 @@
       ],
       "max-width": [
         "100%",
-        "15em",
-        "1200px"
+        "15em"
       ],
       "-moz-appearance": [
         "none",
@@ -2415,12 +2354,6 @@
       ],
       "float": [
         "left"
-      ],
-      "text-decoration": [
-        "none"
-      ],
-      "transition": [
-        "background .3s"
       ]
     }
   },
