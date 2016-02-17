@@ -5,12 +5,12 @@
   "author": "Fredrik Jensen",
   "license": "MIT",
   "scripts": {
-    "postinstall": "npm run styleguide & npm run dev",
+    "postinstall": "npm run dev",
     "deploy": "gulp deploy",
-    "metalsmith": "node_modules/.bin/metalsmith",
-    "dev": "gulp & npm run metalsmith",
+    "dev": "gulp",
+    "stats": "gulp css-stats",
     "styleguide": "kss-node --config kss-config.json --template styleguide-template",
-    "stats": "gulp css-stats && node getfilesize.js"
+    "metalsmith": "node_modules/.bin/metalsmith"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,6 @@
     "lodash.merge": "^4.1.0",
     "require-dir": "^0.3.0",
     "starter-gulp": "../starter-gulp",
-    "starter-styleguide": "../starter-gulp",
-    "starter-metalsmith": "../starter-gulp"
+    "starter-styleguide": "../starter-styleguide"
   }
 }
