@@ -1,7 +1,4 @@
-
-# Dependencies #
-bower_components/
-node_modules/
+# Build folders #
 css-stats/
 .publish
 
@@ -15,24 +12,15 @@ css-stats/
 ehthumbs.db
 Thumbs.db
 
-# Statamic files #
-######################
-_cache/*
-!_cache/index.html
-_logs/*
-!_logs/index.html
-
 # Scss Cache #
 ######################
 .scssc
 .sass-cache
 assets/img/resized/*
-_themes/webdagene/bower_components
 
-# NPM & BOWER #
+# NPM #
 ######################
 node_modules/
-bower_components/
 npm-debug.log
 
 # Sublime Text #
