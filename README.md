@@ -11,7 +11,11 @@
 * Install: ```npm i```
 * Run: ```npm run dev```
 * Deploy to Github pages: ```npm run deploy```
-* Generate styleguide: ```npm run styleguide```
+
+### We have to following starters that can be added as NPM packages
+* [Gulp starter](https://github.com/netliferesearch/starter-gulp)
+* Styleguide starter
+* Metalsmith (static site generator) starter
 
 ### This starter contains
 * Runs on [NodeJS](https://nodejs.org/en/) with [Browsersync](https://www.browsersync.io/)
