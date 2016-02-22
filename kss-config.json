@@ -1,0 +1,25 @@
+{
+  "source": [
+    "src/scss"
+  ],
+  "title": [
+      "Styleguide"
+  ],
+  "homepage": [
+      "index.md"
+  ],
+  "destination":  "dist/styleguide/",
+  "css": [
+    "../css/main.min.css",
+    "../css/styleguide.min.css"
+  ],
+  "js": [
+    "../js/main.js"
+  ],
+  "placeholder": [
+    "{modifier}"
+  ],
+  "nav-depth": [
+      "2"
+  ]
+}
