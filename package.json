@@ -25,8 +25,8 @@
     "gulp": "^3.9.1",
     "lodash.merge": "^4.1.0",
     "require-dir": "^0.3.0",
-    "starter-gulp": "../starter-gulp",
-    "starter-styleguide": "../starter-styleguide",
-    "starter-metalsmith": "../starter-metalsmith"
+    "starter-gulp": "netliferesearch/starter-gulp",
+    "starter-styleguide": "netliferesearch/starter-styleguide",
+    "starter-metalsmith": "netliferesearch/starter-metalsmith"
   }
 }
