@@ -27,59 +27,60 @@ Styleguide 3.7
 */
 
 .select {
-  display: block;
-  position: relative;
-  max-width: 15em;
-  select {
     display: block;
-    width: 100%;
-    padding: 0.5em;
-    padding-right: 2.5em;
-    background-color: color(white);
-    color: color(black);
-    border: 1px solid color(gray);
-    border-radius: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    // Hide the arrow in IE10 and up
-    &::-ms-expand {
-      display: none;
-    }
-    // Undo the Firefox inner focus ring
-    &:focus:-moz-focusring {
-      color: transparent;
-      text-shadow: 0 0 0 #000;
-    }
-    &:focus, &:hover {
+    position: relative;
+    max-width: 15em;
 
-    }
-    &:active {
-      // Styling here will affect the dropdown list in IE
+    select {
+        display: block;
+        width: 100%;
+        padding: 0.5em;
+        padding-right: 2.5em;
+        background-color: color(white);
+        color: color(black);
+        border: 1px solid color(gray);
+        border-radius: 0;
+        appearance: none;
 
+        // Hide the arrow in IE10 and up
+        &::expand {
+            display: none;
+        }
+
+        // Undo the Firefox inner focus ring
+        &:focus {
+            &-focusring {
+                color: transparent;
+                text-shadow: 0 0 0 #000;
+            }
+        }
+
+        &:disabled {
+            color: color-variation(gray, lighten, 3);
+            border-color: color-variation(gray, lighten, 2);
+        }
     }
-    &:disabled {
-      color: lighten(color(gray),50%);
-      border-color: lighten(color(gray),50%);
+
+    // Dropdown arrow
+    &:after {
+        content: '';
+        display: block;
+        pointer-events: none;
+        position: absolute;
+        top: calc(50% - 0.75em);
+        right: 1em;
+        width: 1em;
+        height: 1em;
+        background-color: color(white);
+        border-left: 2px solid color(black);
+        border-bottom: 2px solid color(black);
+        transform: rotate(-45deg);
     }
-  }
-  // Dropdown arrow
-  &:after {
-    content: '';
-    display: block;
-    pointer-events: none;
-    position: absolute;
-    top: calc(50% - 0.75em);
-    right: 1em;
-    width: 1em;
-    height: 1em;
-    background-color: color(white);
-    border-left: 2px solid color(black);
-    border-bottom: 2px solid color(black);
-    transform: rotate(-45deg);
-  }
-  &--disabled:after {
-    border-left-color: lighten(color(gray),50%);
-    border-bottom-color: lighten(color(gray),50%);
-  }
+
+    &--disabled {
+        &:after {
+            border-left-color: lighten(color(gray), 50%);
+            border-bottom-color: lighten(color(gray), 50%);
+        }
+    }
 }

@@ -55,7 +55,7 @@ Styleguide 3.8
     padding-left: 2rem;
 
     &--disabled {
-        color: lighten(color(gray),50%);
+        color: lighten(color(gray), 50%);
         cursor: default;
     }
 
@@ -103,7 +103,7 @@ Styleguide 3.8
         }
 
         &:focus ~ .checkbox__indicator {
-            box-shadow: 0 0 0 .2rem lighten(color(primary), 15%), 0 0 0 .2rem lighten(color(primary),15%);
+            box-shadow: 0 0 0 .2rem lighten(color(primary), 15%), 0 0 0 .2rem lighten(color(primary), 15%);
         }
 
         &:active ~ .checkbox__indicator {

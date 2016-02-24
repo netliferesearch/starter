@@ -11,14 +11,6 @@
 // 4. Overlay and visual helpers
 
 
-
-
-
-
-
-
-
-
 // ------------------------------------
 // 1. Grid Settings
 // ------------------------------------
@@ -26,9 +18,6 @@
 $grid-columns: 12;
 $grid-gutter: 2%;
 $grid-breakpoints: (small, medium, large);
-
-
-
 
 
 // ------------------------------------
@@ -45,75 +34,77 @@ $grid-breakpoints: (small, medium, large);
 
 // Stop inheritance inside .row
 .row > * {
-  letter-spacing: normal;
-  text-rendering: auto;
+    letter-spacing: normal;
+    text-rendering: auto;
 }
 
 // Common styling for .col inside .row
-.row > [class*="col-"] {
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  min-height: 1px;
-  padding-left: $grid-gutter;
+.row > [class*='col-'] {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    min-height: 1px;
+    padding-left: $grid-gutter;
 }
 
 // Loop through values from 1 to 12
 @for $i from 1 through $grid-columns {
 
-  // Classes without mediaqueries
-  .col-#{$i}\/#{$grid-columns} {
-    width: percentage($i / $grid-columns);
-  }
+    // Classes without mediaqueries
+    .col-#{$i}\/#{$grid-columns} {
+        width: percentage($i / $grid-columns);
+    }
 }
 
 // Loop through breakpoint names
 @each $breakpoint in $grid-breakpoints {
-  @include breakpoint($breakpoint) {
-
-    // // Loop through values from 1 to 12
-    @for $i from 1 through $grid-columns {
-      .col-#{$i}\/#{$grid-columns}\@#{$breakpoint} {
-        width: percentage($i / $grid-columns);
-      }
+    @include breakpoint($breakpoint) {
+        // Loop through values from 1 to 12
+        @for $i from 1 through $grid-columns {
+            .col-#{$i}\/#{$grid-columns}\@#{$breakpoint} {
+                width: percentage($i / $grid-columns);
+            }
+        }
     }
-
-  }
 }
 
 // Center all columns
 .row--center {
-  text-align: center;
-
-  // Align content inside column to left
-  > * { text-align: left; }
+    text-align: center;
+    // Align content inside column to left
+    > * { text-align: left; }
 }
 
 // No space between columns
 .row--flush {
-  margin-left: 0;
+    margin-left: 0;
 
-  > * { padding-left: 0; }
+    > * {
+        padding-left: 0;
+    }
 }
 
 // Flow columns from right to left
 .row--reverse {
-  direction: rtl;
-
-  // Align content inside grid from left to right
-  > * { direction: ltr; }
+    direction: rtl;
+    // Align content inside grid from left to right
+    > * { direction: ltr; }
 }
 
 // Uses Flexbox instead of inline-block to achieve adaptive column sizes
 .row--fluid {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 
-  > * { flex: 0 1 auto; }
-  > .col-auto { flex: 1; }
+    > * {
+        flex: 0 1 auto;
+    }
+
+    > .col-auto {
+        flex: 1;
+    }
 }
-
 
 
 
@@ -125,43 +116,35 @@ $grid-breakpoints: (small, medium, large);
 
 
 
-
-
-
-
-
-
-
-
 // ------------------------------------
 // 4. Overlay and visual helpers
 // ------------------------------------
 
 .grid-overlay {
-  padding-left: 2%;
-  padding-right: 2%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none;
-
-  * {
+    padding-left: 2%;
+    padding-right: 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    margin-bottom: 0;
-  }
+    overflow: hidden;
+    pointer-events: none;
 
-  .row > [class*="col"] > div {
-    outline: 1px solid rgba(255,0,0, 0.1);
-    background-color: rgba(255,0,0, 0.025);
-  }
+    * {
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .row > [class*='col'] > div {
+        outline: 1px solid rgba(255, 0, 0, 0.1);
+        background-color: rgba(255, 0, 0, 0.025);
+    }
 }
 
 
 .grid-example .box {
-  outline: 1px solid rgba(0,0,200, 0.3);
-  background-color: rgba(0,0,200, 0.1);
-  margin-bottom: 0.5rem;
+    outline: 1px solid rgba(0, 0, 200, 0.3);
+    background-color: rgba(0, 0, 200, 0.1);
+    margin-bottom: 0.5rem;
 }
