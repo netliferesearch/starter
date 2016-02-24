@@ -1,4 +1,4 @@
 ---
 layout: index.html
-title: Hello World
+title: Hello World!
 ---
