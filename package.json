@@ -10,7 +10,7 @@
     "dev": "gulp",
     "stats": "gulp css-stats",
     "styleguide": "starter-styleguide",
-    "metalsmith": "node metalsmith.js"
+    "metalsmith": "node metalsmith.js & gulp"
   },
   "repository": {
     "type": "git",
