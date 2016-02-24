@@ -31,23 +31,27 @@ article { max-width: 40em; margin: auto; } // Temporary styling for <article>
 */
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  font-family: Arial, sans-serif;
-  text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    text-align: left;
 }
+
 caption {
-  font-family: Georgia, sans-serif;
-  margin-bottom: 0.4rem;
-  text-align: left;
+    font-family: Georgia, sans-serif;
+    margin-bottom: 0.4rem;
+    text-align: left;
 }
-th, td {
-  border-top: 1px solid  color(gray);;
-  vertical-align: top;
-  padding-right: 0.25em;
+
+th,
+td {
+    border-top: 1px solid  color(gray);;
+    vertical-align: top;
+    padding-right: 0.25em;
 }
+
 th + *,
 td + * {
-  border-left: 1px solid  color(gray);
-  padding-left: 0.25em;
+    border-left: 1px solid  color(gray);
+    padding-left: 0.25em;
 }

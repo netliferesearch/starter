@@ -48,11 +48,14 @@ Styleguide 3.6
     margin: 0 1rem 1rem 0;
     fill: color(secondary);
 
-    &.evil, &.tongue, &.smile, &.happy {
+    &.evil,
+    &.tongue,
+    &.smile,
+    &.happy {
         fill: color(third);
     }
 
-        &.html-five {
-            fill: color(primary);
-        }
+    &.html-five {
+        fill: color(primary);
+    }
 }
