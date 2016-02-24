@@ -10,15 +10,18 @@ Netlife Research front-end starter
 * [Styleguide starter](https://github.com/netliferesearch/starter-styleguide)
 * [Metalsmith starter](https://github.com/netliferesearch/starter-metalsmith)
 
-### Task
+### Tasks
 
 `npm run dev` - Local development
 
+`npm run metalsmith` - Static site generator
+
+`npm run styleguide` - Generates styleguide
+
 `npm run deploy` - Deploys to Github pages
 
-`npm stats` - Runs CSS statistics
+`npm stats` - Runs statistics
 
-`npm run metalsmith` - Static site generator
 
 
 ### Install Node
