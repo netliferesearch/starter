@@ -9,7 +9,7 @@
     "deploy": "gulp deploy",
     "dev": "gulp",
     "stats": "gulp css-stats",
-    "styleguide": "node-kss",
+    "styleguide": "starter-styleguide",
     "metalsmith": "node metalsmith.js"
   },
   "repository": {
