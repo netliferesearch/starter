@@ -18,7 +18,7 @@ Front-end starter for prototyping and production.
 * `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
 * `nvm install 4.2`
 
-### Atom Pacakges
+### Atom Packages for proper linting
 * [Linter](https://atom.io/packages/linter)
 * [SassLint](https://atom.io/packages/linter-sass-lint)
 * [ESLint](https://atom.io/packages/linter-eslint)
