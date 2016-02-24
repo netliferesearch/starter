@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/fredjens/starter.git"
+    "url": "git://github.com/netliferesearch/starter.git"
   },
   "dependencies": {
     "picturefill": "^3.0.1",
