@@ -19,7 +19,7 @@ Front-end starter for prototyping and production
 * `nvm install 4.2`
 
 ### Our Editor
-![Atom](https://discuss.atom.io/uploads/github_atom/487/cda7a1c2ac02fd3d.png)
+[Atom](https://atom.io/)
 
 ### Atom Pacakges
 * [Linter](https://atom.io/packages/linter)
