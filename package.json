@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/fredjens/starter.git"
+    "url": "git://github.com/netliferesearch/starter.git"
   },
   "dependencies": {
     "picturefill": "^3.0.1",
@@ -22,6 +22,7 @@
     "webfontloader": "^1.6.20"
   },
   "devDependencies": {
+    "eslint-config-vgno": "^5.0.0",
     "gulp": "^3.9.1",
     "lodash.merge": "^4.1.0",
     "require-dir": "^0.3.0",
