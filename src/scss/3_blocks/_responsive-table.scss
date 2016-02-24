@@ -2,38 +2,46 @@
 // Need to be BEMified
 
 .responsive-table {
-  border: 1px solid color(gray);
-  th {
-    text-transform: uppercase;
-    font-size: .75rem;
-    letter-spacing: 1px;
-  }
-  th,  td {
-    padding: 10px;
-    text-align: center;
-  }
-  @include breakpoint(medium, max) {
-    border: 0;
-    thead {
-      display: none;
+    border: 1px solid color(gray);
+
+    th {
+        text-transform: uppercase;
+        font-size: .75rem;
+        letter-spacing: 1px;
     }
-    tr {
-      margin-bottom: 1.5rem;
-      display: block;
-      border-bottom: 1px solid color(gray);
-    }
+
+    th,
     td {
-      display: block;
-      text-align: right;
-      font-size: .75rem;
-      border-left: 0;
-      padding-left: 0;
+        padding: 10px;
+        text-align: center;
     }
-    td:before {
-      content: attr(data-header);
-      float: left;
-      text-transform: uppercase;
-      font-weight: bold;
+
+    @include breakpoint(medium, max) {
+        border: 0;
+
+        thead {
+            display: none;
+        }
+
+        tr {
+            margin-bottom: 1.5rem;
+            display: block;
+            border-bottom: 1px solid color(gray);
+        }
+
+        td {
+            display: block;
+            text-align: right;
+            font-size: .75rem;
+            border-left: 0;
+            padding-left: 0;
+
+            &:before {
+                content: attr(data-header);
+                float: left;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
     }
-  }
 }
