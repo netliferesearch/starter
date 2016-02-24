@@ -34,14 +34,14 @@ Styleguide 1.2.2
 */
 @function color($color) {
     @if map-deep-get($palette, 'colors', $color) {
-            @return map-deep-get($palette, 'colors', $color);
+        @return map-deep-get($palette, 'colors', $color);
     }
     @warn '`#{$color}` is not in color map';
     @return null;
 }
 
 /*
-colorVariation($color, $variation, $step)
+color-variation($color, $variation, $step)
 
 Color function.
 
@@ -51,24 +51,24 @@ $step - 'numeric' The interval of the variation set in from variables.scss
 
 Styleguide 1.2.2
 */
-@function colorVariation($color, $variation, $step) {
+@function color-variation($color, $variation, $step) {
     @if map-deep-get($palette, colors, $color) {
         @if $variation == lighten {
             @return mix(
-                #ffffff,
+                #fff,
                 map-deep-get($palette, 'colors', $color),
                 map-deep-get($palette, $variation, $step)
             );
             } @else if $variation == darken {
             @return mix(
-                #000000,
+                #000,
                 map-deep-get($palette, 'colors', $color),
                 map-deep-get($palette, $variation, $step)
             );
         }
-        @warn "Variation does not exits";
+        @warn 'Variation does not exits';
     }
-    @warn "Check if color is is in map";
+    @warn 'Check if color is is in map';
     @return null;
 }
 

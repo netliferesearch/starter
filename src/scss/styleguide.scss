@@ -23,28 +23,28 @@
         background: color($color);
     }
     .#{$color}-lighten1 {
-        color: sg-text-color(colorVariation($color, lighten, 1));
-        background: colorVariation($color, lighten, 1);
+        color: sg-text-color(color-variation($color, lighten, 1));
+        background: color-variation($color, lighten, 1);
     }
     .#{$color}-lighten2 {
-        color: sg-text-color(colorVariation($color, lighten, 2));
-        background: colorVariation($color, lighten, 2);
+        color: sg-text-color(color-variation($color, lighten, 2));
+        background: color-variation($color, lighten, 2);
     }
     .#{$color}-lighten3 {
-        color: sg-text-color(colorVariation($color, lighten, 3));
-        background: colorVariation($color, lighten, 3);
+        color: sg-text-color(color-variation($color, lighten, 3));
+        background: color-variation($color, lighten, 3);
     }
     .#{$color}-darken1 {
-        color: sg-text-color(colorVariation($color, darken, 1));
-        background: colorVariation($color, darken, 1);
+        color: sg-text-color(color-variation($color, darken, 1));
+        background: color-variation($color, darken, 1);
     }
     .#{$color}-darken2 {
-        color: sg-text-color(colorVariation($color, darken, 2));
-        background: colorVariation($color, darken, 2);
+        color: sg-text-color(color-variation($color, darken, 2));
+        background: color-variation($color, darken, 2);
     }
     .#{$color}-darken3 {
-        color: sg-text-color(colorVariation($color, darken, 3));
-        background: colorVariation($color, darken, 3);
+        color: sg-text-color(color-variation($color, darken, 3));
+        background: color-variation($color, darken, 3);
     }
 }
 

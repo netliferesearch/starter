@@ -36,11 +36,11 @@ $grid-breakpoints: (small, medium, large);
 // ------------------------------------
 
 .row {
-  list-style: none;
-  margin-left: -$grid-gutter;
+    list-style: none;
+    margin-left: -$grid-gutter;
 
-  // Important fix for inline-block
-  letter-spacing: -1em;
+    // Important fix for inline-block
+    letter-spacing: -1em;
 }
 
 // Stop inheritance inside .row
