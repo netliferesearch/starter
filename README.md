@@ -1,12 +1,5 @@
-          _             _            
-         | |           | |           
-      ___| |_ __ _ _ __| |_ ___ _ __
-     / __| __/ _` | '__| __/ _ \ '__|
-     \__ \ || (_| | |  | ||  __/ |   
-    |___/\__\__,_|_|   \__\___|_|   
-
-    Netlife Research front-end starter
-
+# Starter
+Netlife Research front-end starter
 
 * Install: ```npm i```
 * Run: ```npm run dev```
