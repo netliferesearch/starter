@@ -1,7 +1,7 @@
 {
   "name": "netlife-starter",
   "version": "1.0.0",
-  "description": "Protoyping starter",
+  "description": "Starter for prototyping and production",
   "author": "Fredrik Jensen",
   "license": "MIT",
   "scripts": {
@@ -26,8 +26,8 @@
     "gulp": "^3.9.1",
     "lodash.merge": "^4.1.0",
     "require-dir": "^0.3.0",
-    "starter-gulp": "../starter-gulp",
-    "starter-metalsmith": "../starter-metalsmith",
+    "starter-gulp": "netliferesearch/starter-gulp",
+    "starter-metalsmith": "netliferesearch/starter-metalsmith",
     "handlebars": "^2.0.0",
     "kss": "^2.4.0"
   }

@@ -4,4 +4,4 @@ var metalsmith = require('starter-metalsmith');
 
 metalsmith.extendConfig();
 
-metalsmith.run();
+metalsmith.run('handlebars');
