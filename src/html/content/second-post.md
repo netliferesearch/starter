@@ -1,5 +1,5 @@
 ---
-title: My Second Post
+title: Second Post
 layout: page.html
 ---
 
