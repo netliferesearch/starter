@@ -9,7 +9,7 @@
     "deploy": "gulp deploy",
     "dev": "gulp",
     "stats": "gulp css-stats",
-    "styleguide": "starter-styleguide",
+    "styleguide": "kss-node --config kss-config.json --template styleguide-template",
     "metalsmith": "node metalsmith.js & gulp"
   },
   "repository": {
@@ -27,7 +27,8 @@
     "lodash.merge": "^4.1.0",
     "require-dir": "^0.3.0",
     "starter-gulp": "netliferesearch/starter-gulp",
-    "starter-styleguide": "netliferesearch/starter-styleguide",
-    "starter-metalsmith": "netliferesearch/starter-metalsmith"
+    "starter-metalsmith": "netliferesearch/starter-metalsmith",
+    "handlebars": "^2.0.0",
+    "kss": "^2.4.0"
   }
 }
