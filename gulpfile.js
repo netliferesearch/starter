@@ -5,11 +5,4 @@ var starterGulp = require('starter-gulp');
 
 starterGulp.extendConfig();
 
-starterGulp.extendTasks(gulp, {
-    test: [
-    ['sass'],
-        function() {
-
-        }
-    ]
-});
+starterGulp.extendTasks(gulp);

@@ -2,4 +2,6 @@
 
 var metalsmith = require('starter-metalsmith');
 
-metalsmith();
+metalsmith.extendConfig();
+
+metalsmith.run();
