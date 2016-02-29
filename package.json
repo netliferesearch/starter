@@ -9,7 +9,7 @@
     "deploy": "gulp deploy",
     "dev": "gulp",
     "stats": "gulp css-stats",
-    "styleguide": "kss-node --config kss-config.json --template styleguide-template",
+    "styleguide": "node kss.js",
     "metalsmith": "node metalsmith.js & gulp"
   },
   "repository": {
@@ -28,7 +28,6 @@
     "require-dir": "^0.3.0",
     "starter-gulp": "netliferesearch/starter-gulp",
     "starter-metalsmith": "netliferesearch/starter-metalsmith",
-    "handlebars": "^2.0.0",
-    "kss": "^2.4.0"
+    "starter-styleguide": "netliferesearch/starter-styleguide"
   }
 }
