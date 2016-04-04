@@ -24,8 +24,8 @@
   "devDependencies": {
     "eslint-config-vgno": "^5.0.0",
     "gulp": "^3.9.1",
-    "starter-gulp": "netliferesearch/starter-gulp",
-    "starter-metalsmith": "netliferesearch/starter-metalsmith",
-    "starter-styleguide": "netliferesearch/starter-styleguide"
+    "starter-gulp": "^1.0.0",
+    "starter-metalsmith": "^1.0.0",
+    "starter-styleguide": "^1.0.0"
   }
 }
