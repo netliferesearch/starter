@@ -1,4 +1,4 @@
 'use strict';
 
-require('picturefill');
-require('./webFontLoader.js');
+import 'picturefill';
+import './webFontLoader.js';
