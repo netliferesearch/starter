@@ -26,7 +26,6 @@
     "eslint": "^2.9.0",
     "eslint-config-netliferesearch": "^1.0.1",
     "eslint-plugin-jsx-a11y": "^1.0.4",
-    "eslint-plugin-react": "^5.0.1",
     "gulp": "^3.9.1",
     "starter-gulp": "^1.0.0",
     "starter-metalsmith": "^1.0.0",
