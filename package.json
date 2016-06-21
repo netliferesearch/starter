@@ -18,7 +18,6 @@
   },
   "dependencies": {
     "picturefill": "^3.0.1",
-    "starter-styleguide": "^1.0.2",
     "susy": "^2.2.10",
     "webfontloader": "^1.6.20"
   },
