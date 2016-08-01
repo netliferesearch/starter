@@ -1,7 +1,8 @@
 # Netlife Starter
-Front-end starter for prototyping and production.
+A front-end starter for prototyping and production. This starter only contains a file structure, an editorconfig, Netlife Research [ESlint config](https://github.com/netliferesearch/eslint-config-netliferesearch) and sass-lint config.
 
-### Included as NPM packages
+### Other tools are include as separate NPM packages
+Each one has it own documentations:
 * [Gulp starter](https://github.com/netliferesearch/starter-gulp) - Use prebuild tasks or add your own!
 * [Styleguide starter](https://github.com/netliferesearch/starter-styleguide) - Build styleguides with KSS
 * [Metalsmith starter](https://github.com/netliferesearch/starter-metalsmith) - Static site generating ftw!

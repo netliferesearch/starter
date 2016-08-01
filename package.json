@@ -8,7 +8,6 @@
     "postinstall": "npm run dev",
     "deploy": "gulp deploy",
     "dev": "gulp",
-    "stats": "gulp css-stats",
     "styleguide": "node kss.js",
     "metalsmith": "node metalsmith.js & gulp"
   },
