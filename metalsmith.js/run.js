@@ -7,9 +7,9 @@ const watch = require('metalsmith-watch');
 const handlebars = require('handlebars');
 const filenames = require('metalsmith-filenames');
 const handlebarsLayouts = require('handlebars-layouts');
-
-const webpack = require('metalsmith-webpack');
+const webpack = require('metalsmith-webpack')
 const options = require('../webpack.config');
+
 const config = require('./config');
 
 module.exports = () => {
