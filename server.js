@@ -6,13 +6,15 @@ const WebpackDevServer = require('webpack-dev-server');
 const config = require('./webpack.config');
 
 new WebpackDevServer(webpack(config), {
-    publicPath: config.output.publicPath,
-    hot: true,
+    contentBase: 'http://localhost:8080',
+    publicPath: 'http://localhost:3000/dist/',
     historyApiFallback: true,
+    hot: true,
+    inline: true,
+    colors: true,
 }).listen(3000, 'localhost', (err) => {
     if (err) {
         return console.log(err);
     }
-
-    return console.log('Listening at http://localhost:3000/');
+    return console.log('Open http://localhost:8080/ 🚀');
 });

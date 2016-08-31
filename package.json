@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run build",
-    "build": "webpack & node metalsmith/build",
-    "dev": "node metalsmith/watch"
+    "build": "node server & node metalsmith/build",
+    "dev": "node server & node metalsmith/watch"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "metalsmith-layouts": "^1.4.1",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.1.1",
+    "metalsmith-serve": "0.0.7",
     "metalsmith-watch": "^1.0.1",
     "metalsmith-webpack-dev-server": "^1.0.0",
     "node-sass": "^3.8.0",
@@ -48,6 +49,7 @@
     "eslint": "^3.4.0",
     "eslint-config-netliferesearch": "^3.0.2",
     "eslint-plugin-import": "^1.14.0",
-    "eslint-plugin-jsx-a11y": "^2.2.0"
+    "eslint-plugin-jsx-a11y": "^2.2.0",
+    "webpack-dashboard": "^0.1.8"
   }
 }

@@ -8,8 +8,8 @@ const handlebars = require('handlebars');
 const filenames = require('metalsmith-filenames');
 const handlebarsLayouts = require('handlebars-layouts');
 const config = require('../config');
-// const webpackDevServer = require('metalsmith-webpack-dev-server');
-// const webpackConfig = require('../webpack.config.js');
+const serve = require('metalsmith-serve');
+
 
 handlebars.registerHelper(handlebarsLayouts(handlebars));
 
@@ -34,7 +34,7 @@ metalsmith(__dirname)
         },
         livereload: true,
     }))
-    // .use(webpackDevServer(webpackConfig))
+    .use(serve())
     .build((err) => {
         if (err) throw err;
     });

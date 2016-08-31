@@ -4,6 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+var DashboardPlugin = require('webpack-dashboard/plugin');
 
 const sassLoaders = [
     'css-loader',
@@ -14,14 +15,14 @@ const sassLoaders = [
 module.exports = {
     devtool: 'source-map',
     entry: [
-        'webpack-dev-server/client?http://localhost:35729',
+        'webpack-dev-server/client?http://localhost:3000/dist',
         'webpack/hot/only-dev-server',
         './src/js/main.js',
     ],
     output: {
         filename: '[name].js',
         path: path.join(__dirname, './dist'),
-        publicPath: '/dist'
+        publicPath: '/dist/'
     },
     module: {
         loaders: [{
@@ -35,7 +36,8 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new ExtractTextPlugin('[name].css')
+        new ExtractTextPlugin('[name].css'),
+        new DashboardPlugin()
     ],
     postcss: [
     autoprefixer({

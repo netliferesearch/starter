@@ -9,7 +9,7 @@ module.exports = {
     dist: {
         root: 'dist',
         icons: 'src/html/svg-icons',
-        html: '../dist/site',
+        html: '../dist/',
 
     },
     icons: 'src/html/svg-icons',
