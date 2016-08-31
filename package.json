@@ -5,8 +5,8 @@
   "author": "Netlife Research",
   "license": "MIT",
   "scripts": {
-    "start": "node server",
-    "metalsmith": "node metalsmith.js"
+    "start": "node server & node metalsmith/build",
+    "dev": "node server & node metalsmith/dev",
   },
   "repository": {
     "type": "git",
