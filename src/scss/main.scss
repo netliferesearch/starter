@@ -1,31 +1,12 @@
-/**
- * Starter by Netlife Research
- * ---------------------------
- * https://github.com/netliferesearch/starter
- * ------------------------------------------
- */
 
-/*
-Variables
-
-Styleguide 0
-*/
-
-body {
-    background: red;
-}
-
-/*
 @import 'variables';
-
-/*
 
 @import '1_tools/functions';
 @import '1_tools/mixins';
 @import '1_tools/animations';
 
 @import '2_base/body';
-@import '2_base/fonts';
+// @import '2_base/fonts';
 @import '2_base/typography';
 @import '2_base/lists';
 @import '2_base/tables';
@@ -40,4 +21,7 @@ body {
 @import '3_blocks/grid';
 @import '3_blocks/responsive-table';
 @import '3_blocks/round-image';
-*/
+
+body {
+    background: red;
+}

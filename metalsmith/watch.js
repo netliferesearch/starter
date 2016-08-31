@@ -7,8 +7,9 @@ const watch = require('metalsmith-watch');
 const handlebars = require('handlebars');
 const filenames = require('metalsmith-filenames');
 const handlebarsLayouts = require('handlebars-layouts');
-
-const config = require('./config');
+const config = require('../config');
+// const webpackDevServer = require('metalsmith-webpack-dev-server');
+// const webpackConfig = require('../webpack.config.js');
 
 handlebars.registerHelper(handlebarsLayouts(handlebars));
 
@@ -25,14 +26,15 @@ metalsmith(__dirname)
         engine: 'handlebars',
         partials: config.src.partials,
     }))
-    .destination(config.dist)
+    .destination(config.dist.html)
     .use(watch({
         paths: {
             '${source}/**/*': '**/*',
-            '.src/html/layouts/**/*': '**/*',
+            '../src/html/layouts/**/*': '**/*',
         },
         livereload: true,
     }))
+    // .use(webpackDevServer(webpackConfig))
     .build((err) => {
         if (err) throw err;
     });
