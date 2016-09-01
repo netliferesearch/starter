@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run build",
-    "build": "node server & node metalsmith/build",
+    "build": "webpack & node metalsmith/build",
     "dev": "node server & node metalsmith/watch"
   },
   "repository": {

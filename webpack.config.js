@@ -15,7 +15,7 @@ const sassLoaders = [
 module.exports = {
     devtool: 'source-map',
     entry: [
-        'webpack-dev-server/client?http://localhost:3000/dist',
+        'webpack-dev-server/client?http://localhost:3000',
         'webpack/hot/only-dev-server',
         './src/js/main.js',
     ],

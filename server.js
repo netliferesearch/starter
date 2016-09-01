@@ -6,7 +6,9 @@ const WebpackDevServer = require('webpack-dev-server');
 const config = require('./webpack.config');
 
 new WebpackDevServer(webpack(config), {
-    contentBase: 'http://localhost:8080',
+    proxy: {
+       '**': 'http://localhost:8080'
+    },
     publicPath: 'http://localhost:3000/dist/',
     historyApiFallback: true,
     hot: true,
@@ -16,5 +18,5 @@ new WebpackDevServer(webpack(config), {
     if (err) {
         return console.log(err);
     }
-    return console.log('Open http://localhost:8080/ 🚀');
+    return console.log('Open http://localhost:3000/ 🚀');
 });
