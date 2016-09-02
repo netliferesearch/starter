@@ -4,7 +4,6 @@ const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-var DashboardPlugin = require('webpack-dashboard/plugin');
 
 const sassLoaders = [
     'css-loader',
@@ -36,8 +35,7 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new ExtractTextPlugin('[name].css'),
-        new DashboardPlugin()
+        new ExtractTextPlugin('[name].css')
     ],
     postcss: [
     autoprefixer({
