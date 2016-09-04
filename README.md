@@ -20,16 +20,20 @@ When you see this you can open your browser at [localhost:8080](http://localhost
 * `npm start` - Heroku run this after deploy
 
 # :question: Why we made this?
-At Netlife Research we believe in rapid prototyping. Static site generators are _awesome_ for this. You are working with templates and layouts separated from the content without needing a CMS :metal:. There is [a whole bunch of static site generators out there](https://staticgen.com), and we have tested a lot of them. We did chose [Metalsmith](http://www.metalsmith.io/). Which is a "pluggable" and quite flexible tool, it´s not perfect but it does to the job quite nice most of the times.
+Being a group of creative frontenders and desginers it is great to experiment and do new things in our own way. At the same time sharing ways of doing things is valuable. Making a *starter* kit will maybe moves us a bit more in a streamlined direction.
+
+When we started the this project we looked at a lot of different setups within the group. And we did find a lot of smart things and tried to merge it to a common platform. This means it is probably not perfect, but hopefully it will fix some painpoints and making the setup process a bit easier. Modern frontend _is_ complex, but there is no need to _invent the wheel_ every time. :smile:
+
+We believe in rapid prototyping and static site generators are _awesome_ for this. That´s why we included *Metalsmith* in our default setup. You are working with templates and layouts separated from the content without needing a CMS :metal:. There is [a whole bunch of static site generators out there](https://staticgen.com), and we have tested a lot of them. We did chose [Metalsmith](http://www.metalsmith.io/), which is a "pluggable" and quite flexible.
 
 # :package: It contains
 * [Metalsmith](http://http://www.metalsmith.io/) static site generator
-* Giving CSS superpowers with [http://sass-lang.com/]SASS
+* Giving CSS superpowers with [SASS](http://sass-lang.com/)
 * Some basic CSS styles and setup
 * [Webpack](https://webpack.github.io/) for transpiling SASS and JavaScript
 * [Webpack Dev Server](https://webpack.github.io/docs/webpack-dev-server.html) for :fire: loading
-* [Babel](https://babeljs.io/) for compiling ES6 syntax
-* A file structure with a SRC/DIST setup
+* [Babel](https://babeljs.io/) for compiling ES6
+* File structure with a SRC/DIST setup
 
 ## :neckbeard: Install Node
 You have to install Node via NVM to get your setup and permissions right. If you aren´t convenient doing this your self, react out to a colleuge or ask in our *#frontend* Slack channel.
@@ -44,7 +48,7 @@ Both ESLint and SassLint is included in this starter. [Our setup for ESLint](htt
 * [SassLint](https://atom.io/packages/linter-sass-lint)
 * [ESLint](https://atom.io/packages/linter-eslint)
 
-## :smile: Commit Message Emoji :unicorn_face:
+## :smile: Commit Message Emoji´s
 To make things a bit more fun feel free to include a emoji in your commits. It could actually by quite informative too. (Inspired by [Commit Message Emoji](https://github.com/dannyfritz/commit-message-emoji))
 
 Commit Type | Emoji
@@ -53,6 +57,7 @@ Initial Commit | :tada: `:tada:`
 Cosmetics | :art: `:art:`
 New Feature | :sparkles: `:sparkles:`
 Bugfix | :bug: `:bug:`
+Deleting stuff | :x: `:x:`
 Refactoring | :package: `:package:`
 Documentation | :books: `:books:`
 Performance | :racehorse: `:racehorse:`
