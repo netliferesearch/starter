@@ -22,6 +22,15 @@ When you see this you can open your browser at [localhost:8080](http://localhost
 # :question: Why we made this?
 At Netlife Research we believe in rapid prototyping. Static site generators are _awesome_ for this. You are working with templates and layouts separated from the content without needing a CMS :metal:. There is [a whole bunch of static site generators out there](https://staticgen.com), and we have tested a lot of them. We did chose [Metalsmith](http://www.metalsmith.io/). Which is a "pluggable" and quite flexible tool, it´s not perfect but it does to the job quite nice most of the times.
 
+# :package: It contains
+* [Metalsmith](http://http://www.metalsmith.io/) static site generator
+* Giving CSS superpowers with [http://sass-lang.com/]SASS
+* Some basic CSS styles and setup
+* [Webpack](https://webpack.github.io/) for transpiling SASS and JavaScript
+* [Webpack Dev Server](https://webpack.github.io/docs/webpack-dev-server.html) for :fire: loading
+* [Babel](https://babeljs.io/) for compiling ES6 syntax
+* A file structure with a SRC/DIST setup
+
 ## :neckbeard: Install Node
 You have to install Node via NVM to get your setup and permissions right. If you aren´t convenient doing this your self, react out to a colleuge or ask in our *#frontend* Slack channel.
 
@@ -30,7 +39,7 @@ Both ESLint and SassLint is included in this starter. [Our setup for ESLint](htt
 
 ![Alt text](/docs/linting.png?raw=true "Linting")
 
-### :package: Atom Packages for proper linting
+### Atom Packages for proper linting
 * [Linter](https://atom.io/packages/linter)
 * [SassLint](https://atom.io/packages/linter-sass-lint)
 * [ESLint](https://atom.io/packages/linter-eslint)
