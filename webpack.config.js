@@ -1,15 +1,6 @@
-/* eslint-disable */
-
 const path = require('path');
-const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-const sassLoaders = [
-    'css-loader',
-    'postcss-loader',
-    'sass-loader',
-];
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     devtool: 'source-map',
@@ -21,7 +12,7 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.join(__dirname, './dist'),
-        publicPath: '/dist/'
+        publicPath: '/dist/',
     },
     module: {
         loaders: [{
@@ -30,23 +21,22 @@ module.exports = {
         },
         {
             test: /\.scss$/,
-            loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
-        }]
+            loader: ExtractTextPlugin.extract(
+                'style-loader',
+                'css-loader!postcss-loader!sass-loader'
+            ),
+        }],
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-        new ExtractTextPlugin('[name].css')
+        new ExtractTextPlugin('[name].css'),
     ],
     postcss: [
-    autoprefixer({
-            browsers: ['last 2 versions']
-        })
+        autoprefixer({
+            browsers: ['last 2 versions'],
+        }),
     ],
     resolve: {
         extensions: ['', '.js', '.sass'],
-        root: [path.join(__dirname, './src')]
-    }
-}
-
-
-/* eslint-enable */
+        root: [path.join(__dirname, './src')],
+    },
+};
