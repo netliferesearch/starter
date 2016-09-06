@@ -11,7 +11,7 @@ npm run dev
 
 When you see this you can open your browser at [localhost:3000](http://localhost:3000).
 
-![Alt text](/docs/start.gif?raw=true "Linting")
+![Alt text](https://cloud.githubusercontent.com/assets/4348783/18286459/2f49addc-7473-11e6-9e47-9061ecba7116.gif?raw=true "Linting")
 
 ## :muscle: Tasks
 * `npm i` - Install dependencies
@@ -41,7 +41,7 @@ You have to install Node via NVM to get your setup and permissions right. If you
 ## :fork_and_knife: Linting
 Both ESLint and SassLint is included in this starter. [Our setup for ESLint](https://github.com/netliferesearch/eslint-config-netliferesearch) is a fork of Airbnb which a lot of project seems to use these day. Linting may seems a bit irritating at first, but we will strongly recommend everyone to use it. It's good for experienced developers as well as rising stars. It gives you good and helpful advices and at the same time we ensure the quality of the code we are making.
 
-![Alt text](/docs/linting.png?raw=true "Linting")
+![Alt text](https://cloud.githubusercontent.com/assets/4348783/18286458/2f4758e8-7473-11e6-9b36-4ae5bc450490.png?raw=true "Linting")
 
 ### Atom Packages for proper linting
 * [Linter](https://atom.io/packages/linter)
