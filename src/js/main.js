@@ -1,4 +1,3 @@
-'use strict';
 
-import 'picturefill';
-import './webFontLoader.js';
+import '../scss/main.scss';
+import './wcag';

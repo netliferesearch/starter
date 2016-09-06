@@ -1,53 +1,19 @@
-/**
- * Starter by Netlife Research
- * ---------------------------
- * https://github.com/netliferesearch/starter
- * ------------------------------------------
- */
-
-@import '../../node_modules/susy/sass/susy';
-
-/*
-Variables
-
-Styleguide 0
-*/
 
 @import 'variables';
 
-/*
-Tools
-
-Code used by the other components and helper classes.
-
-Styleguide 1
-*/
 @import '1_tools/functions';
 @import '1_tools/mixins';
 @import '1_tools/animations';
 
-/*
-Base
-
-Styling of default html elements.
-
-Styleguide 2
-*/
 @import '2_base/body';
-@import '2_base/fonts';
+// @import '2_base/fonts';
 @import '2_base/typography';
 @import '2_base/lists';
 @import '2_base/tables';
 @import '2_base/images';
 @import '2_base/forms';
 
-/*
-Blocks
 
-Design components, seperated as blocks.
-
-Styleguide 3
-*/
 @import '3_blocks/button';
 @import '3_blocks/checkbox';
 @import '3_blocks/select';

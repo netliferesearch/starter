@@ -5,14 +5,12 @@
 @import '1_tools/mixins';
 @import '1_tools/animations';
 
-// colors
-
 @function sg-text-color($color) {
     @if ($color) {
         @if (lightness($color) > 50) {
-            @return #000; // Lighter backgorund, return dark color
+            @return #000;
         } @else {
-            @return #fff; // Darker background, return light color
+            @return #fff;
         }
     }
 }

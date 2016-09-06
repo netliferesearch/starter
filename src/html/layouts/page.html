@@ -1,10 +1,6 @@
 <!doctype html>
 <html lang="no">
-    <head>
-        <meta charset="utf-8">
-        <title>{{ title }}</title>
-        <link rel="stylesheet" href="../css/main.min.css">
-    </head>
+    {{> head }}
     <body>
         {{> nav }}
         <main>
@@ -12,6 +8,7 @@
             <p class="large">{{ description }}</p>
             <p>{{{ contents }}}</p>
         </main>
-        <script src="/js/main.min.js"></script>
+        <script src="http://localhost:35729/livereload.js"></script>
+        <script src="http://localhost:3000/dist/main.js"></script>
     </body>
 </html>
