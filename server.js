@@ -3,11 +3,11 @@ const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 /* eslint-enable */
 
-const config = require('./webpack.config');
+const config = require('./webpack.hot.config');
 
 new WebpackDevServer(webpack(config), {
     proxy: {
-       '**': 'http://localhost:8080'
+        '**': 'http://localhost:8080'
     },
     publicPath: 'http://localhost:3000/dist/',
     historyApiFallback: true,
@@ -18,5 +18,6 @@ new WebpackDevServer(webpack(config), {
     if (err) {
         return console.log(err);
     }
+
     return console.log('Open http://localhost:3000/ 🚀');
 });
