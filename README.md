@@ -9,7 +9,7 @@ npm i
 npm run dev
 ```
 
-When you see this you can open your browser at [localhost:8080](http://localhost:8080).
+When you see this you can open your browser at [localhost:3000](http://localhost:3000).
 
 ![Alt text](/docs/start.gif?raw=true "Linting")
 
@@ -20,11 +20,11 @@ When you see this you can open your browser at [localhost:8080](http://localhost
 * `npm start` - Heroku run this after deploy
 
 # :question: Why we made this?
-Being a group of creative frontenders and desginers it is great to experiment and do new things in our own way. At the same time sharing ways of doing things is valuable. Making a *starter* kit will maybe moves us a bit more in a streamlined direction.
+Being a group of creative frontenders and designers it is great to experiment and do new things in our own way. At the same time sharing ways of doing things is valuable. Making a *starter* kit can possibly help us move towards a slightly more streamlined way of doing things.
 
-When we started the this project we looked at a lot of different setups within the group. And we did find a lot of smart things and tried to merge it to a common platform. This means it is probably not perfect, but hopefully it will fix some painpoints and making the setup process a bit easier. Modern frontend _is_ complex, but there is no need to _invent the wheel_ every time. :smile:
+When we started the this project we looked at a lot of different setups within the group. And we did find a lot of smart things and tried to merge it to a common platform. This means it is probably not perfect, but hopefully it will address a few painpoints and make the setup process a bit easier. Modern frontend _is_ complex, but there is no need to _invent the wheel_ every time. :smile:
 
-We believe in rapid prototyping and static site generators are _awesome_ for this. That´s why we included *Metalsmith* in our default setup. You are working with templates and layouts separated from the content without needing a CMS :metal:. There is [a whole bunch of static site generators out there](https://staticgen.com), and we have tested a lot of them. We did chose [Metalsmith](http://www.metalsmith.io/), which is a "pluggable" and quite flexible.
+We believe in rapid prototyping and static site generators are _awesome_ for this. That´s why we included [Metalsmith](http://www.metalsmith.io/) in our default setup. You are working with templates and layouts separated from the content without needing a CMS :metal:. There is [a whole bunch of static site generators out there](https://staticgen.com), and we have tested a lot of them. We did chose Metalsmith because it's both "pluggable" and quite flexible.
 
 # :package: It contains
 * [Metalsmith](http://http://www.metalsmith.io/) static site generator
@@ -39,7 +39,7 @@ We believe in rapid prototyping and static site generators are _awesome_ for thi
 You have to install Node via NVM to get your setup and permissions right. If you aren´t convenient doing this your self, react out to a colleuge or ask in our *#frontend* Slack channel.
 
 ## :fork_and_knife: Linting
-Both ESLint and SassLint is included in this starter. [Our setup for ESLint](https://github.com/netliferesearch/eslint-config-netliferesearch) is a fork of Airbnb which a lot of project seems to use these day. Linting may seems a bit irritating at first, but we will strongly recommend everyone to use it. It´s both good for experienced developers and rising stars. It gives you good and helpful advices and at the same time we ensure the quality of the code we are making.
+Both ESLint and SassLint is included in this starter. [Our setup for ESLint](https://github.com/netliferesearch/eslint-config-netliferesearch) is a fork of Airbnb which a lot of project seems to use these day. Linting may seems a bit irritating at first, but we will strongly recommend everyone to use it. It's good for experienced developers as well as rising stars. It gives you good and helpful advices and at the same time we ensure the quality of the code we are making.
 
 ![Alt text](/docs/linting.png?raw=true "Linting")
 
