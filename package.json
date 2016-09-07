@@ -3,7 +3,6 @@
   "version": "2.0.0",
   "description": "Starter for prototyping and production",
   "author": "Netlife Research",
-  "license": "MIT",
   "scripts": {
     "start": "node server",
     "prestart": "npm run metalsmith",
