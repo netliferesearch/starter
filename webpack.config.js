@@ -2,10 +2,12 @@ const path = require('path');
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const port = process.env.PORT || 8081;
+
 module.exports = {
     devtool: 'source-map',
     entry: [
-        'webpack-dev-server/client?http://localhost:3000',
+        `webpack-dev-server/client?http://localhost:${port}`,
         'webpack/hot/dev-server',
         './src/js/main.js',
     ],

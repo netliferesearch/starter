@@ -1,23 +1,46 @@
-/* eslint-disable */
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
-/* eslint-enable */
 
-const config = require('./webpack.hot.config');
+const config = require(
+    process.env.npm_lifecycle_event === 'start' ?
+    './webpack.config' :
+    './webpack.hot.config'
+);
 
-new WebpackDevServer(webpack(config), {
-    proxy: {
-        '**': 'http://localhost:8080'
-    },
-    publicPath: 'http://localhost:3000/dist/',
-    historyApiFallback: true,
-    hot: true,
-    inline: true,
-    colors: true,
-}).listen(3000, 'localhost', (err) => {
+const port = process.env.PORT || 8081;
+var initialCompileFinished = false;
+
+new WebpackDevServer(
+    webpack(
+        config,
+        (err) => {
+            if (err) {
+                return;
+            }
+
+            if (!initialCompileFinished) {
+                setTimeout(() => { console.log(`Compile done. Open http://localhost:${port}/ 🚀`); }, 0);
+                initialCompileFinished = true;
+            }
+        }
+    ), (
+        process.env.npm_lifecycle_event === 'start' ? {
+            contentBase: 'dist/',
+        } : {
+            proxy: {
+                '**': 'http://localhost:8080',
+            },
+            publicPath: `http://localhost:${port}/dist/`,
+            historyApiFallback: true,
+            hot: true,
+            inline: true,
+            colors: true,
+        }
+    )
+).listen(port, 'localhost', (err) => {
     if (err) {
-        return console.log(err);
+        return console.error(err);
     }
 
-    return console.log('Open http://localhost:3000/ 🚀');
+    return console.log('Doing the initial compile... ⏳');
 });

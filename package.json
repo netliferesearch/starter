@@ -5,8 +5,10 @@
   "author": "Netlife Research",
   "license": "MIT",
   "scripts": {
-    "start": "npm run build",
-    "build": "webpack && node metalsmith/build",
+    "start": "node server",
+    "prestart": "npm run metalsmith",
+    "metalsmith": "node metalsmith/build",
+    "webpack": "webpack",
     "dev": "node server & node metalsmith/watch"
   },
   "repository": {
