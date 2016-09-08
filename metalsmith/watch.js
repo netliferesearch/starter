@@ -34,7 +34,7 @@ metalsmith(__dirname)
         },
         livereload: true,
     }))
-    .use(serve())
+    .use(serve(require('./config')))
     .build((err) => {
         if (err) throw err;
     });

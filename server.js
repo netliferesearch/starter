@@ -4,7 +4,7 @@ const express = require('express');
 const basicAuth = require('basic-auth');
 
 const app = express();
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 3000;
 
 // Authenticator
 app.use((req, res, next) => {

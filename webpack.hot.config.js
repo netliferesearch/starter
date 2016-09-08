@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const config = require('./webpack.config');
 
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 3000;
 
 module.exports = Object.assign({}, config, {
     entry: [
