@@ -1,52 +1,4 @@
-/*
-Checkboxes
 
-Custom styling of checkboxes and radiobuttons.
-
-Markup:
-<label class="checkbox">
-    <input type="checkbox"/>
-    <i class="checkbox__indicator"></i>
-    Label
-</label>
-<label class="checkbox">
-    <input type="checkbox" checked/>
-    <i class="checkbox__indicator"></i>
-    Label
-</label>
-<label class="checkbox checkbox--disabled">
-    <input type="checkbox" disabled/>
-    <i class="checkbox__indicator"></i>
-    Disabled
-</label>
-<label class="checkbox checkbox--disabled">
-    <input type="checkbox" checked disabled/>
-    <i class="checkbox__indicator"></i>
-    Disabled
-</label>
-<label class="checkbox">
-    <input type="radio" name="radiotest"/>
-    <i class="checkbox__indicator"></i>
-    Label
-</label>
-<label class="checkbox">
-    <input type="radio" name="radiotest" checked/>
-    <i class="checkbox__indicator"></i>
-    Label
-</label>
-<label class="checkbox checkbox--disabled">
-    <input type="radio" disabled/>
-    <i class="checkbox__indicator"></i>
-    Disabled
-</label>
-<label class="checkbox checkbox--disabled">
-    <input type="radio" checked disabled/>
-    <i class="checkbox__indicator"></i>
-    Disabled
-</label>
-
-Styleguide 3.8
-*/
 
 .checkbox {
     position: relative;
@@ -55,7 +7,7 @@ Styleguide 3.8
     padding-left: 2rem;
 
     &--disabled {
-        color: lighten(color(gray), 50%);
+        color: $color-gray;
         cursor: default;
     }
 
@@ -71,8 +23,8 @@ Styleguide 3.8
         width:  1.33rem;
         height: 1.33rem;
         line-height: 1.33rem;
-        background-color: color(white);
-        border: 1px solid color(gray); // Always use a border on input elements for accessibility. High contrast mode in Windows will remove all background styling and render the field invisible if border is not used.
+        background-color: $color-white;
+        border: 1px solid $color-gray; // Always use a border on input elements for accessibility. High contrast mode in Windows will remove all background styling and render the field invisible if border is not used.
         user-select: none;
         text-align: center;
         border-radius: 0;
@@ -103,22 +55,22 @@ Styleguide 3.8
         }
 
         &:focus ~ .checkbox__indicator {
-            box-shadow: 0 0 0 .2rem lighten(color(primary), 15%), 0 0 0 .2rem lighten(color(primary), 15%);
+            box-shadow: 0 0 0 .2rem $color-gray, 0 0 0 .2rem $color-white;
         }
 
         &:active ~ .checkbox__indicator {
-            color: color(white);
-            background-color: color(primary);
-            border-color: color(primary);
+            color: $color-white;
+            background-color: $color-primary;
+            border-color: $color-primary;
         }
 
         &:disabled ~ .checkbox__indicator {
-            border-color: lighten(color(gray), 50%);
+            border-color: $color-gray;
         }
 
         &:disabled:checked ~ .checkbox__indicator {
-            background-color: lighten(color(gray), 50%);
-            border-color: lighten(color(gray), 50%);
+            background-color: $color-gray;
+            border-color: $color-gray;
         }
 
         /* RADIO BUTTONS */
@@ -128,10 +80,10 @@ Styleguide 3.8
         }
 
         &[type='radio']:checked ~ .checkbox__indicator:before {
-            background: color(white);
+            background: $color-white;
             width: 0.55em;
             height: 0.55em;
-            border: 3px solid color(white);
+            border: 3px solid $color-white;
             border-radius: 50%;
             transform: translateY(-20%);
         }

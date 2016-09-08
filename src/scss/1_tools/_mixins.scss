@@ -2,110 +2,36 @@
 // Breakpoints
 // ------------------------------------
 
-// Fallback if nothing is set in variables
 $breakpoints: (
-  small: 480,
-  medium: 720,
-  large: 960,
+    small: 480,
+    medium: 720,
+    large: 960,
 ) !default;
 
-@mixin breakpoint($label, $max:null) {
-  @if map-has-key($breakpoints, $label) {
-    $width: map-get($breakpoints, $label);
-    @if $max != null {
-      @media (max-width: rem-calc($width)) {
-        @content;
-      }
-    }
-    @else {
-      @media (min-width: rem-calc($width)) {
-        @content;
-      }
-    }
-  }
-  @elseif type-of($label) == 'number' {
-    @if $max != null {
-      @media screen and (max-width: rem-calc($label)) {
-        @content;
-      }
-    }
-    @else {
-      @media screen and (min-width: rem-calc($label)) {
-        @content;
-      }
-    }
-  }
-  @else {
-    @warn "`#{$label} is not a valid key in `#{$breakpoints}`. ";
-  }
-}
-// Hva gjør denne?
-@mixin bp($label, $max:null) {
-  @if mixin-exists(breakpoint) {
-    @include breakpoint($label, $max) {
-      @content;
-    }
-  }
-  @else {
-    @warn "`#{$label}` is not a valid key in `$breakpoints`.";
-  }
-}
-
-
-
-
-
-
-
-// ------------------------------------
-// Header Sizes
-// ------------------------------------
-
-@mixin font-sizes {
-  @each $size, $headers in $font-sizes {
-    @if $size == 'base' {
-      @each $header, $font-size in $headers {
-        #{$header}, .#{$header} {
-          @include make-font-size($font-size);
+@mixin breakpoint($label, $max: null) {
+    @if map-has-key($breakpoints, $label) {
+        $width: map-get($breakpoints, $label);
+        @if $max != null {
+            @media (max-width: rem-calc($width)) {
+                @content;
+            }
+        } @else {
+            @media (min-width: rem-calc($width)) {
+                @content;
+            }
         }
-      }
     }
-    @else {
-      @include breakpoint($size) {
-        @each $header, $font-size in $headers {
-          #{$header}, .#{$header} {
-            @include make-font-size($font-size);
-          }
+    @elseif type-of($label) == 'number' {
+        @if $max != null {
+            @media screen and (max-width: rem-calc($label)) {
+                @content;
+            }
+        } @else {
+            @media screen and (min-width: rem-calc($label)) {
+                @content;
+            }
         }
-      }
+    } @else {
+        @warn '`#{$label} is not a valid key in `#{$breakpoints}`.';
     }
-  }
-}
-
-// Utility function for mixin font-size
-@mixin make-font-size($font-size) {
-  // If $fs-font-size is a list, include
-  // both font-size and line-height
-  @if type-of($font-size) == "list" {
-    font-size: #{nth($font-size, 1)/16}rem;
-    @if (length($font-size) > 1) {
-      line-height: nth($font-size, 2);
-    }
-  }
-  @else {
-    font-size: rem-calc($font-size);
-  }
-}
-
-// ------------------------------------
-// Button
-// ------------------------------------
-
-// To set button color, background and hover
-@mixin button-color($bg-color, $color:null) {
-  background: $bg-color;
-  color: $color;
-  &:hover {
-    background: darken($bg-color, 10%);
-  }
 }
