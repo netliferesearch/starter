@@ -2,6 +2,7 @@
 
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
+const metasmith = require('./metalsmith/config');
 
 const config = require(
     process.env.npm_lifecycle_event === 'start' ?
@@ -9,7 +10,7 @@ const config = require(
     './webpack.hot.config'
 );
 
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 3000;
 var initialCompileFinished = false;
 
 new WebpackDevServer(webpack(config, (err) => {
@@ -23,7 +24,7 @@ new WebpackDevServer(webpack(config, (err) => {
     }
 }), {
     proxy: {
-        '**': 'http://localhost:8080',
+        '**': `http://localhost:${ metasmith.port }`,
     },
     publicPath: `http://localhost:${port}/dist/`,
     historyApiFallback: true,
