@@ -1,9 +1,10 @@
-const path = require('path');
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-    devtool: 'source-map',
+    devtool: 'cheap-module-source-map',
     entry: [
         './src/js/main.js',
     ],
@@ -27,6 +28,11 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin('[name].css'),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('production'),
+            },
+        }),
     ],
     postcss: [
         autoprefixer({
