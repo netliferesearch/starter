@@ -4,7 +4,7 @@ const markdown = require('metalsmith-markdown');
 const layouts = require('metalsmith-layouts');
 const handlebars = require('handlebars');
 const handlebarsLayouts = require('handlebars-layouts');
-const config = require('../config');
+const config = require('./config');
 
 handlebars.registerHelper(handlebarsLayouts(handlebars));
 metalsmith(__dirname)

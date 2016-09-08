@@ -9,7 +9,7 @@ const handlebars = require('handlebars');
 const filenames = require('metalsmith-filenames');
 const handlebarsLayouts = require('handlebars-layouts');
 const serve = require('metalsmith-serve');
-const config = require('../config');
+const config = require('./config');
 
 handlebars.registerHelper(handlebarsLayouts(handlebars));
 
