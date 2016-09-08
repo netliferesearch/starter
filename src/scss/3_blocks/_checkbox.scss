@@ -43,7 +43,7 @@
             border-color: color(gray); // Always use a border on input elements for accessibility. High contrast mode in Windows will remove all background styling and render the field invisible if border is not used.
             color: color(white);
 
-            &:before {
+            &::before {
                 content: '';
                 display: inline-block;
                 width: 0.7em;
@@ -79,7 +79,7 @@
             border-radius: 50%;
         }
 
-        &[type='radio']:checked ~ .checkbox__indicator:before {
+        &[type='radio']:checked ~ .checkbox__indicator::before {
             background: $color-white;
             width: 0.55em;
             height: 0.55em;
