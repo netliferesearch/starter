@@ -1,5 +1,6 @@
 
 const metalsmith = require('metalsmith');
+const define = require('metalsmith-define');
 const markdown = require('metalsmith-markdown');
 const layouts = require('metalsmith-layouts');
 const inplace = require('metalsmith-in-place');
@@ -16,6 +17,9 @@ handlebars.registerHelper(handlebarsLayouts(handlebars));
 metalsmith(__dirname)
     .source(config.src.content)
     .use(filenames())
+    .use(define({
+        development: true,
+    }))
     .use(markdown())
     .use(layouts({
         engine: 'handlebars',
