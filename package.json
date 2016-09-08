@@ -5,10 +5,10 @@
   "author": "Netlife Research",
   "scripts": {
     "start": "node server",
-    "prestart": "npm run metalsmith",
+    "prestart": "npm run metalsmith && npm run webpack",
     "metalsmith": "node metalsmith/build",
     "webpack": "webpack",
-    "dev": "node server & node metalsmith/watch"
+    "dev": "node dev-server & node metalsmith/watch"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,8 @@
     "babel-preset-react": "^6.0.15",
     "babel-preset-stage-0": "^6.0.15",
     "css-loader": "^0.23.1",
+    "cssnano": "^3.7.4",
+    "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "handlebars": "^4.0.5",
     "handlebars-layouts": "^3.1.3",

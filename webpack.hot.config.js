@@ -1,7 +1,14 @@
 const webpack = require('webpack');
 const config = require('./webpack.config');
 
+const port = process.env.PORT || 8081;
+
 module.exports = Object.assign({}, config, {
+    entry: [
+        `webpack-dev-server/client?http://localhost:${port}`,
+        'webpack/hot/dev-server',
+        './src/js/main.js',
+    ],
     plugins: [new webpack.HotModuleReplacementPlugin()],
     module: {
         loaders: [{
