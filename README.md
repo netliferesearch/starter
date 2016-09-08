@@ -72,6 +72,8 @@ New Feature | :sparkles: `:sparkles:`
 Bugfix | :bug: `:bug:`
 Deleting stuff | :x: `:x:`
 Refactoring | :package: `:package:`
+Cleaning | :shower: `:shower:`
+Experimental | :crystal_ball: `:crystal_ball:`
 Documentation | :books: `:books:`
 Performance | :racehorse: `:racehorse:`
 Tooling | :wrench: `:wrench:`
