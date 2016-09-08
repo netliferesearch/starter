@@ -3,6 +3,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ title }}</title>
-        <link rel="stylesheet" type="text/css" href="/main.css">
+        {{#if development}}
         <script src="http://localhost:35729/livereload.js"></script>
+        {{else}}
+        <link rel="stylesheet" type="text/css" href="/main.css">
+        {{/if}}
     </head>
