@@ -13,7 +13,7 @@ npm run dev
 
 When you see this you can open your browser at [localhost:3000](http://localhost:3000).
 
-![Alt text](https://cloud.githubusercontent.com/assets/4348783/18286459/2f49addc-7473-11e6-9e47-9061ecba7116.gif?raw=true "Linting")
+![Alt text](https://cloud.githubusercontent.com/assets/4348783/18286459/2f49addc-7473-11e6-9e47-9061ecba7116.gif?raw=true "Start")
 
 ## :muscle: Tasks
 * `npm i` - Install dependencies
@@ -49,6 +49,18 @@ Both ESLint and SassLint is included in this starter. [Our setup for ESLint](htt
 * [Linter](https://atom.io/packages/linter)
 * [SassLint](https://atom.io/packages/linter-sass-lint)
 * [ESLint](https://atom.io/packages/linter-eslint)
+
+## :computer: Heroku
+This starter contains both a server and build tasks for Heroku. Password can be changed in the `server.js` file.
+
+For easy initial deploy to Heroku, use this button:
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+Choose a name for the new dyno and region *Europe*. After the app is deployed got to *Manage app* and the *Deploy* tab to connect your Github repository. Then deploy new versions manually or enable automatic deploys.
+
+[[https://cloud.githubusercontent.com/assets/4348783/18344038/08d3e106-75b6-11e6-915b-989f8b38f4ea | width = 400px ]]
+
+[[https://cloud.githubusercontent.com/assets/4348783/18344037/08d2d996-75b6-11e6-9d69-450159e7d6fb.png | width = 400px ]]
 
 ## :smile: Commit Message Emoji´s
 To make things a bit more fun feel free to include a emoji in your commits. It could actually by quite informative too. (Inspired by [Commit Message Emoji](https://github.com/dannyfritz/commit-message-emoji))
