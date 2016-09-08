@@ -1,30 +1,16 @@
-/*
-Button
-
-Styling for buttons.
-
-Markup:
-<button class="button {{modifier_class}}">Button</button>
-
-.button--primary - Primary button
-.button--secondary - Secondary button
-.button--third - Third button
-.button--small - Small button
-
-Styleguide 3.1
-*/
 
 .button {
-    @include button-color(color(gray), color(white));
+    color: $color-white;
+    background-color: $color-gray;
     display: inline-block;
     background: color(gray);
     cursor: pointer;
-    padding: spacing(medium) spacing(large);
+    padding: 2rem;
     vertical-align: middle;
     text-align: center;
     line-height: 1;
-    color: color(white);
-    font-family: font(sans);
+    color: $color-primary;
+    font-family: $font-sans;
     font-size: rem-calc(16);
     appearance: none;
 
@@ -34,15 +20,11 @@ Styleguide 3.1
       }
 
     &--primary {
-        @include button-color(color(primary), color(black));
+        background-color: $color-primary;
     }
 
     &--secondary {
-        @include button-color(color(secondary), color(white));
-    }
-
-    &--third {
-        @include button-color(color(third), color(white));
+        background-color: $color-secondary;
     }
 
     // Removes the focus ring around an element when a mouse input is detected.

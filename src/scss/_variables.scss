@@ -1,60 +1,15 @@
-/*
-Colors
-
-Markup:
-<div class="sg-color">
-    <div class="sg-color__swatch {{modifier_class}}">Default</div>
-    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-lighten3">Lighten 3</div>
-    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-lighten2">Lighten 2</div>
-    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-lighten1">Lighten 1</div>
-    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-darken1">Darken 1</div>
-    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-darken2">Darken 2</div>
-    <div class="sg-color__swatch sg-color__swatch--small {{modifier_class}}-darken3">Darken 3</div>
-</div>
-
-.primary - Primary
-.secondary - Secondary
-.third - Third
-.black - Black
-.gray - Gray
-
-Styleguide 0.1
-*/
-
-$palette: (
-    colors: (
-        primary: #a8cd25,
-        secondary: #1d0c9a,
-        third: #8a5bd3,
-        black: #000,
-        white: #fff,
-        gray: #444
-    ),
-    darken: (
-        1: 20%,
-        2: 40%,
-        3: 60%
-    ),
-    lighten: (
-        1: 20%,
-        2: 40%,
-        3: 60%
-    )
-);
-
 // ------------------------------------
-// Spacing
+// Variables
 // ------------------------------------
 
-$spacings: (
-    small: .5rem,
-    medium: 1rem,
-    large: 2rem
-);
+$color-primary: #a8cd25;
+$color-secondary: #1d0c9a;
+$color-white: #fff;
+$color-gray: #444;
+$color-black: #000;
 
-// ------------------------------------
-// Breakpoints
-// ------------------------------------
+$font-sans: 'Helvetica', sans-serif;
+$font-serif: 'Georgia', serif;
 
 $breakpoints: (
     small: 480,
@@ -62,40 +17,3 @@ $breakpoints: (
     large: 960,
     wide: 1200,
 );
-
-// ------------------------------------
-// Typography
-// ------------------------------------
-
-$fonts: (
-    sans: ('Work Sans', 'Helvetica', sans-serif),
-    serif: ('Merriweather', 'Georgia', serif),
-    // If extra level needed
-    sans-weight: (
-        light: ('Helvetica', sans-serif),
-        regular: ('Helvetica', sans-serif),
-        medium: ('Helvetica', sans-serif),
-        bold:  ('Helvetica', sans-serif)
-    ),
-);
-
-$font-sizes: (
-    base: (
-        'h1': (32, 1.4),
-        'h2': 28,
-        'h3': 24,
-        'h4': 20,
-        'h5': 18,
-        'h6': 16,
-        'p': 16
-    ),
-    medium: (
-        'h1': (54, .9),
-        'h2': 32,
-        'h3': 28,
-        'h4': 24,
-        'h5': 20,
-        'h6': 16,
-        'p': (20, 1.8)
-    ),
-) !default;

@@ -2,7 +2,7 @@
 // Need to be BEMified
 
 .responsive-table {
-    border: 1px solid color(gray);
+    border: 1px solid $color-gray;
 
     th {
         text-transform: uppercase;
@@ -16,7 +16,7 @@
         text-align: center;
     }
 
-    @include breakpoint(medium, max) {
+    @include breakpoint(medium) {
         border: 0;
 
         thead {
@@ -26,7 +26,7 @@
         tr {
             margin-bottom: 1.5rem;
             display: block;
-            border-bottom: 1px solid color(gray);
+            border-bottom: 1px solid $color-gray;
         }
 
         td {
@@ -36,7 +36,7 @@
             border-left: 0;
             padding-left: 0;
 
-            &:before {
+            &::before {
                 content: attr(data-header);
                 float: left;
                 text-transform: uppercase;

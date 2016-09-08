@@ -1,55 +1,8 @@
-/*
-Forms
-
-Base styling for forms.
-
-Markup:
-<label>
-    Label
-    <input type="text" placeholder="Placeholder"/>
-</label>
-<label>
-    Disabled
-    <input type="text" disabled/>
-</label>
-<label>
-    Label
-    <textarea></textarea>
-</label>
-<label><input type="checkbox"/> Label</label>
-<label><input type="checkbox" checked/> Label</label>
-<label><input type="checkbox" disabled/> Disabled</label>
-<label><input type="radio" name="test"/> Label</label>
-<label><input type="radio" name="test" checked/> Label</label>
-<label><input type="radio" name="test" disabled/> Disabled</label>
-<label>
-    Label
-    <select>
-      <option>Option 1</option>
-      <option>Option 2</option>
-    </select>
-</label>
-<label>
-    Disabled
-    <select disabled>
-      <option>Option 1</option>
-      <option>Option 2</option>
-    </select>
-</label>
-<fieldset>
-    <legend>Legend</legend>
-    Fields here
-</fieldset>
-<button type="button">Button</button>
-<button type="submit">Submit</button>
-
-Styleguide 2.3
-*/
 
 // Labels
 label {
     display: block;
-    margin-bottom: spacing(medium);
+    margin-bottom: 1rem;
 }
 
 // Inputs and textareas
@@ -63,7 +16,7 @@ textarea {
     border: 1px solid color(gray);
 
     &:disabled {
-        border: 1px solid lighten(color(gray), 50%);
+        border: 1px solid $color-gray;
     }
 }
 
@@ -79,16 +32,16 @@ button {
     border: 0;
     background: color(secondary);
     color: color(white);
-    padding: spacing(small) spacing(medium);
+    padding: 1rem;
 
     &:focus,
     &:hover {
-        background: darken(color(secondary), 10%);
+        background: $color-gray;
     }
 
     &:disabled {
-        color: color(gray);
-        background: color(gray);
+        color: $color-white;
+        background: $color-gray;
     }
 }
 
@@ -101,7 +54,7 @@ select {
 fieldset {
     border: 0;
     padding: 0;
-    margin: 0 0 spacing(medium);
+    margin: 0 0 1rem;
 
     legend {
         @extend %h4;

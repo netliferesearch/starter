@@ -1,39 +1,8 @@
-/*
-Table
-
-Base styling for typograhpy.
-
-Markup:
-<table>
-    <thead>
-        <tr>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Content</td>
-            <td>Content</td>
-            <td>Content</td>
-            <td>Content</td>
-        </tr>
-    </tbody>
-</table>
-
-Styleguide 2.2
-*/
-
-/* Messed up the styleguide:
-article { max-width: 40em; margin: auto; } // Temporary styling for <article>
-*/
 
 table {
     width: 100%;
     border-collapse: collapse;
-    font-family: Arial, sans-serif;
+    font-family: $font-sans;
     text-align: left;
 }
 
@@ -45,13 +14,13 @@ caption {
 
 th,
 td {
-    border-top: 1px solid  color(gray);;
+    border-top: 1px solid $color-gray;
     vertical-align: top;
     padding-right: 0.25em;
 }
 
 th + *,
 td + * {
-    border-left: 1px solid  color(gray);
+    border-left: 1px solid $color-gray;
     padding-left: 0.25em;
 }

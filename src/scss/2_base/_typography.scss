@@ -1,39 +1,12 @@
-/*
-Typography
-
-Base styling for typograhpy.
-
-Markup:
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
-<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
-<p>The <strong>bold fox</strong> jumps over the <em>italic dog</em>. The <a href="#">linked parrot</a> just watch. The <strong>bold fox</strong> jumps over the <em>italic dog</em>. The <a href="#">linked parrot</a> just watch.</p>
-<ul>
-    <li>Item</li>
-    <li>Item</li>
-    <li>Item</li>
-</ul>
-<ol>
-    <li>Item</li>
-    <li>Item</li>
-    <li>Item</li>
-</ol>
-
-Styleguide 2.1
-*/
 
 html {
     font-size: 100%;
 }
 
 body {
-    font-family: font(serif);
+    font-family: $font-serif;
     line-height: 1.6;
-    color: color(gray);
+    color: $color-gray;
 }
 
 // Headings
@@ -49,7 +22,7 @@ h6,
 %h4,
 %h5,
 %h6 {
-    font-family: font(sans);
+    font-family: $font-sans;
     font-weight: 800;
     margin-bottom: 0.4rem;
 }
@@ -142,23 +115,6 @@ li {
     margin-top: 0.5em;
 }
 
-// Code
-/*pre, code {
-  font-family: monospace;
-  background-color: color(gray);
-  border-radius: 3px;
-  padding: 0 0.25rem;
-}
-pre {}
-code {
-  font-size: 1rem;
-}
-pre > code {
-  border: 0;
-  background: none;
-  padding: 0;
-  border-radius: 0;
-}*/
 
 blockquote {
     margin-left: 1.4rem;
@@ -185,7 +141,7 @@ address {
 hr {
     border: 0;
     height: 1px;
-    background-color: color(gray);
+    background-color: $color-gray;
 }
 
 // To control FOUT and make browsers behave the same with WebFontLoader
@@ -199,7 +155,3 @@ hr {
 .wf-inactive {
     visibility: visible;
 }
-
-// This mixin prints header sizes for different
-// breakpoints set in _variables.scss
-@include font-sizes;
