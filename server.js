@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const express = require('express');
 const basicAuth = require('basic-auth');
 

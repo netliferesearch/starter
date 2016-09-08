@@ -18,8 +18,7 @@ new WebpackDevServer(webpack(config, (err) => {
     }
 
     if (!initialCompileFinished) {
-        setTimeout(() => {
-            console.log(`Compile done. Open http://localhost:${port}/ 🚀`); }, 0);
+        setTimeout(() => { console.log(`Compile done. Open http://localhost:${port}/ 🚀`); }, 0);
         initialCompileFinished = true;
     }
 }), {
