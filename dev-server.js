@@ -8,7 +8,7 @@ const config = require(
 );
 
 const port = process.env.PORT || 8081;
-var initialCompileFinished = false;
+let initialCompileFinished = false;
 
 new WebpackDevServer(webpack(config, (err) => {
     if (err) {
@@ -16,7 +16,8 @@ new WebpackDevServer(webpack(config, (err) => {
     }
 
     if (!initialCompileFinished) {
-        setTimeout(() => { console.log(`Compile done. Open http://localhost:${port}/ 🚀`); }, 0);
+        setTimeout(() => {
+            console.log(`Compile done. Open http://localhost:${port}/ 🚀`); }, 0);
         initialCompileFinished = true;
     }
 }), {

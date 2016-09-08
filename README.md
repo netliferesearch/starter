@@ -51,7 +51,9 @@ Both ESLint and SassLint is included in this starter. [Our setup for ESLint](htt
 * [ESLint](https://atom.io/packages/linter-eslint)
 
 ## :computer: Heroku
-This starter contains both a server and build tasks for Heroku. Password can be changed in the `server.js` file. For easy initial deploy to Heroku, use this button:
+This starter contains both a server and build tasks for Heroku. Remember to change the password in `server.js`. Default password is: ```netlife / research```.
+
+For easy initial deploy to Heroku, use this button:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
