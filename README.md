@@ -54,13 +54,14 @@ Both ESLint and SassLint is included in this starter. [Our setup for ESLint](htt
 This starter contains both a server and build tasks for Heroku. Password can be changed in the `server.js` file.
 
 For easy initial deploy to Heroku, use this button:
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 Choose a name for the new dyno and region *Europe*. After the app is deployed got to *Manage app* and the *Deploy* tab to connect your Github repository. Then deploy new versions manually or enable automatic deploys.
 
-[[https://cloud.githubusercontent.com/assets/4348783/18344038/08d3e106-75b6-11e6-915b-989f8b38f4ea | width = 400px ]]
+![Alt text](https://cloud.githubusercontent.com/assets/4348783/18344038/08d3e106-75b6-11e6-915b-989f8b38f4ea "Heroku setup" | width = 400px)
 
-[[https://cloud.githubusercontent.com/assets/4348783/18344037/08d2d996-75b6-11e6-9d69-450159e7d6fb.png | width = 400px ]]
+![Alt text](https://cloud.githubusercontent.com/assets/4348783/18344037/08d2d996-75b6-11e6-9d69-450159e7d6fb.png "Heroku setup" | width = 400px)
 
 ## :smile: Commit Message Emoji´s
 To make things a bit more fun feel free to include a emoji in your commits. It could actually by quite informative too. (Inspired by [Commit Message Emoji](https://github.com/dannyfritz/commit-message-emoji))
