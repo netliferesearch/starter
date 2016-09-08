@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 
@@ -8,7 +10,7 @@ const config = require(
 );
 
 const port = process.env.PORT || 8081;
-let initialCompileFinished = false;
+var initialCompileFinished = false;
 
 new WebpackDevServer(webpack(config, (err) => {
     if (err) {
