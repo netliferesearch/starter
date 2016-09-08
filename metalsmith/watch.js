@@ -8,9 +8,8 @@ const watch = require('metalsmith-watch');
 const handlebars = require('handlebars');
 const filenames = require('metalsmith-filenames');
 const handlebarsLayouts = require('handlebars-layouts');
-const config = require('../config');
 const serve = require('metalsmith-serve');
-
+const config = require('../config');
 
 handlebars.registerHelper(handlebarsLayouts(handlebars));
 
@@ -38,7 +37,7 @@ metalsmith(__dirname)
         },
         livereload: true,
     }))
-    .use(serve(require('./config')))
+    .use(serve(config))
     .build((err) => {
         if (err) throw err;
     });

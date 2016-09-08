@@ -1,5 +1,6 @@
 
 module.exports = {
+    port: 43565,
     src: {
         content: '../src/html/content',
         layout: '../src/html/layouts',
