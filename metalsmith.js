@@ -31,7 +31,8 @@ const ms = metalsmith(__dirname)
     .use(inplace({
         engine: 'handlebars',
         partials: config.src.partials,
-    }));
+    }))
+    .destination(config.dist.html);
 if (dev) {
     ms.use(watch({
         paths: {
