@@ -37,7 +37,7 @@ if (dev) {
     ms.use(watch({
         paths: {
             '${source}/**/*': '**/*',
-            '../src/html/layouts/**/*': '**/*',
+            './src/html/layouts/**/*': '**/*',
         },
         livereload: true,
     }))
