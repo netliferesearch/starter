@@ -6,9 +6,9 @@
   "scripts": {
     "start": "node server",
     "prestart": "npm run metalsmith && npm run webpack",
-    "metalsmith": "node metalsmith-build",
+    "metalsmith": "node metalsmith",
     "webpack": "webpack",
-    "dev": "node dev-server & node metalsmith-watch"
+    "dev": "node dev-server & node metalsmith"
   },
   "repository": {
     "type": "git",

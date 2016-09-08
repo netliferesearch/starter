@@ -11,13 +11,16 @@ const handlebarsLayouts = require('handlebars-layouts');
 const serve = require('metalsmith-serve');
 const config = require('./config');
 
+const dev = ((process.env.NODE_ENV || '').trim().toLowerCase() !== 'production');
+
 handlebars.registerHelper(handlebarsLayouts(handlebars));
 
-metalsmith(__dirname)
+const ms = metalsmith(__dirname)
+    .clean(true)
     .source(config.src.content)
     .use(filenames())
     .use(define({
-        development: true,
+        development: dev ? true : null,
     }))
     .use(markdown())
     .use(layouts({
@@ -28,16 +31,17 @@ metalsmith(__dirname)
     .use(inplace({
         engine: 'handlebars',
         partials: config.src.partials,
-    }))
-    .destination(config.dist.html)
-    .use(watch({
+    }));
+if (dev) {
+    ms.use(watch({
         paths: {
             '${source}/**/*': '**/*',
             '../src/html/layouts/**/*': '**/*',
         },
         livereload: true,
     }))
-    .use(serve(config))
-    .build((err) => {
-        if (err) throw err;
-    });
+    .use(serve(config));
+}
+ms.build((err) => {
+    if (err) throw err;
+});
