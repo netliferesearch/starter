@@ -59,7 +59,6 @@ Choose a name for the new dyno and region *Europe*. After the app is deployed go
 
 [[ http://www.sheawong.com/wp-content/uploads/2013/08/keephatin.gif | height = 100px ]]
 
-
 ![Alt text](https://cloud.githubusercontent.com/assets/4348783/18344038/08d3e106-75b6-11e6-915b-989f8b38f4ea.png "Heroku setup" | width = 400px)
 
 ![Alt text](https://cloud.githubusercontent.com/assets/4348783/18344037/08d2d996-75b6-11e6-9d69-450159e7d6fb.png "Heroku setup" | width = 400px)
