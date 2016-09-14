@@ -23,19 +23,24 @@ const ms = metalsmith(__dirname)
     .use(define({
         development: dev ? true : null,
     }))
-    .use(markdown())
+    .use(markdown({
+        smartypants: true,
+        gfm: true,
+        tables: true,
+    }))
     .use(layouts({
         engine: 'handlebars',
         directory: config.src.layout,
         partials: config.src.partials,
     }))
-    .use(assets({
-        source: config.src.assets,
-        destination: config.dist.assets,
-    }))
     .use(inplace({
         engine: 'handlebars',
         partials: config.src.partials,
+        pattern: '*.html',
+    }))
+    .use(assets({
+        source: config.src.assets,
+        destination: config.dist.assets,
     }))
     .destination(config.dist.html);
 if (dev) {
