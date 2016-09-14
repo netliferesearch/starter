@@ -9,6 +9,7 @@ const handlebars = require('handlebars');
 const filenames = require('metalsmith-filenames');
 const handlebarsLayouts = require('handlebars-layouts');
 const serve = require('metalsmith-serve');
+const assets = require('metalsmith-assets');
 const config = require('./config');
 
 const dev = ((process.env.NODE_ENV || '').trim().toLowerCase() !== 'production');
@@ -28,6 +29,10 @@ const ms = metalsmith(__dirname)
         directory: config.src.layout,
         partials: config.src.partials,
     }))
+    .use(assets({
+        source: config.src.assets,
+        destination: config.dist.assets,
+    }))
     .use(inplace({
         engine: 'handlebars',
         partials: config.src.partials,
@@ -35,10 +40,7 @@ const ms = metalsmith(__dirname)
     .destination(config.dist.html);
 if (dev) {
     ms.use(watch({
-        paths: {
-            '${source}/**/*': '**/*',
-            './src/html/layouts/**/*': '**/*',
-        },
+        paths: config.src.watch,
         livereload: true,
     }))
     .use(serve(config));
