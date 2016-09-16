@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const config = require('./webpack.config');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 const port = process.env.PORT || 3000;
 
@@ -10,7 +11,10 @@ module.exports = Object.assign({}, config, {
         'webpack/hot/dev-server',
         './src/js/main.js',
     ],
-    plugins: [new webpack.HotModuleReplacementPlugin()],
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new DashboardPlugin(),
+    ],
     module: {
         loaders: [{
             test: /\.jsx?$/,
