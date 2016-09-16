@@ -23,6 +23,11 @@ const ms = metalsmith(__dirname)
     .use(define({
         development: dev ? true : null,
     }))
+    .use(inplace({
+        engine: 'handlebars',
+        partials: config.src.partials,
+        pattern: '*.html',
+    }))
     .use(markdown({
         smartypants: true,
         gfm: true,
@@ -32,11 +37,6 @@ const ms = metalsmith(__dirname)
         engine: 'handlebars',
         directory: config.src.layout,
         partials: config.src.partials,
-    }))
-    .use(inplace({
-        engine: 'handlebars',
-        partials: config.src.partials,
-        pattern: '*.html',
     }))
     .use(assets({
         source: config.src.assets,
