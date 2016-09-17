@@ -1,4 +1,4 @@
-
+/* this is the metalsmith config */
 module.exports = {
     port: 43565,
     src: {

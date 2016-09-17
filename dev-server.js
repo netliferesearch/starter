@@ -5,7 +5,7 @@
 'use strict'
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
-const metalsmith = require('./config');
+const metalsmith = require('./metalsmith.config');
 
 const config = require(
     process.env.npm_lifecycle_event === 'start' ?
