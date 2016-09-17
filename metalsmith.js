@@ -10,7 +10,7 @@ const filenames = require('metalsmith-filenames');
 const handlebarsLayouts = require('handlebars-layouts');
 const serve = require('metalsmith-serve');
 const assets = require('metalsmith-assets');
-const config = require('./config');
+const config = require('./metalsmith.config');
 
 const dev = ((process.env.NODE_ENV || '').trim().toLowerCase() !== 'production');
 
