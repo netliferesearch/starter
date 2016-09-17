@@ -2,7 +2,6 @@
  This is the webpack config for the development build.
  */
 'use strict'
-'use strict'
 const webpack = require('webpack');
 const config = require('./webpack.config');
 const DashboardPlugin = require('webpack-dashboard/plugin');
