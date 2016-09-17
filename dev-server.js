@@ -7,7 +7,7 @@ const metalsmith = require('./config');
 const config = require(
     process.env.npm_lifecycle_event === 'start' ?
     './webpack.config' :
-    './webpack.hot.config'
+    './webpack.dev.config'
 );
 
 const port = process.env.PORT || 3000;
@@ -30,7 +30,17 @@ new WebpackDevServer(webpack(config, (err) => {
     historyApiFallback: true,
     hot: true,
     inline: true,
-    colors: true,
+    quiet: false,
+    noInfo: false,
+    stats: {
+      assets: false,
+      colors: true,
+      version: false,
+      hash: false,
+      timings: false,
+      chunks: false,
+      chunkModules: false
+    },
 }).listen(port, 'localhost', (err) => {
     if (err) {
         return console.error(err);
