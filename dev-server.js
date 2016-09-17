@@ -7,7 +7,7 @@ const metalsmith = require('./config');
 const config = require(
     process.env.npm_lifecycle_event === 'start' ?
     './webpack.config' :
-    './webpack.dev.config'
+    './webpack.hot.config'
 );
 
 const port = process.env.PORT || 3000;
@@ -20,7 +20,7 @@ new WebpackDevServer(webpack(config, (err) => {
 
     if (!initialCompileFinished) {
         setTimeout(() => { console.log(`Compilation done. Open http://localhost:${port}/ 🚀`); }, 0);
-
+        initialCompileFinished = true;
     }
 }), {
     proxy: {
@@ -32,7 +32,6 @@ new WebpackDevServer(webpack(config, (err) => {
     inline: true,
     colors: true,
 }).listen(port, 'localhost', (err) => {
-    initialCompileFinished = true;
     if (err) {
         return console.error(err);
     }
