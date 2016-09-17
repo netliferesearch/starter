@@ -8,7 +8,7 @@
     "prestart": "npm run metalsmith && npm run webpack",
     "metalsmith": "node metalsmith",
     "webpack": "webpack",
-    "dev": "webpack-dashboard -- node dev-server & node metalsmith"
+    "dev": "node dev-server & node metalsmith"
   },
   "repository": {
     "type": "git",
