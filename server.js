@@ -1,5 +1,7 @@
+/*  This is the setup for the staging and production server,
+    i.e not for development.
+*/
 /* eslint-disable */
-
 const express = require('express');
 const basicAuth = require('basic-auth');
 

@@ -1,3 +1,6 @@
+/*
+ This is the development server setup.
+ */
 /* eslint-disable */
 'use strict'
 const webpack = require('webpack');

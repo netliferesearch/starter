@@ -1,3 +1,7 @@
+/*
+ This is the webpack config for the production build.
+ */
+'use strict'
 const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
