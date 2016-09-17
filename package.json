@@ -9,7 +9,7 @@
     "metalsmith": "node metalsmith",
     "webpack": "webpack",
     "dev": "node metalsmith & node dev-server $ wait",
-    "dashboard" : "node metalsmith & webpack-dashboard -- webpack-dev-server config dev-server & wait"
+    "dashboard": "node metalsmith & webpack-dashboard -- webpack-dev-server config dev-server & wait"
   },
   "repository": {
     "type": "git",

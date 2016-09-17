@@ -17,7 +17,7 @@ module.exports = Object.assign({}, config, {
     ],
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new DashboardPlugin(),
+        new DashboardPlugin()
     ],
     module: {
         loaders: [{
