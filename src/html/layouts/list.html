@@ -4,13 +4,13 @@
         {{> nav }}
         <main>
             <h1>{{ title }}</h1>
-            {{{ contents }}}
+            {{{ contents }}}
             {{#each cats}}
                 <div>
                     <h2>{{this.name}}</h2>
                     {{this.breed}}
                 </div>
-            {{lastName}}
+                {{lastName}}
             {{/each}}
         </main>
         {{> footer }}
