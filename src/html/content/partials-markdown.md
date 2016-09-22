@@ -1,9 +1,10 @@
 ---
 layout: partials-markdown.html
 title: Partials from markdown
-test: 'testing testing'
+test: 'Testing testing'
 ---
+## Include `\{{> nav}}` navigation
+{{> nav}}
 
-<div>
-{{test}}
-</div>
+## Include `\{{ test }}` from frontmatter
+<p>{{ test }}</p>
