@@ -23,15 +23,29 @@ const ms = metalsmith(__dirname)
     .use(define({
         development: dev ? true : null,
     }))
-    .use(inplace({
-        engine: 'handlebars',
-        partials: config.src.partials,
-        pattern: '*.html',
-    }))
     .use(markdown({
         smartypants: true,
         gfm: true,
         tables: true,
+    }))
+    .use(function (files, metalsmith, next) {
+        var content,
+            k,
+            regex;
+
+        regex = new RegExp('{{&gt;', 'g');
+
+        for (k in files) {
+            content = files[k].contents.toString();
+            files[k].contents = new Buffer(content.replace(regex, '{{>'));
+        }
+
+        next();
+    })
+    .use(inplace({
+        engine: 'handlebars',
+        partials: config.src.partials,
+        pattern: '*.html',
     }))
     .use(layouts({
         engine: 'handlebars',
