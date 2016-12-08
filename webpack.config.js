@@ -30,7 +30,7 @@ module.exports = {
             ),
         }, {
             test: /\.(otf|eot|svg|ttf|woff|woff2)$/,
-            loader: 'file?name=fonts/[name].[ext]'
+            loader: 'file?name=[name].[ext]&publicPath=/'
         }],
     },
     plugins: [
