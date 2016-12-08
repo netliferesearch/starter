@@ -26,6 +26,9 @@ module.exports = Object.assign({}, config, {
         }, {
             test: /\.scss$/,
             loaders: ['style', 'css', 'postcss', 'sass'],
+        }, {
+            test: /\.(otf|eot|svg|ttf|woff|woff2)$/,
+            loader: 'file?name=dist/fonts/[name].[ext]'
         }],
     },
 });

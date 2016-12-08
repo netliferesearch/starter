@@ -28,6 +28,9 @@ module.exports = {
                 'style-loader',
                 'css-loader!postcss-loader!sass-loader'
             ),
+        }, {
+            test: /\.(otf|eot|svg|ttf|woff|woff2)$/,
+            loader: 'file?name=fonts/[name].[ext]'
         }],
     },
     plugins: [
