@@ -8,3 +8,6 @@ test: 'Testing testing'
 
 ## Include `\{{ test }}` from frontmatter
 <p>{{ test }}</p>
+
+## Include `\{{ hero }}` hero
+{{> hero title=title }}
