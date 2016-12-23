@@ -28,12 +28,10 @@ const ms = metalsmith(__dirname)
         gfm: true,
         tables: true,
     }))
-    .use(function (files, metalsmith, next) {
-        var content,
-            k,
-            regex;
-
-        regex = new RegExp('{{&gt;', 'g');
+    .use((files, metalsmith, next)  => {
+        var content;
+        var k;
+        var regex = new RegExp('{{&gt;', 'g');
 
         for (k in files) {
             content = files[k].contents.toString();
