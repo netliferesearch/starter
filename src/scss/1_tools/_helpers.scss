@@ -34,6 +34,10 @@
     }
 }
 
+/* To calculate pixels to rem, i.e.:
+    font-size: rem-calc(16);
+*/
+
 @function rem-calc($size) {
     $rem-size: $size / 16;
     @return #{$rem-size}rem;
