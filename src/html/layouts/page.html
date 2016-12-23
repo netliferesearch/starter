@@ -1,14 +1,9 @@
-<!doctype html>
-<html lang="no">
-    {{> head }}
-    <body>
-        {{> nav }}
-        <main>
-        <h1>{{ title }}</h1>
-            <p class="large">{{ description }}</p>
-            <p>{{{ contents }}}</p>
-        </main>
-        {{> footer }}
-        {{> scripts }}
-    </body>
-</html>
+{{#extend "_layout"}}
+{{#content "main"}}
+    <main>
+    <h1>{{ title }}</h1>
+        <p class="large">{{ description }}</p>
+        <p>{{{ contents }}}</p>
+    </main>
+{{/content}}
+{{/extend}}
