@@ -1,79 +1,80 @@
 {
-    "name": "netlife-starter",
-    "version": "2.0.0",
-    "description": "Starter for prototyping and production",
-    "author": "Netlife Research",
-    "contributors": [
-        {
-            "name": "Fredrik Jensen"
-        },
-        {
-            "name": "Kristoffer Brabrand"
-        },
-        {
-            "name": "Martin Berglund"
-        },
-        {
-            "name": "Knut Melvær"
-        },
-        {
-            "name": "Joakim Bording"
-        },
-        {
-            "name": "Nils Norman Haukås"
-        }
-    ],
-    "license": "MIT",
-    "scripts": {
-        "start": "node server",
-        "prestart": "npm run metalsmith && npm run webpack",
-        "staging": "NODE_ENV=production npm run metalsmith && npm run webpack",
-        "metalsmith": "node metalsmith",
-        "webpack": "webpack",
-        "dev": "node metalsmith & node dev-server $ wait",
-        "dashboard": "node metalsmith & webpack-dashboard -- webpack-dev-server config dev-server & wait"
+  "name": "netlife-starter",
+  "version": "2.0.0",
+  "description": "Starter for prototyping and production",
+  "author": "Netlife Research",
+  "contributors": [
+    {
+      "name": "Fredrik Jensen"
     },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/netliferesearch/starter.git"
+    {
+      "name": "Kristoffer Brabrand"
     },
-    "dependencies": {
-        "autoprefixer": "^6.4.0",
-        "babel-core": "^6.0.20",
-        "babel-loader": "^6.0.1",
-        "babel-preset-es2015": "^6.0.15",
-        "babel-preset-react": "^6.0.15",
-        "babel-preset-stage-0": "^6.0.15",
-        "basic-auth": "^1.0.4",
-        "css-loader": "^0.23.1",
-        "cssnano": "^3.7.4",
-        "express": "^4.14.0",
-        "extract-text-webpack-plugin": "^1.0.1",
-        "file-loader": "^0.9.0",
-        "handlebars": "^4.0.5",
-        "handlebars-layouts": "^3.1.3",
-        "metalsmith": "^1.0.0",
-        "metalsmith-assets": "^0.1.0",
-        "metalsmith-define": "^2.0.1",
-        "metalsmith-filenames": "^1.0.0",
-        "metalsmith-in-place": "^1.4.4",
-        "metalsmith-layouts": "^1.4.1",
-        "metalsmith-markdown": "^0.2.1",
-        "metalsmith-permalinks": "^0.1.1",
-        "metalsmith-serve": "0.0.7",
-        "metalsmith-watch": "^1.0.1",
-        "node-sass": "^3.8.0",
-        "postcss-loader": "^0.9.1",
-        "sass-loader": "^4.0.0",
-        "style-loader": "^0.13.1",
-        "webpack": "^1.12.2",
-        "webpack-dev-server": "^1.12.1",
-        "webpack-dashboard": "^0.1.8"
+    {
+      "name": "Martin Berglund"
     },
-    "devDependencies": {
-        "eslint": "^3.4.0",
-        "eslint-config-netliferesearch": "^3.0.2",
-        "eslint-plugin-import": "^1.14.0",
-        "eslint-plugin-jsx-a11y": "^2.2.0"
+    {
+      "name": "Knut Melvær"
+    },
+    {
+      "name": "Joakim Bording"
+    },
+    {
+      "name": "Nils Norman Haukås"
     }
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "node server",
+    "prestart": "npm run metalsmith && npm run webpack",
+    "staging": "NODE_ENV=production npm run metalsmith && npm run webpack",
+    "metalsmith": "node metalsmith",
+    "webpack": "webpack",
+    "dev": "node metalsmith & node dev-server $ wait",
+    "dashboard": "node metalsmith & webpack-dashboard -- webpack-dev-server config dev-server & wait"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/netliferesearch/starter.git"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.4.0",
+    "babel-core": "^6.0.20",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
+    "basic-auth": "^1.0.4",
+    "css-loader": "^0.23.1",
+    "cssnano": "^3.7.4",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "handlebars": "^4.0.5",
+    "handlebars-layouts": "^3.1.3",
+    "metalsmith": "^1.0.0",
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-define": "^2.0.1",
+    "metalsmith-filenames": "^1.0.0",
+    "metalsmith-in-place": "^1.4.4",
+    "metalsmith-layouts": "^1.4.1",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-matters": "^1.2.0",
+    "metalsmith-permalinks": "^0.1.1",
+    "metalsmith-serve": "0.0.7",
+    "metalsmith-watch": "^1.0.1",
+    "node-sass": "^3.8.0",
+    "postcss-loader": "^0.9.1",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.12.2",
+    "webpack-dashboard": "^0.1.8",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "eslint-config-netliferesearch": "^3.0.2",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.2.0"
+  }
 }

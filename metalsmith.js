@@ -1,7 +1,6 @@
 
 const metalsmith = require('metalsmith');
 const define = require('metalsmith-define');
-const markdown = require('metalsmith-markdown');
 const layouts = require('metalsmith-layouts');
 const inplace = require('metalsmith-in-place');
 const watch = require('metalsmith-watch');
@@ -16,17 +15,15 @@ const dev = ((process.env.NODE_ENV || '').trim().toLowerCase() !== 'production')
 
 handlebars.registerHelper(handlebarsLayouts(handlebars));
 
+
+/*eslint-disable */
+
 const ms = metalsmith(__dirname)
     .clean(true)
     .source(config.src.content)
     .use(filenames())
     .use(define({
         development: dev ? true : null,
-    }))
-    .use(markdown({
-        smartypants: true,
-        gfm: true,
-        tables: true,
     }))
     .use((files, metalsmith, next)  => {
         var content;
@@ -47,6 +44,7 @@ const ms = metalsmith(__dirname)
     }))
     .use(layouts({
         engine: 'handlebars',
+        default: 'default.html',
         directory: config.src.layout,
         partials: config.src.partials,
     }))

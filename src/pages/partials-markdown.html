@@ -1,0 +1,12 @@
+---
+title: Partials from markdown
+test: 'Testing testing'
+---
+<h2>Include <code>\{{> nav}}</code> navigation</h2>
+{{> nav}}
+
+<h2>Include <code>\{{ test }}</code> from frontmatter</h2>
+<p>{{ test }}</p>
+
+<h2>Include <code>\{{ hero }}</code> hero</h2>
+{{> hero title=title }}

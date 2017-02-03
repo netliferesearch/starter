@@ -10,6 +10,8 @@ module.exports = {
         watch: {
             '${source}/**/*': '**/*',
             './src/layouts/**/*': '**/*',
+            './src/pages/**/*': '**/*',
+            './src/partials/**/*': '**/*',
         },
     },
     dist: {

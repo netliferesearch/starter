@@ -18,6 +18,7 @@
     {{/block}}
 
     {{#block "main"}}
+    <h1>{{ title }}</h1>
     {{{contents}}}
     {{/block}}
 
@@ -26,9 +27,9 @@
     {{/block}}
 
     {{#if development}}
-    <script src="/dist/main.js"></script>
+        <script src="/dist/main.js"></script>
     {{else}}
-    <script src="/main.js"></script>
+        <script src="/main.js"></script>
     {{/if}}
 </body>
 </html>

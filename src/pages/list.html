@@ -1,0 +1,29 @@
+---
+{
+  "title": "List from array",
+  "cats": [
+    {
+      "name": "Bella",
+      "breed": "Persian"
+    },
+    {
+      "name": "Shadow",
+      "breed": "Maine Coon"
+    },
+    {
+      "name": "Oliver",
+      "breed": "Bengal"
+    }
+  ]
+}
+---
+
+Cats are nice!
+
+{{#each cats}}
+    <div>
+        <h2>{{this.name}}</h2>
+        {{this.breed}}
+    </div>
+    {{lastName}}
+{{/each}}
