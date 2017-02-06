@@ -40,7 +40,7 @@ const ms = metalsmith(__dirname)
     .use(inplace({
         engine: 'handlebars',
         partials: config.src.partials,
-        pattern: '*.html',
+        pattern: '**/*.html',
     }))
     .use(layouts({
         engine: 'handlebars',
