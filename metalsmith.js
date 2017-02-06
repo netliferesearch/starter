@@ -15,9 +15,6 @@ const dev = ((process.env.NODE_ENV || '').trim().toLowerCase() !== 'production')
 
 handlebars.registerHelper(handlebarsLayouts(handlebars));
 
-
-/*eslint-disable */
-
 const ms = metalsmith(__dirname)
     .clean(true)
     .source(config.src.content)
@@ -25,18 +22,6 @@ const ms = metalsmith(__dirname)
     .use(define({
         development: dev ? true : null,
     }))
-    .use((files, metalsmith, next)  => {
-        var content;
-        var k;
-        var regex = new RegExp('{{&gt;', 'g');
-
-        for (k in files) {
-            content = files[k].contents.toString();
-            files[k].contents = new Buffer(content.replace(regex, '{{>'));
-        }
-
-        next();
-    })
     .use(inplace({
         engine: 'handlebars',
         partials: config.src.partials,
@@ -53,6 +38,7 @@ const ms = metalsmith(__dirname)
         destination: config.dist.assets,
     }))
     .destination(config.dist.html);
+
 if (dev) {
     ms.use(watch({
         paths: config.src.watch,
@@ -60,6 +46,7 @@ if (dev) {
     }))
     .use(serve(config));
 }
+
 ms.build((err) => {
     if (err) throw err;
 });
