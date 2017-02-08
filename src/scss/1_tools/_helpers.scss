@@ -2,24 +2,6 @@
 // Helpers
 // ------------------------------------
 
-%vertical-align {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-%horizontal-align {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-%center-align {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 %clearfix,
 .cf {
@@ -33,6 +15,7 @@
         clear: both;
     }
 }
+
 
 /* To calculate pixels to rem, i.e.:
     font-size: rem-calc(16);

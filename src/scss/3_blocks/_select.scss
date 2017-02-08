@@ -9,9 +9,9 @@
         width: 100%;
         padding: 0.5em;
         padding-right: 2.5em;
-        background-color: $color-white;
-        color: $color-black;
-        border: 1px solid $color-gray;
+        background-color: $color-light;
+        color: $color-dark;
+        border: 1px solid $color-dark;
         border-radius: 0;
         appearance: none;
 
@@ -29,8 +29,8 @@
         }
 
         &:disabled {
-            color: $color-white;
-            border-color: $color-gray;
+            color: $color-light;
+            border-color: $color-dark;
         }
     }
 
@@ -44,16 +44,16 @@
         right: 1em;
         width: 1em;
         height: 1em;
-        background-color: $color-white;
-        border-left: 2px solid $color-black;
-        border-bottom: 2px solid $color-black;
+        background-color: $color-light;
+        border-left: 2px solid $color-dark;
+        border-bottom: 2px solid $color-dark;
         transform: rotate(-45deg);
     }
 
     &--disabled {
         &::after {
-            border-left-color: $color-gray;
-            border-bottom-color: $color-gray;
+            border-left-color: $color-dark;
+            border-bottom-color: $color-dark;
         }
     }
 }

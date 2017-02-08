@@ -1,16 +1,16 @@
 
 .button {
-    color: $color-white;
-    background-color: $color-gray;
+    color: $color-light;
+    background-color: $color-dark;
     display: inline-block;
-    background: color(gray);
+    background: $color-dark;
     cursor: pointer;
     padding: 2rem;
     vertical-align: middle;
     text-align: center;
     line-height: 1;
     font-family: $font-sans;
-    font-size: rem-calc(16);
+    font-size: 1em;
     appearance: none;
 
     &--small {

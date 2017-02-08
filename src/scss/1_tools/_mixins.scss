@@ -8,7 +8,7 @@ $breakpoints: (
     large: 960,
 ) !default;
 
-@mixin breakpoint($label, $max: null) {
+@mixin media-query($label, $max: null) {
     @if map-has-key($breakpoints, $label) {
         $width: map-get($breakpoints, $label);
         @if $max != null {

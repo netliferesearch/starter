@@ -2,7 +2,7 @@
 // Need to be BEMified
 
 .responsive-table {
-    border: 1px solid $color-gray;
+    border: 1px solid $color-dark;
 
     th {
         text-transform: uppercase;
@@ -16,7 +16,7 @@
         text-align: center;
     }
 
-    @include breakpoint(medium) {
+    @include media-query(md) {
         border: 0;
 
         thead {
@@ -26,7 +26,7 @@
         tr {
             margin-bottom: 1.5rem;
             display: block;
-            border-bottom: 1px solid $color-gray;
+            border-bottom: 1px solid $color-dark;
         }
 
         td {

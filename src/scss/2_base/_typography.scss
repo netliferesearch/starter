@@ -6,7 +6,7 @@ html {
 body {
     font-family: $font-serif;
     line-height: 1.6;
-    color: $color-gray;
+    color: black;
 }
 
 // Headings
@@ -27,12 +27,6 @@ h6,
     margin-bottom: 0.4rem;
 }
 
-h1,
-%h1 {
-    font-size: 3rem;
-    line-height: 1.1;
-}
-
 h3,
 h4,
 %h3,
@@ -40,20 +34,25 @@ h4,
     line-height: 1.3;
 }
 
+
 h1,
 %h1 {
+    font-size: 2.25em;
+    line-height: 1.1;
     letter-spacing: -0.025em;
 }
-
 h2,
 %h2 {
-    font-size: 2rem;
+    font-size: 1.5em;
     letter-spacing: -0.025em;
+}
+h2,
+%h2 {
 }
 
 h3,
 %h3 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
 }
 
 h4,
@@ -95,25 +94,6 @@ p {
     line-height: 1.6;
 }
 
-// Lists
-ul,
-ol {
-    padding-left: 1.4rem;
-}
-
-dt {
-    font-weight: bold;
-}
-
-dd {
-    margin-left: 0;
-}
-
-dd + dt,
-li {
-    margin-top: 0.5em;
-}
-
 
 blockquote {
     margin-left: 1.4rem;
@@ -140,8 +120,9 @@ address {
 hr {
     border: 0;
     height: 1px;
-    background-color: $color-gray;
+    background-color: $color-dark;
 }
+
 
 // To control FOUT and make browsers behave the same with WebFontLoader
 // This will hide the content for 2 seconds (set in wenFontLoader.js) and then use fallback.

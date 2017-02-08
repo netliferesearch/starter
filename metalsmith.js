@@ -4,16 +4,12 @@ const define = require('metalsmith-define');
 const layouts = require('metalsmith-layouts');
 const inplace = require('metalsmith-in-place');
 const watch = require('metalsmith-watch');
-const handlebars = require('handlebars');
 const filenames = require('metalsmith-filenames');
-const handlebarsLayouts = require('handlebars-layouts');
 const serve = require('metalsmith-serve');
 const assets = require('metalsmith-assets');
 const config = require('./metalsmith.config');
 
 const dev = ((process.env.NODE_ENV || '').trim().toLowerCase() !== 'production');
-
-handlebars.registerHelper(handlebarsLayouts(handlebars));
 
 const ms = metalsmith(__dirname)
     .clean(true)

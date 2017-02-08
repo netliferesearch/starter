@@ -13,35 +13,33 @@ textarea {
     min-height: 2em;
     padding: 0 1em;
     display: block;
-    border: 1px solid color(gray);
+    border: 1px solid $color-dark;
 
     &:disabled {
-        border: 1px solid $color-gray;
+        border: 1px solid $color-dark;
     }
 }
 
 // Checkboxes and radiobuttons
 label input[type='checkbox']:first-child,
 label input[type='radio']:first-child {
-    display: inline-block;
-    margin-right: spacing(small);
 }
 
 // Buttons
 button {
     border: 0;
-    background: color(secondary);
-    color: color(white);
+    background: $color-secondary;
+    color: $color-light;
     padding: 1rem;
 
     &:focus,
     &:hover {
-        background: $color-gray;
+        background: $color-dark;
     }
 
     &:disabled {
-        color: $color-white;
-        background: $color-gray;
+        color: $color-light;
+        background: $color-dark;
     }
 }
 

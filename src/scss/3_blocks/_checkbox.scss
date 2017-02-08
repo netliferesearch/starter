@@ -7,7 +7,7 @@
     padding-left: 2rem;
 
     &--disabled {
-        color: $color-gray;
+        color: $color-dark;
         cursor: default;
     }
 
@@ -23,8 +23,8 @@
         width:  1.33rem;
         height: 1.33rem;
         line-height: 1.33rem;
-        background-color: $color-white;
-        border: 1px solid $color-gray; // Always use a border on input elements for accessibility. High contrast mode in Windows will remove all background styling and render the field invisible if border is not used.
+        background-color: $color-light;
+        border: 1px solid $color-dark; // Always use a border on input elements for accessibility. High contrast mode in Windows will remove all background styling and render the field invisible if border is not used.
         user-select: none;
         text-align: center;
         border-radius: 0;
@@ -39,9 +39,9 @@
         opacity: 0;
 
         &:checked ~ .checkbox__indicator {
-            background-color: color(gray);
-            border-color: color(gray); // Always use a border on input elements for accessibility. High contrast mode in Windows will remove all background styling and render the field invisible if border is not used.
-            color: color(white);
+            background-color: $color-dark;
+            border-color: $color-dark; // Always use a border on input elements for accessibility. High contrast mode in Windows will remove all background styling and render the field invisible if border is not used.
+            color: $color-light;
 
             &::before {
                 content: '';
@@ -55,22 +55,22 @@
         }
 
         &:focus ~ .checkbox__indicator {
-            box-shadow: 0 0 0 .2rem $color-gray, 0 0 0 .2rem $color-white;
+            box-shadow: 0 0 0 .2rem $color-dark, 0 0 0 .2rem $color-light;
         }
 
         &:active ~ .checkbox__indicator {
-            color: $color-white;
+            color: $color-light;
             background-color: $color-primary;
             border-color: $color-primary;
         }
 
         &:disabled ~ .checkbox__indicator {
-            border-color: $color-gray;
+            border-color: $color-dark;
         }
 
         &:disabled:checked ~ .checkbox__indicator {
-            background-color: $color-gray;
-            border-color: $color-gray;
+            background-color: $color-dark;
+            border-color: $color-dark;
         }
 
         /* RADIO BUTTONS */
@@ -80,10 +80,10 @@
         }
 
         &[type='radio']:checked ~ .checkbox__indicator::before {
-            background: $color-white;
+            background: $color-light;
             width: 0.55em;
             height: 0.55em;
-            border: 3px solid $color-white;
+            border: 3px solid $color-light;
             border-radius: 50%;
             transform: translateY(-20%);
         }

@@ -12,27 +12,18 @@
 
  $color-primary: #a8cd25;
  $color-secondary: #1d0c9a;
- $color-white: #fff;
- $color-gray: #444;
- $color-black: #000;
+ $color-light: #fff;
+ $color-dark: #111;
 
  $font-sans: 'Helvetica', sans-serif;
  $font-serif: 'Georgia', serif;
 
  $breakpoints: (
-     small: 480,
-     medium: 720,
-     large: 960,
-     wide: 1200,
+     sm: 480,
+     md: 720,
+     lg: 960,
+     xl: 1200,
  );
-
-
-
-
-
-
-
-
 
 
  // ------------------------------------
@@ -57,3 +48,96 @@
 @import '3_blocks/select';
 @import '3_blocks/icon';
 @import '3_blocks/responsive-table';
+
+
+
+
+
+
+// ------------------------------------
+// Move This Later
+// ------------------------------------
+
+
+body {
+    background-color: mix($color-dark, $color-light, 3%);
+}
+.o-wrapper {
+    max-width: 60em;
+    width: 90%;
+    // margin-left: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include media-query(sm) {
+        // margin-left: 10%;
+        width: 80%;
+    }
+}
+
+
+.c-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.c-logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    svg {
+        fill: #eee;
+        width: 60%;
+    }
+    a {
+        text-decoration: none;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: calc(2em + 8vw);
+    }
+}
+.c-cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.c-cards__item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    
+    @include media-query(sm) {
+        width: calc(50% - 1rem);
+        margin-right: 1rem;
+        min-height: 16rem;
+    }
+    @include media-query(md) {
+        width: calc(33% - 1rem);
+    }
+    
+    a {
+        display: block;
+        padding: 1rem;
+        flex: 1;
+        text-decoration: none;
+        
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+}
+.c-footer {
+    text-align: center;
+    padding-bottom: 2rem;
+}
