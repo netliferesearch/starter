@@ -16,3 +16,6 @@ dt {
 dd {
     margin-left: 0;
 }
+dd + dt {
+    margin-top: 1em;
+}
