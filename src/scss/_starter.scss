@@ -41,39 +41,44 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
+}
+
+.st-header--home {
     text-align: center;
 }
 
 .st-logo {
+    margin-top: 0;
     position: relative;
     display: inline-flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-
     font-family: $font-secondary;
-    font-size: 2em;
-    text-transform: lowercase;
     text-decoration: none;
     color: $color-dark;
+    text-transform: lowercase;
+}
+.st-logo--home {
+    flex-direction: column;
+    font-size: 2em;
     margin-bottom: 0.25em;
-    
+
     @include media-query(md) {
         font-size: 3em;
-        line-height: 1;
     }
-   
     & > svg {
-        fill: rgba($color-dark, 0.125);
-        width: 4em;
         flex: 0 0 auto;
+        width: 4em;
+        fill: rgba($color-dark, 0.125);
         margin-right: 0.25em;
-    }
-    
-    & > svg:hover {
-        fill: $color-primary;
+        transition: fill 150ms;
     }
 }
+a.st-logo:hover {
+    color: $color-primary;
+}
+
+
 .st-lede {
     text-align: center;
     font-size: 1.25em;
@@ -152,4 +157,5 @@
 .st-footer {
     text-align: center;
     padding-bottom: 2rem;
+    margin-top: 2.5rem;
 }

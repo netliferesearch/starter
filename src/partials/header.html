@@ -1,9 +1,18 @@
 <header class="st-header  {{#if home}}st-header--home{{/if}}">
     <div class="st-wrapper">
-        <a class="st-logo" href="/">
-            <svg xmlns="http://www.w3.org/2000/svg" width="300" viewBox="0 0 300 300"  fill-rule="evenodd" clip-rule="evenodd"><path d="M160.9 58.3l-24-24.1-58 15.6-7.8 7.7-5.7-5.6-29.7 29.7 5.7 5.6L11 117.7l45.3 45.2 28.2-28.3 25.5 25.5 33.9-34-25.4-25.4zM160.201 210.323l33.941-33.94 50.911 50.91-33.94 33.942z"/><path d="M195.6 49.8l37-22.4 8.2 22.4-22.6 22.6 29.7 29.7 22.6-22.6 22.4 8.2-22.4 37-50.2 9.2L93 261.2l-33.9-33.9L186.4 100l9.2-50.2"/></svg>
-            <span>Starter</span>
-        </a>
+
+        {{#if home}}
+            <h1 class="st-logo  st-logo--home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="300" viewBox="0 0 300 300"  fill-rule="evenodd" clip-rule="evenodd"><path d="M160.9 58.3l-24-24.1-58 15.6-7.8 7.7-5.7-5.6-29.7 29.7 5.7 5.6L11 117.7l45.3 45.2 28.2-28.3 25.5 25.5 33.9-34-25.4-25.4zM160.201 210.323l33.941-33.94 50.911 50.91-33.94 33.942z"/><path d="M195.6 49.8l37-22.4 8.2 22.4-22.6 22.6 29.7 29.7 22.6-22.6 22.4 8.2-22.4 37-50.2 9.2L93 261.2l-33.9-33.9L186.4 100l9.2-50.2"/></svg>
+                <span>{{ text }}</span>
+            </h1>
+        {{else}}
+            <a class="st-logo" href="/">
+                &larr; {{ text }}
+            </a>
+        {{/if}}
+
+
         <hr>
     </div>
 </header>
