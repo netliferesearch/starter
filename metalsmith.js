@@ -8,8 +8,13 @@ const filenames = require('metalsmith-filenames');
 const serve = require('metalsmith-serve');
 const assets = require('metalsmith-assets');
 const config = require('./metalsmith.config');
+const markdown = require('metalsmith-markdown');
+const handlebars = require('handlebars');
+const handlebarsLayouts = require('handlebars-layouts');
 
 const dev = ((process.env.NODE_ENV || '').trim().toLowerCase() !== 'production');
+
+handlebars.registerHelper(handlebarsLayouts(handlebars));
 
 const ms = metalsmith(__dirname)
     .clean(true)
@@ -22,6 +27,11 @@ const ms = metalsmith(__dirname)
         engine: 'handlebars',
         partials: config.src.partials,
         pattern: '**/*.html',
+    }))
+    .use(markdown({
+        smartypants: true,
+        gfm: true,
+        tables: true,
     }))
     .use(layouts({
         engine: 'handlebars',

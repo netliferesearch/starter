@@ -1,51 +1,41 @@
 ---
 title: Starter
 home: 'true'
-layout: 'home.html'
+summary: 'A frontend starting point and a static site generator for rapid prototyping.'
+examples:
+  -
+    title: 'Typography'
+    img: '/assets/images/dag-henning.svg'
+    url: '/examples/typography.html'
+  -
+    title: 'Images'
+    img: '/assets/images/martha.svg'
+    url: '/examples/image.html'
+  -
+    title: 'Partials'
+    img: '/assets/images/hauken.svg'
+    url: '/examples/partials.html'
+  -
+    title: 'JSON Frontmatter'
+    img: '/assets/images/are.svg'
+    url: '/examples/frontmatter.html'
 ---
+
 <div class="st-lede">
-    <p>A frontend starting point and a static site generator for rapid prototyping.</p>
+    <p>{{ summary }}</p>
 </div>
 <h2 style="text-align: center;">Examples</h2>
 <ul class="st-grid">
-    <li class="st-grid__item">
-        <a class="st-card" href="/examples/typography.html">
-            <div class="st-card__media">
-                <img src="/assets/images/dag-henning.svg" alt="">
-            </div>
-            <div class="st-card__body">
-                <h3 class="st-card__title">Typography</h3>
-            </div>
-        </a>
-    </li>
-    <li class="st-grid__item">
-        <a class="st-card" href="/examples/image.html">
-            <div class="st-card__media">
-                <img src="/assets/images/martha.svg" alt="">
-            </div>
-            <div class="st-card__body">
-                <h3 class="st-card__title">Images</h3>
-            </div>
-        </a>
-    </li>
-    <li class="st-grid__item">
-        <a class="st-card" href="/examples/partials.html">
-            <div class="st-card__media">
-                <img src="/assets/images/hauken.svg" alt="">
-            </div>
-            <div class="st-card__body">
-                <h3 class="st-card__title">Partials</h3>
-            </div>
-        </a>
-    </li>
-    <li class="st-grid__item">
-        <a class="st-card" href="/examples/list.html">
-            <div class="st-card__media">
-                <img src="/assets/images/are.svg" alt="">
-            </div>
-            <div class="st-card__body">
-                <h3 class="st-card__title">YAML or JSON</h3>
-            </div>
-        </a>
-    </li>
+    {{#each examples}}
+        <li class="st-grid__item">
+            <a class="st-card" href="{{ this.url }}">
+                <div class="st-card__media">
+                    <img src="{{ this.img }}" alt="">
+                </div>
+                <div class="st-card__body">
+                    <h3 class="st-card__title">{{ this.title }}</h3>
+                </div>
+            </a>
+        </li>
+    {{/each}}
 </ul>
